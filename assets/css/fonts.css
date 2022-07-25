@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Big John';
+  src: url('../fonts/BIG\ JOHN.otf');
+}
+
+@font-face {
+  font-family: 'Big John PRO';
+  src: url('../fonts/BigJohnPRO-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Big John PRO Light';
+  src: url('../fonts/BigJohnPRO-Light.otf');
+}
+
+@font-face {
+  font-family: 'Lora SemiBold';
+  src: url('../fonts/Lora-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'VLANÈLLA';
+  src: url('../fonts/VLANÈLLA.ttf');
+}
+
+@font-face {
+  font-family: 'Balsamiq Sans';
+  src: url('../fonts/BalsamiqSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Balsamiq Sans-Bold';
+  src: url('../fonts/BalsamiqSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'ACaslon-Semi-Bold';
+  src: url('../fonts/ACaslonPro-Semibold.otf');
+}
+
+@font-face {
+  font-family: 'Dosis-Medium';
+  src: url('../fonts/Dosis-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Dosis-SemiBold';
+  src: url('../fonts/Dosis-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Dosis-Bold';
+  src: url('../fonts/Dosis-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Dosis-ExtraBold';
+  src: url('../fonts/Dosis-ExtraBold.ttf');
+}
+

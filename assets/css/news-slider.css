@@ -1,0 +1,155 @@
+h3.h3 {
+  text-align: center;
+  padding: 1.5em 0em;
+  /* font-size: 1.5em; */
+  font-family: Big John;
+  color: #000;
+}
+
+.post-slide8 {
+  margin: 0 15px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(43, 59, 93, 0.3);
+  margin-bottom: 2em;
+  height: 50%;
+}
+
+.post-slide8 .post-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.post-slide8 .post-img img {
+  width: 100%;
+  height: auto;
+}
+
+/* .post-slide8 .over-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+} */
+
+/* .post-slide8:hover .over-layer {
+  opacity: 1;
+} */
+
+.post-slide8 .post-link {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 45%;
+  text-align: center;
+}
+
+.post-slide8 .post-link li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.post-slide8 .post-link li a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.post-slide8 .post-link li a:hover {
+  color: #2a8ae2;
+  text-decoration: none;
+}
+
+.post-slide8 .post-date {
+  position: absolute;
+  top: 10%;
+  left: 4%;
+}
+
+.post-slide8 .date {
+  display: inline-block;
+  border-radius: 3px 0 0 3px;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background: #333;
+  float: left;
+}
+
+.post-slide8 .month {
+  display: inline-block;
+  border-radius: 0 3px 3px 0;
+  padding: 5px 13px;
+  color: #111;
+  font-size: 20px;
+  font-weight: 700;
+  background: #2a8ae2;
+}
+
+.post-slide8 .post-content {
+  padding: 30px;
+}
+
+.post-slide8 .post-title {
+  margin: 0 0 10px 0;
+}
+
+.post-slide8 .post-title p {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: VLANÈLLA;
+  color: #333;
+  display: inline-block;
+  text-transform: capitalize;
+  transition: all 0.3s ease 0s;
+}
+
+.post-slide8 .post-description {
+  font-size: 16px;
+  font-family: Dosis-Medium;
+  line-height: 24px;
+  color: grey;
+}
+
+.post-slide8 .read-more {
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Big John PRO;
+  text-transform: capitalize;
+  position: relative;
+  transition: color 0.2s linear;
+}
+
+.post-slide8 .read-more:hover {
+  text-decoration: none;
+  color: #2a8ae2;
+}
+
+.post-slide8 .read-more:after {
+  content: '';
+  position: absolute;
+  width: 30%;
+  display: block;
+  border: 1px solid #2a8ae2;
+  transition: all 0.3s ease;
+}
+
+.post-slide8 .read-more:hover:after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 479px) {
+  .post-slide8 .month {
+    font-size: 14px;
+  }
+  .post-slide8 .date {
+    font-size: 14px;
+  }
+}
