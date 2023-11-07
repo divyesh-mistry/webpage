@@ -235,7 +235,21 @@
             display: block;
             color: #555;
         }
+   
 
+        /* Adjust Font Sizes for Mobile */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+            em {
+                font-size: 24px;
+            }
+            article {
+                padding: 20px;
+                font-size: 18px;
+            }
+        }
         article {
             max-width: auto;
             margin: 0 auto;
@@ -277,13 +291,13 @@
             text-align: center;
             margin: 20px 0;
         }
-
         img.center-image {
-            width: 800px;
-            height: 650px;
+            max-width: 100%;
+            height: auto;
             display: inline-block;
             border: 2px solid #1f1311;
             border-radius: 1;
+          margin: 0 auto;
         }
     </style>
 </head>
