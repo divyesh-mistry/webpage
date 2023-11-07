@@ -1,0 +1,92 @@
+.filterDiv {
+  /* float: left; */
+  /* background-color: #666; */
+  /* color: #ffffff; */
+  /* width: 100px; */
+  /* line-height: 100px; */
+  text-align: justify;
+  /* margin: 2px; */
+  display: none;
+  font-family: Dosis-Bold;
+  font-weight: bold;
+  font-size: 26px;
+  color: #333;
+  padding-bottom: 5%;
+}
+
+.article-name {
+  color: #333;
+}
+
+.article-name:hover {
+  color: #922c2a;
+}
+
+.authors {
+  font-size: 16px;
+  color: #333;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  /* font-weight: 500; */
+  font-family: Balsamiq Sans;
+}
+
+.published-in {
+  font-size: 16px;
+  color: #888;
+  font-family: Balsamiq Sans;
+  font-weight: normal;
+}
+
+.file {
+  display: flex;
+  justify-content: flex-end;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: -2%;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.file a:hover {
+  color: #922c2a;
+}
+
+.show {
+  display: block;
+}
+
+.filter-container {
+  overflow: hidden;
+  margin-top: 3%;
+}
+
+#myBtnContainer {
+  margin-left: 15%;
+  margin-bottom: 2%;
+}
+
+.publications {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: Big John PRO;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+}
+
+.publications:hover {
+  color: #922c2a;
+}
+
+.publications.active {
+  color: #922c2a;
+}
+
+.best-paper {
+  color: #922c2a;
+}
