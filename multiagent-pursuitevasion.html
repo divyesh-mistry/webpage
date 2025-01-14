@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8" />
+    <meta name="author" content="Abhinav Sinha" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="keywords" content="pursuit evasion, multiagent" />
+    <meta
+      name="description"
+      content="Abhinav Sinha - Researcher in Control Systems"
+    />
+
+    <!-- title  -->
+    <title>Abhinav Sinha</title>
+
+    <!-- plugins css -->
+    <link rel="stylesheet" href="css/plugins.css" />
+
+    <!-- switcher css -->
+    <link href="css/switcher.css" rel="stylesheet" />
+
+    <!-- custom css -->
+    <link href="css/styles-2.css" rel="stylesheet" id="colors" />
+
+    <!-- fonts css -->
+    <link rel="stylesheet" href="css/fonts.css" />
+
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/5a31214411.js"></script>
+
+    <!-- academicons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+    />
+
+    <!-- mathjax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <!-- start page loading -->
+    <div id="preloader">
+      <div class="row loader">
+        <div class="loader-icon"></div>
+      </div>
+    </div>
+    <!-- end page loading -->
+
+    <!-- start main-wrapper section -->
+    <div class="main-wrapper">
+      <!-- start header section -->
+      <header class="header-style1 menu_area-light">
+        <div class="navbar-default border-bottom1 border-color-light-white">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-12 col-lg-12">
+                <div class="menu_area alt-font">
+                  <nav class="navbar navbar-expand-lg navbar-light no-padding">
+                    <div class="navbar-header navbar-header-custom">
+                      <!-- start logo -->
+                      <a href="index.html#home" class="navbar-brand logo4">
+                        <h6
+                          style="
+                            margin-top: 7%;
+                            text-transform: uppercase;
+                            font-family: Big John;
+                            color: #fff;
+                          "
+                        >
+                          Abhinav Sinha
+                        </h6>
+                      </a>
+                      <!-- end logo -->
+                    </div>
+
+                    <div class="navbar-toggler"></div>
+
+                    <!-- menu area -->
+                    <ul
+                      class="navbar-nav ml-auto"
+                      id="nav"
+                      style="display: none"
+                    >
+                      <li>
+                        <a href="index.html#home">Home</a>
+                      </li>
+                      <li>
+                        <a href="index.html#about">About</a>
+                      </li>
+                      <li>
+                        <a href="index.html#research">Research</a>
+                      </li>
+                      <li>
+                        <a href="index.html#courses">Courses</a>
+                      </li>
+                      <li>
+                        <a href="index.html#people">People</a>
+                      </li>
+                      <li>
+                        <a href="index.html#news">News</a>
+                      </li>
+                      <li>
+                        <a href="index.html#contact">Contact</a>
+                      </li>
+                    </ul>
+                    <!-- end menu area -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end header section -->
+
+      <!-- start banner section-->
+      <section
+        class="bg-img banner-section cover-background full-screen"
+        data-overlay-dark="6"
+        data-background="img/content/graph3.jpg"
+        id="home"
+      >
+        <div class="container absolute-middle-center z-index-9">
+          <div class="row">
+            <div class="col-lg-7 sm-margin-40px-bottom">
+              <h1
+                class="font-size50 md-font-size42 sm-font-size38 xs-font-size30 font-weight-800 text-white"
+              >
+                Guidance, Autonomy, Learning, and Control for Intelligent
+                Systems (GALACxIS) Lab
+              </h1>
+              <p
+                class="width-95 xs-width-100 font-size16 xs-display-none line-height-30 xs-font-size14 xs-line-height-26 font-size20 text-white"
+              ></p>
+              <div class="margin-30px-top sm-margin-25px-top">
+                <a href="#research-section" class="butn theme white-hover"
+                  ><span>Get Started</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- start banner shape -->
+        <div class="banner-shape">
+          <img src="img/content/banner9-shape.png" alt="" />
+        </div>
+        <!-- end banner shape -->
+      </section>
+      <!-- end banner section-->
+
+      <!-- start research section -->
+      <section class="lg" id="research-section">
+        <div class="container">
+          <div class="section-heading title-style7">
+            <h4 class="no-margin-bottom" style="font-family: Dosis-SemiBold">
+              Multiagent Cooperative Pursuit-Evasion
+            </h4>
+          </div>
+          <p style="text-align: justify; font-size: 18px">
+            The context of multiagent pursuit-evasion is an important aspect in
+            robotics, aerospace and control engineering, and path planning. In
+            multi-vehicle pursuit-evasion scenarios, the pursuer (incoming
+            threat to the evader) tries to minimize its relative distance with
+            respect to the evader (targeted vehicle). On the other hand, the
+            evader attempts to throw the pursuer off its trail and deploys a
+            defending interceptor (defender) to assist in avoiding possible
+            capture by the pursuer. The evader, therefore, cooperates with the
+            defender, which attempts to neutralize the pursuer, before the
+            pursuer can capture the evader. In this regard, the evader and the
+            defender are a cooperating team, while the pursuer is in the
+            opposition.
+          </p>
+          <p style="text-align: justify; font-size: 18px">
+            The resulting three-player engagement scenarios are different from
+            the the traditional one-to-one engagements, and present a formidable
+            challenge in the design of defense strategy, as the evader-defender
+            team may use different levels of cooperation to neutralize the
+            threat.
+          </p>
+
+          <figure>
+            <img
+              src="img/research/enggeoV3.png"
+              style="width: 60%; margin-left: 15%; margin-bottom: 2%"
+            />
+            <figcaption style="text-align: center; font-weight: bold">
+              Illustration of evader-pursuer-defender scenario.
+            </figcaption>
+          </figure>
+
+          <h5
+            class="no-margin-bottom"
+            style="font-family: Dosis-SemiBold; text-decoration: underline"
+          >
+            Time-Constrained Cooperative Pursuit-Evasion
+          </h5>
+
+          <p style="text-align: justify; font-size: 18px">
+            We consider a pursuit-evasion scenario among three agents- an
+            evader, a pursuer, and a defender. We design cooperative guidance
+            laws for the evader and the defender team to safeguard the evader
+            from an attacking pursuer. Unlike differential games, optimal
+            control formulations, and other heuristic methods, we propose a
+            novel perspective on designing effective nonlinear feedback control
+            laws for the evader-defender team using a time-constrained guidance
+            approach.
+          </p>
+
+          <figure>
+            <img
+              src="img/research/TADBlockDiagramV3.png"
+              style="width: 75%; margin-left: 15%; margin-bottom: 2%"
+            />
+            <figcaption style="text-align: center; font-weight: bold">
+              A schematic diagram of the proposed cooperative schemes.
+            </figcaption>
+          </figure>
+
+          <p style="text-align: justify; font-size: 18px">
+            <b>Selected Publications</b>:
+          </p>
+          <ul>
+            <li style="list-style-type: disc; margin-left: 20px">
+              <b>Abhinav Sinha</b>, Shashi Ranjan Kumar, and Dwaipayan
+              Mukherjee,
+              <a
+                href="https://doi.org/10.1007/s10846-022-01570-y"
+                target="_blank"
+              >
+                "Three-agent Time-constrained Cooperative Pursuit-Evasion"</a
+              >, <i>Journal of Intelligent & Robotic Systems</i>, vol. 104, no.
+              28, pp. 1-27, 2022.
+            </li>
+          </ul>
+
+          <div
+            class="separator-line-horrizontal-full bg-medium-light-gray"
+          ></div>
+
+          <p></p>
+
+          <h5
+            class="no-margin-bottom"
+            style="font-family: Dosis-SemiBold; text-decoration: underline"
+          >
+            Scalable Solutions to the Target Defense Scenario
+          </h5>
+
+          <p style="text-align: justify; font-size: 18px">
+            We consider a pursuit-evasion scenario where a pursuer is aiming to
+            capture an evader, but the evader is assisted by multiple defenders
+            to avoid getting captured. The objective is to design cooperative
+            guidance and control strategies for the evader and the defender
+            swarm to safeguard the former. A part of our research proposes an
+            impact-time control based cooperative guidance approach to defend
+            the evader from the pursuer. If the defenders intercept the pursuer
+            before the latter gets a chance to come in the vicinity of the
+            evader, the mission can be deemed a success. The evader-defender
+            team can use various levels of cooperation to achieve this
+            objective, depending on the availability of communication resources
+            and desired simplicity during the implementation.
+          </p>
+
+          <!-- for sub figures -->
+          <div class="row">
+            <div class="column2">
+              <img
+                src="img/research/traj-direct-TAD.png"
+                alt=""
+                style="width: 100%; margin-bottom: 4%"
+              />
+              <figcaption style="text-align: center; font-weight: bold">
+                Agents' trajectories.
+              </figcaption>
+            </div>
+
+            <div class="column2">
+              <img
+                src="img/research/tgo-direct-TAD.png"
+                alt=""
+                style="width: 100%; margin-bottom: 2%"
+              />
+              <figcaption style="text-align: center; font-weight: bold">
+                Agents' time-to-go profiles.
+              </figcaption>
+            </div>
+          </div>
+
+          <p style="text-align: justify; font-size: 18px">
+            <b>Selected Publications</b>:
+          </p>
+          <ul>
+            <li style="list-style-type: disc; margin-left: 20px">
+              <b>Abhinav Sinha</b>, Shashi Ranjan Kumar, and Dwaipayan
+              Mukherjee,
+              <a
+                href="https://ieeexplore.ieee.org/document/9274339"
+                target="_blank"
+              >
+                "Cooperative Salvo Based Active Aircraft Defense using Impact
+                Time Guidance"</a
+              >, <i>IEEE Control Systems Letters</i>, Vol. 5, No. 5, 2021, pp.
+              1573-1578.
+            </li>
+          </ul>
+
+          <div
+            class="separator-line-horrizontal-full bg-medium-light-gray"
+          ></div>
+
+          <p></p>
+
+          <h5
+            class="no-margin-bottom"
+            style="font-family: Dosis-SemiBold; text-decoration: underline"
+          >
+            <!-- Conquest amidst the Sentinel: The Art of Navigating Pursuit in an
+            Adversarial Environment -->
+            Pursuit in an Adversarial Environment
+          </h5>
+
+          <p style="text-align: justify; font-size: 18px">
+            We consider a pursuit-evasion scenario among three agents- an
+            evader, a pursuer, and a defender. This pursuit-evasion game
+            involves strategic maneuvering, where the pursuer must navigate
+            through various obstacles and overcome the defenses set up by the
+            defender to accomplish its objective. The presence of a defender
+            adds an extra layer of complexity and challenge to the pursuit, as
+            the defender employs tactics to thwart the pursuer's advances and
+            safeguard the target. We focus on designing guidance strategies for
+            the pursuer to capture the target while evading a defender that has
+            similar capabilities as that of the pursuer.
+          </p>
+
+          <p style="text-align: justify; font-size: 18px">
+            <b>Selected Publications</b>:
+          </p>
+          <ul>
+            <li style="list-style-type: disc; margin-left: 20px">
+              Suraj Bandela, <b>Abhinav Sinha</b>, and Yongcan Cao,
+              <a href="" target="_blank">
+                "A Reinforcement Learning Approach to Target Capture in the
+                Presence of a Defender"</a
+              >, <i>AIAA SciTech Forum</i>, AIAA-2025-1902, pp. 1-14, 2025.
+            </li>
+          </ul>
+
+          <div
+            class="separator-line-horrizontal-full bg-medium-light-gray"
+          ></div>
+
+          <p></p>
+
+          <h5
+            class="no-margin-bottom"
+            style="font-family: Dosis-SemiBold; text-decoration: underline"
+          >
+            Cooperative Guidance and Geometrical Solutions to the Target Defense
+            Problem
+          </h5>
+
+          <p style="text-align: justify; font-size: 18px">
+            We investigate geometrical approaches to guarantee pursuit-evasion
+            from arbitrary three-body engagement geometries. The proposed
+            solution, which is the evader-defender cooperative guidance
+            strategy, is aimed at ensuring that the defender always arrives at a
+            certain angle within a prescribed time, regardless of the initial
+            geometry, thereby preventing the pursuer from capturing the evader.
+            Our solutions are expected to be less stringent and allow the
+            defender to have more flexibility in terms of geometry and maneuvers
+            depending on engagement scenarios. By analyzing the geometry of the
+            problem, our research open up new avenues to identify necessary and
+            sufficient conditions or configurations that lead to successful
+            evasion or capture.
+          </p>
+
+          <figure>
+            <img
+              src="img/research/GTG.png"
+              style="width: 30%; margin-left: 35%; margin-bottom: 2%"
+            />
+            <figcaption style="text-align: center; font-weight: bold">
+              Geometrical treatment of the cooperative defense problem.
+            </figcaption>
+          </figure>
+
+          <p style="text-align: justify; font-size: 18px">
+            <b>Selected Publications</b>:
+          </p>
+          <ul>
+            <li style="list-style-type: disc; margin-left: 20px">
+              Saurabh Kumar, Shashi Ranjan Kumar, and <b>Abhinav Sinha</b>,
+              <a href="https://arxiv.org/abs/2402.06176" target="_blank">
+                "Cooperative Nonlinear Guidance Strategies for Guaranteed
+                Pursuit-Evasion"</a
+              >, <i>arXiv:2402.06176</i>, 2024.
+            </li>
+          </ul>
+
+          <h5
+            class="no-margin-bottom"
+            style="font-family: Dosis-SemiBold; text-decoration: underline"
+          >
+            Information-Driven Response in Cooperative Pursuit-Evasion
+          </h5>
+
+          <p style="text-align: justify; font-size: 18px">
+            We develop autonomous decision-making strategies for the agents,
+            enabling them to perform self-localization and track the pursuer
+            using onboard sensors in the absence of radar and communication
+            support. A prevalent assumption in the state-of-the-art is the
+            availability of complete state information, wherein each agent
+            possesses knowledge of the states of all other agents in the game.
+            This assumption is pivotal to the development of strategies rooted
+            in differential games since it allows for the analytical computation
+            of equilibria. The novelty of our approach lies in modeling the
+            dynamic game from the perspective of limited information and
+            developing an information fusion-based joint cooperative estimation
+            and guidance strategies for the evader-defender team.
+          </p>
+
+          <figure>
+            <img
+              src="img/research/AIR-GAME-CCA.png"
+              style="width: 60%; margin-left: 20%; margin-bottom: 2%"
+            />
+            <figcaption style="text-align: center; font-weight: bold">
+              Information-driven response architecture.
+            </figcaption>
+          </figure>
+
+          <p style="text-align: justify; font-size: 18px">
+            <b>Selected Publications</b>:
+          </p>
+          <ul>
+            <li style="list-style-type: disc; margin-left: 20px">
+              Shivam Bajpai, Rohith Boyinine, <b>Abhinav Sinha</b>, and
+              Rajnikant Sharma,
+              <a href="" target="_blank">
+                "Toward Simultaneous Localization and Guidance for Collaborative
+                Combat Aircraft (CCA) Effectiveness"</a
+              >, <i>AIAA SciTech Forum</i>, AIAA-2025-1902, pp. 1-14, 2025.
+            </li>
+          </ul>
+
+          <!-- <p style="text-align: justify; font-size: 18px">
+            A part of our research proposes an impact-time control based
+            cooperative guidance approach to defend the evader from the pursuer.
+            If the defender intercepts the pursuer before the latter gets a
+            chance to come in the vicinity of the evader, the mission can be
+            deemed a success. The evader-defender team can use various levels of
+            cooperation to achieve this objective, depending on the availability
+            of communication resources and desired simplicity during the
+            implementation. The evader aligns itself on the collision course
+            with the pursuer to lure the latter, and launches the defender
+            against it. Once on the collision course, the pursuer is expected to
+            become non-maneuvering, and the time of interception for the
+            pursuer-evader engagement can be estimated with a reasonable
+            accuracy. The defender can then intercept the non-maneuvering
+            pursuer at a suitable impact-time, which is sufficiently lesser than
+            the estimated time-to-go of the pursuer-evader engagement, even if
+            the evader does not continuously communicate its states to the
+            defender. On the other hand, if the evader communicates with the
+            defender, then explicit time-to-go information may not be necessary,
+            and the defender can intercept the pursuer with a pre-specified time
+            margin. This time margin may be chosen to ensure safe distance
+            between pursuer and evader, at the time instant when the defender
+            intercepts the pursuer.
+          </p> -->
+        </div>
+      </section>
+      <!-- end research section -->
+
+      <div class="separator-line-horrizontal-full bg-medium-light-gray"></div>
+
+      <!-- start footer section -->
+      <footer class="footer-style9 bg-white" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 sm-margin-30px-bottom">
+              <h3 class="footer-title-style9">Mailing Address</h3>
+              <address class="width-145 no-margin no-padding">
+                Dr. Abhinav Sinha<br />
+                Assistant Professor<br />
+                730 Rhodes Hall<br />
+                Department of Aerospace Engineering and Engineering Mechanics<br />
+                College of Engineering and Applied Science<br />
+                University of Cincinnati<br />
+                2901 Woodside Drive<br />
+                Cincinnati, Ohio 45221, USA
+              </address>
+              <br />
+              <i class="fa fa-envelope" aria-hidden="true"></i
+              ><a href="mailto:abhinav.sinha@utsa.edu" style="margin-left: 3%"
+                >sinhaab@ucmail.uc.edu</a
+              >
+              <!-- <br />
+              <i class="fa fa-envelope" aria-hidden="true"></i
+                ><a
+                  href="mailto:abhinavsinha@aero.iitb.ac.in"
+                  style="margin-left: 3%"
+                  >abhinavsinha@aero.iitb.ac.in</a
+                >
+                <br />
+              <i class="fa fa-envelope" aria-hidden="true"></i
+              ><a href="mailto:sinha.abhinav@iitb.ac.in" style="margin-left: 3%"
+                >sinha.abhinav@iitb.ac.in</a
+              > -->
+            </div>
+
+            <div class="col-lg-3 col-md-6 sm-margin-30px-bottom">
+              <h3 class="footer-title-style9">Sitemap</h3>
+              <div>
+                <ul class="footer-list-style3">
+                  <!-- <li><a href="#!">About Us</a></li> -->
+                  <li>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i
+                    ><a href="index.html#about"> About</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i
+                    ><a href="index.html#research"> Research</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i
+                    ><a href="publications.html#publication"> Publications</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i
+                    ><a href="index.html#courses"> Courses</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i
+                    ><a href="index.html#people"> People</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i
+                    ><a href="index.html#news"> News</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 xs-margin-30px-bottom">
+              <h3 class="footer-title-style9">Public Profiles</h3>
+              <div>
+                <ul class="footer-list-style3">
+                  <li>
+                    <a
+                      href="https://scholar.google.co.in/citations?user=WoblYzsAAAAJ&hl=en"
+                      target="_blank"
+                      ><i class="ai ai-google-scholar ai-2x"></i
+                    ></a>
+                    <span style="font-size: 16px; margin-left: 5%">
+                      Google Scholar</span
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.researchgate.net/profile/Abhinav_Sinha4"
+                      target="_blank"
+                      ><i class="ai ai-researchgate ai-2x"></i
+                    ></a>
+                    <span style="font-size: 16px; margin-left: 5%">
+                      Researchgate</span
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/drabhinavsinha/"
+                      target="_blank"
+                      ><i class="fa fa-linkedin-in fa-2x"></i
+                    ></a>
+                    <span style="font-size: 16px; margin-left: 5%">
+                      LinkedIn</span
+                    >
+                  </li>
+                  <li>
+                    <a href="https://github.com/sinha-abhinav" target="_blank"
+                      ><i class="fa fa-github fa-2x"></i
+                    ></a>
+                    <span style="font-size: 16px; margin-left: 5%">
+                      Github</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar xs-font-size13">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-md-6 text-left xs-text-center xs-margin-5px-bottom"
+              >
+                <p>
+                  &copy; Abhinav Sinha
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  . All Rights Reserved.
+                </p>
+              </div>
+              <div class="col-md-6 text-right xs-text-center">
+                Designed and Developed by:
+                <a href="https://vaibhavsinhacs.github.io/" target="_blank"
+                  >Vaibhav Sinha</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer section -->
+    </div>
+    <!-- end main-wrapper section -->
+
+    <!-- start scroll to top -->
+    <a href="#research-section" class="scroll-to-top"
+      ><i class="fa fa-angle-up" aria-hidden="true"></i
+    ></a>
+    <!-- end scroll to top -->
+
+    <!-- including js files -->
+
+    <!-- jQuery -->
+    <script src="js/core.min.js"></script>
+
+    <!-- custom scripts -->
+    <script src="js/scroller.js"></script>
+  </body>
+</html>
