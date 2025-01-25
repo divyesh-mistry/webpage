@@ -12779,13 +12779,15 @@ ul.list>li:before {
 }
 .banner-section {
   width: 100%; /* Full width of the viewport */
-  height: calc(100vw / 4); /* Aspect ratio of 4:1 */
-  max-height: 396px; /* Limit height to LinkedIn's max */
   position: relative;
   background-size: cover; /* Ensure the image covers the entire banner area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent tiling */
   overflow: hidden;
+
+  /* Use aspect-ratio for consistent scaling */
+  aspect-ratio: 4 / 1; /* 4:1 ratio */
+  max-height: 396px; /* Limit height to LinkedIn's max */
 }
 
 .banner-section::before {
@@ -12798,32 +12800,24 @@ ul.list>li:before {
   background: rgba(0, 0, 0, 0.6); /* Dark overlay (adjust opacity if needed) */
   z-index: 1;
 }
+
 @media screen and (max-width: 767px) {
   .banner-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Ensure full height */
+    aspect-ratio: auto; /* Allow auto-adjust for smaller screens */
+    height: auto; /* Let content dictate height */
+    min-height: 250px; /* Maintain minimum height */
   }
   
   .banner-section h1 {
-    font-size: 30px !important; /* Reduce font size */
-    line-height: 1.2;
+    font-size: 24px !important; /* Smaller font for mobile */
   }
+
   .banner-section p {
     font-size: 14px !important;
-    line-height: 1.5;
+    line-height: 20px !important;
   }
+
   .banner-section .butn {
-    margin-top: 15px;
-    width: 100%; /* Full-width button */
-    font-size: 16px;
-    padding: 10px 20px;
+    margin-top: 10px !important;
   }
-  .banner-section .butn:hover {
-    background-color: #fff;
-    color: #000;
-  }
-  
 }
