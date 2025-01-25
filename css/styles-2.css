@@ -12800,6 +12800,21 @@ ul.list>li:before {
 }
 @media screen and (max-width: 767px) {
   .banner-section {
-    height: 250px; /* Adjust for smaller screens */
+    padding: 20px 10px; /* Adjust padding for mobile screens */
+    text-align: center; /* Center-align text */
+  }
+  .banner-section h1 {
+    font-size: 30px !important; /* Reduce font size */
+    line-height: 1.2;
+  }
+  .banner-section p {
+    font-size: 14px !important;
+    line-height: 1.5;
+  }
+  .banner-section .butn {
+    margin-top: 15px;
+    width: 100%; /* Full-width button */
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }
