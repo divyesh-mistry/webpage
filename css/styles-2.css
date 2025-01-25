@@ -12800,9 +12800,13 @@ ul.list>li:before {
 }
 @media screen and (max-width: 767px) {
   .banner-section {
-    padding: 20px 10px; /* Adjust padding for mobile screens */
-    text-align: center; /* Center-align text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full height */
   }
+  
   .banner-section h1 {
     font-size: 30px !important; /* Reduce font size */
     line-height: 1.2;
@@ -12817,4 +12821,9 @@ ul.list>li:before {
     font-size: 16px;
     padding: 10px 20px;
   }
+  .banner-section .butn:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
 }
