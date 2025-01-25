@@ -12801,23 +12801,31 @@ ul.list>li:before {
   z-index: 1;
 }
 
+@media screen and (max-width: 1199px) {
+  .line-banner .header-text h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .line-banner .header-text {
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+  }
+  .line-banner .header-text h1 {
+    font-size: 42px;
+    line-height: 48px;
+  }
+}
 @media screen and (max-width: 767px) {
-  .banner-section {
-    aspect-ratio: auto; /* Allow auto-adjust for smaller screens */
-    height: auto; /* Let content dictate height */
-    min-height: 250px; /* Maintain minimum height */
+  .line-banner .header-text h1 {
+    font-size: 36px;
+    line-height: 42px;
   }
-  
-  .banner-section h1 {
-    font-size: 24px !important; /* Smaller font for mobile */
-  }
-
-  .banner-section p {
-    font-size: 14px !important;
-    line-height: 20px !important;
-  }
-
-  .banner-section .butn {
-    margin-top: 10px !important;
+}
+@media screen and (max-width: 575px) {
+  .line-banner .header-text h1 {
+    font-size: 28px;
+    line-height: 36px;
   }
 }
