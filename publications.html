@@ -168,15 +168,15 @@
               Research Publications
             </h4>
           </div>
-          <p style="text-align: justify; font-size: 18px">
-            <b>Research Publications in Progress</b>:
-          </p>
-          <p style="text-align: justify; font-size: 16px">
+          <!-- <p style="text-align: justify; font-size: 18px"> -->
+            <!-- <b>Research Publications in Progress</b>: -->
+          <!-- </p>  -->
+          <!-- <p style="text-align: justify; font-size: 16px">
             Currently, there are several ongoing research projects that are in the process of publication. These works are focused on advancing the understanding of <i>nickel-based superalloys</i> and their performance under various conditions, and will be shared once completed.
           </p>
 
-          <!-- start buttons div -->
-          <!-- <div id="myBtnContainer">
+          <!-- <-- start buttons div --> 
+           <div id="myBtnContainer">
             <div class="publications active" onclick="filterSelection('all')">
               All
             </div>
@@ -184,13 +184,13 @@
               Journal Articles
             </div>
             <div class="publications" onclick="filterSelection('conferences')">
-              Conference Proceedings
+              Conference Presentation
             </div>
             <div class="publications" onclick="filterSelection('others')">
               Book Chapters
             </div>
-          </div> -->
-          <!-- end buttons div -->
+          </div> 
+          <!-- <-- end buttons div  -->
 
           <div
             class="separator-line-horrizontal-full bg-medium-light-gray"
@@ -198,75 +198,55 @@
 
           <!-- start publications list -->
           <div class="filter-container">
-            <!-- one publication item starts -->
-            <!-- <div class="filterDiv journals">
-              <a class="article-name" href="#publication"
-                >Cooperative Active Aircraft Protection Using Time
-                Constrained Nonlinear Guidance
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a
-              >
-              <p class="authors">
-                Abhinav Sinha, Shashi Ranjan Kumar, and Dwaipayan Mukherjee.
-              </p>
-              <p class="published-in">
-                under review.
-              </p>
-            </div> -->
-            <!-- one publication item ends -->
-
-            
-
-            
-
-
-
-
-
 
             <!-- one publication item starts -->
-            <!-- <div class="filterDiv journals">
+            <div class="filterDiv journals">
               <a class="article-name" href="#"
-                >Three-dimensional Nonlinear Path-following Guidance with Bounded Input
-                Constraints
+                > A Molecular Dynamics Study of Size Effects for Critical Resolved Shear Stress in Nickel Superalloys
                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i
               ></a>
               <p class="authors">
-                Saurabh Kumar, Shashi Ranjan Kumar, and Abhinav Sinha.
+                Divyesh A. Mistry, Amuthan A. Ramabathiran.
               </p>
-              <p class="published-in">under review [preprint available at <a href="https://arxiv.org/pdf/2409.08507
-                " target="_blank">arXiv:2404.08507
+              <p class="published-in">Submitted [preprint available at <a href="https://doi.org/10.48550/arXiv.2504.16409
+                " target="_blank"> arXiv:2504.16409
                 </a>]</p>
-            </div> -->
+            </div>
             <!-- one publication item ends -->
 
             <!-- one publication item starts -->
-            <!-- <div class="filterDiv journals">
+            <div class="filterDiv journals">
               <a class="article-name" href="#"
-                >Trajectory Tracking for Unmanned Aerial Vehicles in 3D Spaces under Motion Constraints
+                >Polycrystalline Discrete Dislocation Dynamics Framework for
+                Ni-based Superalloys with Prior Particle Boundaries (PPBs)
                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i
               ></a>
               <p class="authors">
-                Saurabh Kumar, Shashi Ranjan Kumar, and Abhinav Sinha.
+                Divyeh A. Mistry, Tawqeer Nasir Tak, P.J. Guruprasad
               </p>
-              <p class="published-in">under review [preprint available at <a href="https://arxiv.org/pdf/2407.10837" target="_blank">arXiv:2404.10837</a>]</p>
-            </div> -->
+              <p class="published-in">Communicated. [preprint will be available soon] <a
+            </div>
             <!-- one publication item ends -->
 
+          <!-- one conference item starts -->
+          <div class="filterDiv conferences">
+            <a class="article-name" href="https://complas2023.cimne.com/event/contribution/b63495cd-acfe-11ed-b019-000c29ddfc0c" target="_blank">
+              An Atomistically Informed Discrete Dislocation Dynamics Study of Prior Particle Boundaries in Ni Superalloys
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+            <p class="authors">
+              Divyesh A. Mistry, Amuthan A. Ramabathiran, P.J. Guruprasad
+            </p>
+            <p class="published-in">
+              Presented at the <strong>17th Conference of COMPLAS Series</strong>, 6 September 2023, Barcelona, Spain.
+            </p> <!-- ✅ Properly closed -->
+          </div>
+          
+          
+          <!-- one conference item ends -->
+
+ 
             
-
-            <!-- one publication item starts -->
-            <!-- <div class="filterDiv journals">
-              <a class="article-name" href="#"
-                >Cooperative Nonlinear Guidance Strategies for Guaranteed Pursuit-Evasion
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i
-              ></a>
-              <p class="authors">
-                Saurabh Kumar, Shashi Ranjan Kumar, and Abhinav Sinha.
-              </p>
-              <p class="published-in">under review [preprint available at <a href="https://arxiv.org/pdf/2402.06176" target="_blank">arXiv:2402.06176</a>]</p>
-            </div> -->
-            <!-- one publication item ends -->
-
       </section>
       <!-- end publications section -->
       <div class="separator-line-horrizontal-full bg-medium-light-gray"></div>
@@ -413,5 +393,50 @@
 
     <!-- custom scripts -->
     <script src="js/scroller.js"></script>
-  </body>
+<!-- dynamic content -->
+<script>
+  filterSelection("all");
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
+    }
+  }
+
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  var myBtnContainer = document.getElementById("myBtnContainer");
+  var publication = document.getElementsByClassName("publications");
+  for (var i = 0; i < publication.length; i++) {
+    publication[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+</body>
 </html>
+
