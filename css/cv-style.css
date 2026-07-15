@@ -8,31 +8,37 @@
   --accent-cyan: #06b6d4;     /* Quantum Cyan */
   --accent-teal: #10b981;     /* Dislocation Loop Green */
   --accent-indigo: #6366f1;   /* Stress Field Indigo */
-  --text-dark: #f3f4f6;       /* Soft Light Gray for text */
+  --text-dark: #e5e7eb;       /* Soft Light Gray for text */
   --text-light: #090d16;
   --text-muted: #9ca3af;      /* Gray Text */
   --bg-gradient: radial-gradient(circle at top, #111827 0%, #090d16 100%);
-  --glass-bg: rgba(17, 24, 39, 0.8);
-  --glass-border: rgba(55, 65, 81, 0.6);
-  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  --hover-shadow: 0 0 20px rgba(6, 182, 212, 0.25);
+  --glass-bg: rgba(17, 24, 39, 0.85);
+  --glass-border: rgba(6, 182, 212, 0.25);
+  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  --hover-shadow: 0 0 25px rgba(6, 182, 212, 0.3);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Computational Lattice Background Grid */
-body {
+/* Computational Lattice Background Grid & Force Dark Mode */
+body, .main-wrapper {
   font-family: 'Outfit', sans-serif !important;
   color: var(--text-dark) !important;
   background-color: var(--primary) !important;
   background-image: 
-    linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(6, 182, 212, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.035) 1px, transparent 1px);
   background-size: 40px 40px;
   background-attachment: fixed;
   overflow-x: hidden;
 }
 
-section {
+/* Force backgrounds of sections to be transparent to let grid show */
+section, 
+.bg-light-sky, 
+.bg-white, 
+.bg-light, 
+.bg-dark, 
+.footer-style9 {
   background: transparent !important;
 }
 
@@ -41,6 +47,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: #fff !important;
   letter-spacing: -0.5px;
+}
+
+p, li, span, address, td, th {
+  color: var(--text-dark) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
 }
 
 /* Glassmorphism Computational Cards */
@@ -73,19 +87,37 @@ h1, h2, h3, h4, h5, h6 {
 .glass-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--hover-shadow);
-  border-color: rgba(6, 182, 212, 0.5) !important;
+  border-color: rgba(6, 182, 212, 0.55) !important;
 }
 
 .glass-card:hover::before {
   transform: translateX(100%);
 }
 
+/* Add custom active terminal indicator in top right of glass cards */
+.glass-card::after {
+  content: '[sys:active]';
+  font-family: 'Fira Code', monospace;
+  font-size: 9px;
+  color: var(--accent-cyan);
+  opacity: 0.15;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.glass-card:hover::after {
+  opacity: 0.7;
+}
+
 /* Navigation Overrides */
 header {
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
-  background: rgba(9, 13, 22, 0.8) !important;
-  border-bottom: 1px solid rgba(6, 182, 212, 0.15) !important;
+  background: rgba(9, 13, 22, 0.85) !important;
+  border-bottom: 1px solid rgba(6, 182, 212, 0.18) !important;
 }
 
 .navbar-brand h6 {
@@ -97,7 +129,7 @@ header {
 
 .navbar-nav li a {
   color: var(--text-muted) !important;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
   transition: var(--transition);
 }
@@ -111,8 +143,21 @@ header {
 /* Hero Section */
 .banner-section {
   position: relative;
-  padding: 180px 0 120px 0;
-  background: radial-gradient(circle at center, rgba(6, 182, 212, 0.1) 0%, transparent 70%) !important;
+  padding: 220px 0 140px 0;
+  background: radial-gradient(circle at center, rgba(9, 13, 22, 0.4) 0%, var(--primary) 90%), url('../img/research_ds/Md_flow.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  border-bottom: 1px solid rgba(6, 182, 212, 0.15) !important;
+}
+
+#particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero-subtitle {
@@ -203,8 +248,8 @@ header {
   font-family: 'Fira Code', monospace !important;
   display: inline-block;
   padding: 6px 14px;
-  background: rgba(6, 182, 212, 0.15);
-  color: var(--accent-cyan);
+  background: rgba(6, 182, 212, 0.15) !important;
+  color: var(--accent-cyan) !important;
   font-weight: 600;
   font-size: 0.875rem;
   border-radius: 6px;
@@ -223,7 +268,7 @@ header {
 .timeline-institution {
   font-size: 1.05rem;
   font-weight: 500;
-  color: var(--accent-indigo);
+  color: var(--accent-indigo) !important;
   margin-bottom: 15px;
 }
 
@@ -239,33 +284,46 @@ header {
 }
 
 /* Core Competencies Grid */
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
 .competency-card {
   border-left: 4px solid var(--accent-indigo) !important;
 }
 
 .competency-icon {
-  background: rgba(99, 102, 241, 0.15);
-  color: var(--accent-cyan);
+  background: rgba(99, 102, 241, 0.15) !important;
+  color: var(--accent-cyan) !important;
   box-shadow: 0 0 10px rgba(6, 182, 212, 0.15);
 }
 
 .skill-badge {
   font-family: 'Fira Code', monospace !important;
   padding: 6px 12px;
-  background: rgba(17, 24, 39, 0.5);
-  color: var(--text-dark);
+  background: rgba(17, 24, 39, 0.6) !important;
+  color: var(--text-dark) !important;
   font-size: 0.8rem;
   font-weight: 500;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(6, 182, 212, 0.15) !important;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  margin: 4px;
 }
 
 .skill-badge:hover {
-  background: var(--accent-cyan);
-  color: var(--primary);
-  border-color: var(--accent-cyan);
+  background: var(--accent-cyan) !important;
+  color: var(--primary) !important;
+  border-color: var(--accent-cyan) !important;
   box-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+}
+
+.skill-badge i {
+  margin-right: 6px;
 }
 
 /* Certifications and Awards Cards */
@@ -274,8 +332,8 @@ header {
 }
 
 .cert-icon {
-  background: rgba(16, 185, 129, 0.15);
-  color: var(--accent-teal);
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: var(--accent-teal) !important;
   box-shadow: 0 0 10px rgba(16, 185, 129, 0.15);
 }
 
@@ -285,11 +343,11 @@ header {
 
 /* Publication Styling */
 .pub-item {
-  border-left: 3px solid var(--accent-cyan);
+  border-left: 3px solid var(--accent-cyan) !important;
 }
 
 .pub-item:hover {
-  border-left-color: var(--accent-indigo);
+  border-left-color: var(--accent-indigo) !important;
 }
 
 .pub-title {
@@ -303,42 +361,86 @@ header {
 }
 
 .pub-authors {
-  color: var(--text-dark);
+  color: var(--text-dark) !important;
 }
 
 .pub-authors strong {
-  color: var(--accent-cyan);
+  color: var(--accent-cyan) !important;
 }
 
 .pub-journal {
-  color: var(--text-muted);
+  color: var(--text-muted) !important;
 }
 
 /* Separator Line */
 .cv-divider {
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, rgba(255, 255, 255, 0) 100%) !important;
+  height: 2px !important;
+  border: none !important;
 }
 
 .separator-line-horrizontal-full {
-  background-color: rgba(6, 182, 212, 0.1) !important;
+  background-color: rgba(6, 182, 212, 0.15) !important;
 }
 
-/* Footer / Sitemap Styling */
+/* Footer / Sitemap Styling - Fully Redesigned for Dark Lattice */
 footer {
-  background-color: var(--primary-light) !important;
-  border-top: 1px solid rgba(6, 182, 212, 0.15) !important;
+  background-color: rgba(17, 24, 39, 0.95) !important;
+  border-top: 1px solid rgba(6, 182, 212, 0.2) !important;
+  padding: 80px 0 45px 0 !important;
+}
+
+footer .footer-title-style9 {
+  color: #fff !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 25px !important;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+footer .footer-title-style9::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35px;
+  height: 3px;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 6px var(--accent-cyan);
 }
 
 footer address {
-  color: var(--text-dark);
+  color: var(--text-dark) !important;
+  line-height: 1.8 !important;
+  font-size: 15px;
 }
 
 footer a {
   color: var(--accent-cyan) !important;
+  font-weight: 500;
+  transition: var(--transition);
 }
 
 footer a:hover {
   color: #fff !important;
+  text-shadow: 0 0 8px var(--accent-cyan);
+}
+
+footer ul.footer-list-style3 li {
+  margin-bottom: 12px;
+}
+
+footer ul.footer-list-style3 li i {
+  color: var(--accent-cyan) !important;
+  margin-right: 8px;
+}
+
+footer ul.footer-list-style3 li a {
+  color: var(--text-muted) !important;
+}
+
+footer ul.footer-list-style3 li a:hover {
+  color: var(--accent-cyan) !important;
 }
 
 /* Custom changes to make elements look premium */
@@ -372,6 +474,6 @@ footer a:hover {
 }
 
 .collaborator-avatar {
-  border-color: var(--accent-cyan) !important;
-  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2) !important;
+  border: 4px solid var(--accent-cyan) !important;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3) !important;
 }
