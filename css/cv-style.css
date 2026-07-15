@@ -1,0 +1,377 @@
+/* cv-style.css - Custom stylesheet for modern Academic CV portfolio */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  --primary: #0f172a;        /* Deep Slate */
+  --primary-light: #1e293b;  /* Lighter Slate */
+  --accent-blue: #0284c7;    /* Modern Sky Blue */
+  --accent-teal: #0d9488;    /* Professional Teal */
+  --accent-indigo: #4f46e5;  /* Deep Indigo */
+  --text-dark: #334155;      /* Slate Text */
+  --text-light: #f8fafc;     /* Off-White */
+  --text-muted: #64748b;     /* Gray Text */
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(226, 232, 240, 0.8);
+  --card-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+  --hover-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.15);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base resets & typography */
+body {
+  font-family: 'Outfit', 'Montserrat', sans-serif !important;
+  color: var(--text-dark);
+  background: var(--bg-gradient);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', 'Montserrat', sans-serif !important;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Glassmorphism Panels */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  margin-bottom: 30px;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--hover-shadow);
+  border-color: rgba(2, 132, 199, 0.3);
+}
+
+/* Navigation Overrides */
+header {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+header.scrollHeader {
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+.navbar-brand h6 {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px;
+}
+
+/* Hero Section */
+.banner-section {
+  position: relative;
+  padding: 160px 0 100px 0;
+  background-attachment: fixed !important;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #bae6fd !important;
+  font-weight: 500;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Timelines (Experience & Education) */
+.timeline-container {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-blue) 0%, var(--accent-indigo) 100%);
+  opacity: 0.4;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -30px;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid var(--accent-blue);
+  z-index: 2;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+  transition: var(--transition);
+}
+
+.timeline-item:hover .timeline-dot {
+  background: var(--accent-indigo);
+  border-color: #fff;
+  transform: scale(1.2);
+}
+
+.timeline-date {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(2, 132, 199, 0.1);
+  color: var(--accent-blue);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 30px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.timeline-role {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.timeline-institution {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--accent-indigo);
+  margin-bottom: 15px;
+}
+
+.timeline-details {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.timeline-details li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  text-align: justify;
+}
+
+.timeline-details li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
+  font-weight: bold;
+}
+
+/* Core Competencies Grid */
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.competency-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.competency-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  padding-bottom: 12px;
+}
+
+.competency-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--accent-indigo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.competency-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.competency-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.skill-badge {
+  padding: 6px 12px;
+  background: rgba(15, 23, 42, 0.04);
+  color: var(--text-dark);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  transition: var(--transition);
+}
+
+.skill-badge:hover {
+  background: var(--accent-blue);
+  color: #fff;
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
+}
+
+/* Section Header Styling */
+.section-title {
+  position: relative;
+  margin-bottom: 50px;
+  padding-bottom: 15px;
+  font-weight: 800;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-blue);
+  border-radius: 2px;
+}
+
+.section-title-center {
+  text-align: center;
+}
+
+.section-title-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Certifications and Awards Cards */
+.cert-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cert-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(13, 148, 136, 0.1);
+  color: var(--accent-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.cert-info h5 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.cert-info p {
+  margin-bottom: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Publication Styling */
+.pub-item {
+  border-left: 3px solid var(--accent-blue);
+  padding-left: 20px;
+  margin-bottom: 25px;
+  transition: var(--transition);
+}
+
+.pub-item:hover {
+  border-left-color: var(--accent-indigo);
+  padding-left: 25px;
+}
+
+.pub-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--primary);
+  display: block;
+  text-decoration: none;
+}
+
+.pub-title:hover {
+  color: var(--accent-blue);
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.pub-journal {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* Collaborators list */
+.collaborator-avatar {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.1);
+  transition: var(--transition);
+  object-fit: cover;
+}
+
+.collaborator-avatar:hover {
+  transform: scale(1.08) rotate(2deg);
+  border-color: var(--accent-blue);
+}
+
+/* Footer & Addresses */
+address {
+  font-style: normal;
+  line-height: 1.7;
+}
+
+/* Custom separator line */
+.cv-divider {
+  height: 1px;
+  background: radial-gradient(circle, rgba(15, 23, 42, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  margin: 60px 0;
+}

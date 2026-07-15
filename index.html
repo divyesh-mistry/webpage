@@ -55,6 +55,7 @@
 
     <!-- custom css -->
     <link href="css/styles-2.css" rel="stylesheet" id="colors" />
+    <link href="css/cv-style.css" rel="stylesheet" />
 
     <!-- fonts css -->
     <link rel="stylesheet" href="css/fonts.css" />
@@ -123,13 +124,19 @@
                         <a href="#about">About</a>
                       </li>
                       <li>
+                        <a href="#experience">Experience</a>
+                      </li>
+                      <li>
+                        <a href="#education">Education</a>
+                      </li>
+                      <li>
+                        <a href="#competencies">Competencies</a>
+                      </li>
+                      <li>
                         <a href="#research">Research</a>
                       </li>
                       <li>
-                        <a href="#courses">Courses</a>
-                      </li>
-                      <li>
-                        <a href="#people">People</a>
+                        <a href="#publications">Publications</a>
                       </li>
                       <li>
                         <a href="#news">News</a>
@@ -157,18 +164,19 @@
       >
         <div class="container absolute-middle-center z-index-9">
           <div class="row">
-            <div class="col-lg-7 sm-margin-40px-bottom">
+            <div class="col-lg-8 sm-margin-40px-bottom">
               <h1
                 class="font-size60 md-font-size42 sm-font-size38 xs-font-size30 font-weight-800 text-white"
               >
-              Multiscale Modeling
+              Dr. Divyesh Mistry
               </h1>
-              <p
-                class="width-95 xs-width-100 font-size16 xs-display-none line-height-30 xs-font-size14 xs-line-height-26 font-size20 text-white"
-              ></p>
+              <div class="hero-subtitle">Computational Materials Scientist</div>
+              <p class="width-95 xs-width-100 line-height-30 font-size20 text-white margin-20px-top" style="opacity: 0.9;">
+                Postdoctoral Research Fellow at Merrimack College | PhD, IIT Bombay
+              </p>
               <div class="margin-30px-top sm-margin-25px-top">
                 <a href="#about" class="butn theme white-hover"
-                  ><span>Get Started</span></a
+                  ><span>Learn More</span></a
                 >
               </div>
             </div>
@@ -184,8 +192,6 @@
       <!-- end banner section-->
 
       <!-- start about section -->
-     
-        <!-- start about section -->
       <section class="lg" id="about">
         <div class="container">
           <div class="row">
@@ -198,15 +204,16 @@
                     src="img/people/divyesh.jpeg"
                     alt="Dr. Divyesh Mistry"
                     title="Dr. Divyesh Mistry"
+                    class="collaborator-avatar"
                   />
                   <style>
                     .my-image img {
-                      width: 400px; /* Set the desired size */
-                      height: 400px; /* Make height equal to width for a perfect circle */
-                      /* border-radius: 90%; Makes the image circular */
-                      object-fit: cover; /* Ensures the image fits within the circle */
-                      border: 2px solid #000; /* Optional: Adds a border to the circle */
-                      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for styling */
+                      width: 250px;
+                      height: 250px;
+                      border-radius: 50%;
+                      object-fit: cover;
+                      border: 4px solid var(--accent-blue);
+                      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.15);
                     }
                   </style>
                 </div>
@@ -218,73 +225,294 @@
                   style="
                     border-radius: 40px;
                     width: 80%;
-                    margin-left: 9%;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'Outfit', sans-serif;
                     font-weight: bold;
-                    font-size: 20px;
+                    font-size: 16px;
+                    border-color: var(--accent-blue);
+                    color: var(--accent-blue);
                   "
                 >
-                  View My Resume
+                  <i class="fa fa-download" style="margin-right: 8px;"></i> Download CV
                 </button></a
               >
             </div>
-            <div class="col-md-8 text-center xs-margin-25px-bottom">
-              <h5
-                class="margin-40px-bottom font-weight-700 font-size30 md-font-size28 xs-font-size26"
-                style="font-family: Big John"
-              >
-                Dr. Divyesh Mistry
-              </h5>
+            <div class="col-md-8 text-left xs-margin-25px-bottom">
+              <h2 class="section-title">Dr. Divyesh Mistry</h2>
               <p
-  class="font-size22 sm-font-size15 line-height-30 sm-line-height-28 width-100 sm-width-100 xs-width-85 center-col margin-30px-bottom"
-  style="
-    font-family: 'Montserrat', sans-serif;
-    text-align: justify;
-  "
->
-  <strong>Dr. Divyesh Mistry</strong> is a computational materials scientist whose work centers on
-  <strong>physics-informed multiscale descriptions of plasticity and dislocation transport
-  in nickel-based superalloys</strong>.
-  His research addresses how <strong>γ/γ′ architectures and prior particle boundaries (PPBs)</strong>
-  act as coupled strength- and heterogeneity-controlling features across length scales.
-  He develops <strong>hierarchical modeling frameworks</strong> that integrate molecular dynamics,
-  discrete dislocation dynamics, and continuum mechanics to identify mechanistic links
-  between defect-scale interactions and macroscopic constitutive response.
-  A distinguishing aspect of his work is the use of <strong>atomistically derived inputs</strong>
-  to construct transferable models of strengthening, strain localization, and rate-dependent
-  deformation relevant to high-temperature and high-strain-rate environments.
-  His research combines large-scale simulation, high-performance computing, and
-  targeted experimental correlation to enable predictive microstructure–property relations.
-</p>
+                class="font-size18 line-height-32 margin-30px-bottom"
+                style="font-family: 'Outfit', sans-serif; text-align: justify;"
+              >
+                <strong>Dr. Divyesh Mistry</strong> is a computational materials scientist currently working as a 
+                <strong>Postdoctoral Research Fellow</strong> at <strong>Merrimack College</strong> (North Andover, MA, USA). 
+                His research centers on physics-informed multiscale descriptions of plasticity, defect evolution, and fracture in 
+                advanced structural materials, including nickel-based superalloys and tungsten alloys. He integrates molecular dynamics, 
+                discrete dislocation dynamics, and continuum mechanics to identify mechanistic links between defect-scale interactions 
+                and macroscopic constitutive responses.
+              </p>
+              <p
+                class="font-size18 line-height-32 margin-30px-bottom"
+                style="font-family: 'Outfit', sans-serif; text-align: justify;"
+              >
+                Dr. Mistry completed his <strong>Ph.D. in Aerospace Engineering</strong> from the <strong>Indian Institute of Technology Bombay</strong>, 
+                where he was awarded the prestigious MHRD Teaching Assistantship. He holds an <strong>M.Tech. in Mechanical Engineering</strong> 
+                from the <strong>Indian Institute of Technology Kharagpur</strong>, specializing in Mechanical System Design.
+              </p>
+            </div>
 
-</div>
-
-<div class="col-md-12 text-center xs-margin-25px-bottom">
-  <div class="separator-line-horrizontal-full bg-medium-light-gray"></div>
-  <p
-    class="font-size18 sm-font-size15 line-height-30 sm-line-height-28 width-95 sm-width-100 xs-width-85 center-col no-margin-bottom margin-30px-top"
-    style="font-family: 'Montserrat', sans-serif; text-align: justify;"
-  >
-    Dr. Mistry received his <strong>M.Tech. in Mechanical Engineering</strong> from the
-    <strong>Indian Institute of Technology Kharagpur</strong>, where he developed mesh-free
-    numerical formulations for smart composite structures, providing a rigorous foundation
-    in continuum mechanics and computational methods.
-    His academic trajectory includes experience as a <strong>Teaching Assistant at IIT Bombay</strong>
-    and as an <strong>Assistant Professor</strong>, with sustained engagement in graduate mentoring,
-    curriculum support, and advanced instruction in finite element methods,
-    multiscale modeling, and scientific computing.
-    His broader objective is to advance <strong>mechanism-driven computational frameworks</strong>
-    that remain interpretable, scalable, and relevant to materials
-    operating under extreme conditions.
-  </p>
-</div>
-
-        <!-- </div> -->
+            <div class="col-md-12 margin-30px-top">
+              <div class="glass-card">
+                <h4 style="margin-bottom: 15px; color: var(--accent-blue);">
+                  <i class="fa fa-user-circle" style="margin-right: 10px;"></i> Professional Summary
+                </h4>
+                <p style="font-size: 16px; line-height: 1.8; text-align: justify; margin-bottom: 0;">
+                  Computational Materials Scientist with over 5 years of experience specializing in atomistic simulations and multiscale modeling of deformation mechanisms in advanced structural materials. Expert in deploying large-scale molecular dynamics (MD) workflows using LAMMPS on high-performance computing (HPC) platforms to characterize defect evolution, dislocation dynamics, and fracture under extreme thermo-mechanical loading conditions. Highly proficient in utilizing Python for scientific computing, high-volume simulation data analysis, and predictive model development. Proven track record of conducting microstructure-sensitive modeling of high-temperature alloys and refractory metals, directly transferable to predicting material behavior in nuclear and reactor environments.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <!-- end about section -->
 
-      <!-- blue separator -->
-      <span class="block-btn"><span class="resume-text"></span> </span>
+      <!-- start experience section -->
+      <section class="lg" id="experience" style="padding: 80px 0; background-color: #f8fafc;">
+        <div class="container">
+          <h2 class="section-title">Professional Experience</h2>
+          <div class="timeline-container">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">April 2026 – Present</span>
+              <div class="glass-card">
+                <div class="timeline-role">Postdoctoral Research Fellow</div>
+                <div class="timeline-institution">Merrimack College, Mechanical Engineering, North Andover, MA, USA</div>
+                <ul class="timeline-details">
+                  <li>Leading multiscale MD/DDD investigations into deformation, defect evolution, and Ductile-to-Brittle Transition Temperature (DBTT) shifts in tungsten and tungsten–rhenium alloys.</li>
+                  <li>Deploying high-throughput, automated LAMMPS simulation workflows across HPC clusters to quantify atomistic mechanisms governing low-temperature cleavage and DBTT.</li>
+                  <li>Developing computational frameworks to isolate the effects of dislocation density, radiation-induced defects, and crack-tip plasticity on brittle-to-ductile transitions under extreme loading.</li>
+                  <li>Engineering custom Python pipelines (NumPy/Pandas) to accelerate post-processing and analysis of large simulation datasets.</li>
+                  <li>Collaborating with industry and academic partners on technical reports and proposals for predicting material integrity in extreme environments.</li>
+                  <li>Mentoring graduate and undergraduate students in computational mechanics and parallel molecular dynamics setups.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">Jan 2025 – Dec 2025</span>
+              <div class="glass-card">
+                <div class="timeline-role">Junior Research Fellow (DRDO Project)</div>
+                <div class="timeline-institution">IIT Bombay, Aerospace Engineering, Mumbai, India</div>
+                <ul class="timeline-details">
+                  <li>Conducted research on the constitutive modelling and high strain-rate response of Shape Memory Alloy (SMA)-based composites for aerospace and defense applications.</li>
+                  <li>Performed dynamic impact experiments using Split Hopkinson Pressure Bar (SHPB) systems to characterize material behaviour under high strain-rate loading.</li>
+                  <li>Integrated experimental observations with numerical simulations to calibrate and validate constitutive models for aerospace structural applications.</li>
+                  <li>Assisted in project execution, data analysis, and mentoring of junior researchers in experimental characterization and computational modelling.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">Jan 2019 – June 2025</span>
+              <div class="glass-card">
+                <div class="timeline-role">Ph.D. Research Scholar</div>
+                <div class="timeline-institution">IIT Bombay, Aerospace Engineering, Mumbai, India</div>
+                <ul class="timeline-details">
+                  <li>Designed and executed large-scale atomistic simulations using LAMMPS on high-performance computing platforms to investigate generalized stacking fault energies, defect mobilities, and dislocation core structures.</li>
+                  <li>Developed a physics-informed hierarchical multiscale framework that maps atomistic-derived parameters (drag coefficients, obstacle strengths, and lattice strain fields) directly into mesoscale continuum models.</li>
+                  <li>Engineered automated post-processing and data-mining pipelines using Python to parse high-volume molecular dynamics (MD) trajectory data, track defect coordinates, and analyze structural evolution via OVITO.</li>
+                  <li>Authored a custom parallel polycrystalline Discrete Dislocation Dynamics (DDD) code coupled with Finite Element Analysis (FEA) to simulate 3D defect interactions and slip localization near internal interfaces.</li>
+                  <li>Utilized parallel computing (MPI) to scale atomistic simulations up to multi-million atom systems, establishing quantitative relationships between alloy microstructures and mechanical response under high stress fields.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">Jan 2019 – Dec 2023</span>
+              <div class="glass-card">
+                <div class="timeline-role">Graduate Teaching Assistant</div>
+                <div class="timeline-institution">IIT Bombay, Aerospace Engineering, Mumbai, India</div>
+                <ul class="timeline-details">
+                  <li>Assisted instruction in Continuum Mechanics, Finite Element Methods (FEM), and Multiscale Modelling for undergraduate and postgraduate engineering courses.</li>
+                  <li>Developed and supervised computational laboratory exercises involving numerical methods, finite element analysis, and scientific programming.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">June 2016 – Dec 2018</span>
+              <div class="glass-card">
+                <div class="timeline-role">Assistant Professor</div>
+                <div class="timeline-institution">CMR Institute of Technology, Mechanical Engineering, Bangalore, India</div>
+                <ul class="timeline-details">
+                  <li>Taught undergraduate courses in Finite Element Methods, Experimental Stress Analysis, and Solid Mechanics.</li>
+                  <li>Developed computational laboratory modules using ANSYS, MATLAB, and Python to support engineering analysis and numerical modelling.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">June 2014 – July 2016</span>
+              <div class="glass-card">
+                <div class="timeline-role">Graduate Teaching Assistant & M.Tech. Researcher</div>
+                <div class="timeline-institution">IIT Kharagpur, Mechanical Engineering, Kharagpur, India</div>
+                <ul class="timeline-details">
+                  <li>Developed and validated computational models using ABAQUS and ANSYS for structural mechanics and vibration analyses.</li>
+                  <li>Conducted laboratory instruction in Finite Element Modelling, Vibration Analysis, and Tribology, integrating theoretical concepts with numerical simulations.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end experience section -->
+
+      <!-- start education section -->
+      <section class="lg" id="education" style="padding: 80px 0;">
+        <div class="container">
+          <h2 class="section-title">Education</h2>
+          <div class="timeline-container">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">Jan 2019 – Dec 2025</span>
+              <div class="glass-card">
+                <div class="timeline-role">Doctorate (Ph.D.) in Aerospace Engineering</div>
+                <div class="timeline-institution">Indian Institute of Technology - Bombay, Mumbai, India</div>
+                <ul class="timeline-details">
+                  <li><strong>Thesis:</strong> Multiscale Modeling of Prior Particle Boundaries in Nickel-based Superalloys</li>
+                  <li><strong>CGPA:</strong> 9.36 / 10</li>
+                  <li><strong>Advisors:</strong> Prof. Amuthan A. Ramabathiran, Prof. P. J. Guruprasad</li>
+                  <li><strong>Funding:</strong> MHRD Teaching Assistantship through Project</li>
+                  <li><strong>Key Subjects:</strong> Multiscale Modeling, Continuum Mechanics, Plasticity, Computational Mechanics</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">Jun 2014 – Jul 2016</span>
+              <div class="glass-card">
+                <div class="timeline-role">M.Tech. in Mechanical Engineering (Mechanical System Design)</div>
+                <div class="timeline-institution">Indian Institute of Technology - Kharagpur, West Bengal, India</div>
+                <ul class="timeline-details">
+                  <li><strong>Thesis:</strong> A Mesh-Free Model for Static Analysis of Smart Composite Beams</li>
+                  <li><strong>CGPA:</strong> 8.85 / 10</li>
+                  <li><strong>Advisor:</strong> Prof. Manas Chandra Ray</li>
+                  <li><strong>Funding:</strong> MHRD GATE Fellowship</li>
+                  <li><strong>Key Subjects:</strong> Solid Mechanics, Fracture Mechanics, Finite Element Methods, Composites, Elasticity, Vibration</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">Dec 2013</span>
+              <div class="glass-card">
+                <div class="timeline-role">B.E. in Aeronautical Engineering (Aero Mechanical)</div>
+                <div class="timeline-institution">The Aeronautical Society of India, New Delhi</div>
+                <ul class="timeline-details">
+                  <li><strong>Key Subjects:</strong> Aircraft Structures, Aerodynamics, Propulsion, Stability & Control, Solid and Fluid Mechanics</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end education section -->
+
+      <!-- start competencies section -->
+      <section class="lg bg-light-sky" id="competencies" style="padding: 80px 0;">
+        <div class="container">
+          <h2 class="section-title section-title-center">Core Competencies</h2>
+          <div class="competencies-grid">
+            
+            <!-- Atomistic & Multiscale Modelling -->
+            <div class="glass-card competency-card">
+              <div class="competency-header">
+                <div class="competency-icon">
+                  <i class="fa fa-cubes"></i>
+                </div>
+                <h4 class="competency-title">Atomistic & Multiscale Modelling</h4>
+              </div>
+              <div class="competency-badges">
+                <span class="skill-badge">Molecular Dynamics (MD)</span>
+                <span class="skill-badge">Discrete Dislocation Dynamics (DDD)</span>
+                <span class="skill-badge">Atomistic Simulations</span>
+                <span class="skill-badge">Microstructure Evolution</span>
+                <span class="skill-badge">Defect Mechanics</span>
+              </div>
+            </div>
+
+            <!-- Computational Modeling Tools -->
+            <div class="glass-card competency-card">
+              <div class="competency-header">
+                <div class="competency-icon">
+                  <i class="fa fa-wrench"></i>
+                </div>
+                <h4 class="competency-title">Computational Modeling Tools</h4>
+              </div>
+              <div class="competency-badges">
+                <span class="skill-badge">LAMMPS</span>
+                <span class="skill-badge">OVITO</span>
+                <span class="skill-badge">Atomsk</span>
+                <span class="skill-badge">ABAQUS</span>
+                <span class="skill-badge">ANSYS</span>
+                <span class="skill-badge">COMSOL</span>
+              </div>
+            </div>
+
+            <!-- Programming & Scientific Computing -->
+            <div class="glass-card competency-card">
+              <div class="competency-header">
+                <div class="competency-icon">
+                  <i class="fa fa-code"></i>
+                </div>
+                <h4 class="competency-title">Programming & Scientific Computing</h4>
+              </div>
+              <div class="competency-badges">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">HPC (MPI/OpenMP)</span>
+                <span class="skill-badge">C++</span>
+                <span class="skill-badge">Fortran</span>
+                <span class="skill-badge">Bash Scripting</span>
+                <span class="skill-badge">Parallel Frameworks</span>
+                <span class="skill-badge">Git</span>
+              </div>
+            </div>
+
+            <!-- Data Analysis & Visualization -->
+            <div class="glass-card competency-card">
+              <div class="competency-header">
+                <div class="competency-icon">
+                  <i class="fa fa-line-chart"></i>
+                </div>
+                <h4 class="competency-title">Data Analysis & Visualization</h4>
+              </div>
+              <div class="competency-badges">
+                <span class="skill-badge">NumPy</span>
+                <span class="skill-badge">Pandas</span>
+                <span class="skill-badge">SciPy</span>
+                <span class="skill-badge">Matplotlib</span>
+                <span class="skill-badge">Automated Post-Processing</span>
+                <span class="skill-badge">Simulation Data Analysis</span>
+              </div>
+            </div>
+
+            <!-- Tools & Environments -->
+            <div class="glass-card competency-card">
+              <div class="competency-header">
+                <div class="competency-icon">
+                  <i class="fa fa-desktop"></i>
+                </div>
+                <h4 class="competency-title">Tools & Environments</h4>
+              </div>
+              <div class="competency-badges">
+                <span class="skill-badge">Linux (Ubuntu)</span>
+                <span class="skill-badge">HPC Clusters</span>
+                <span class="skill-badge">GitHub</span>
+                <span class="skill-badge">LaTeX</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- end competencies section -->
 
       <!-- start research section -->
       <section class="lg" id="research">
@@ -722,323 +950,210 @@
           </div> -->
           <!-- end a row -->
 
-          <a href="publications.html#publication" target="_blank"
-            ><button class="btn-hover color-9">SEE ALL PUBLICATIONS</button></a
-          >
         </div>
       </section>
       <!-- end research section -->
+
+      <!-- start publications section -->
+      <section class="lg" id="publications" style="padding: 80px 0; background-color: #ffffff;">
+        <div class="container">
+          <h2 class="section-title">Selected Publications</h2>
+          
+          <div class="row">
+            <div class="col-md-12">
+              
+              <!-- Pub 1 -->
+              <div class="pub-item">
+                <a href="https://doi.org/10.1016/j.commatsci.2025.114122" target="_blank" class="pub-title">
+                  Size-Dependent Power Laws for Edge Dislocations in Nickel Superalloys: A Molecular Dynamics Study
+                </a>
+                <div class="pub-authors"><strong>Mistry D. A.</strong>, &amp; Ramabathiran, A. A.</div>
+                <div class="pub-journal"><em>Computational Materials Science</em>, 259 (2025), DOI: 10.1016/j.commatsci.2025.114122</div>
+              </div>
+
+              <!-- Pub 2 -->
+              <div class="pub-item">
+                <span class="pub-title">
+                  A Discrete Dislocation Dynamics Study of Prior Particle Boundary Effects in Ni-Based Superalloys
+                </span>
+                <div class="pub-authors"><strong>Mistry D. A.</strong>, Tawqeer N. Tak, &amp; Guruprasad, P. J.</div>
+                <div class="pub-journal"><em>Journal of Engineering Materials and Technology (ASME)</em> (Revision Under Review)</div>
+              </div>
+
+              <!-- Pub 3 -->
+              <div class="pub-item">
+                <span class="pub-title">
+                  Polycrystalline Discrete Dislocation Dynamics of Ni-Based Superalloys: Interactions with Prior Particle Boundaries and Second Phases Using Atomistically Informed Inputs
+                </span>
+                <div class="pub-authors"><strong>Mistry D. A.</strong>, Tawqeer N. Tak, &amp; Guruprasad, P. J.</div>
+                <div class="pub-journal"><em>Manuscript in Preparation</em></div>
+              </div>
+
+              <!-- Pub 4 -->
+              <div class="pub-item">
+                <span class="pub-title">
+                  Multiscale Modeling of Dislocation–Precipitate–PPB Interactions in Powder-Metallurgy Nickel Superalloys
+                </span>
+                <div class="pub-authors"><strong>Mistry D. A.</strong>, Avik Mahata, Amuthan A. Ramabathiran, P. J. Guruprasad, &amp; Tawqeer N. Tak</div>
+                <div class="pub-journal"><em>Engineering Mechanics Institute Conference (EMI 2026)</em>, June 2–5, 2026, Boulder, Colorado, USA.</div>
+              </div>
+
+              <!-- Pub 5 -->
+              <div class="pub-item">
+                <span class="pub-title">
+                  Hierarchical Multiscale Modeling of Plasticity in Ni-Based Superalloys: The Combined Role of Prior Particle Boundaries and Second Phases
+                </span>
+                <div class="pub-authors"><strong>Mistry D. A.</strong>, Tawqeer N. Tak, &amp; Guruprasad, P. J.</div>
+                <div class="pub-journal"><em>14th International Symposium on Plasticity and Impact Mechanics (IMPLAST 2025)</em>, October 12–16, 2025, IIT Roorkee, India.</div>
+              </div>
+
+              <!-- Pub 6 -->
+              <div class="pub-item">
+                <a href="https://complas2023.cimne.com/event/contribution/b63495cd-acfe-11ed-b019-000c29ddfc0c" target="_blank" class="pub-title">
+                  An Atomistically Informed Discrete Dislocation Dynamics Study of Prior Particle Boundaries in Ni-Based Superalloys
+                </a>
+                <div class="pub-authors"><strong>Mistry D. A.</strong>, Guruprasad, P. J., &amp; Ramabathiran, A. A.</div>
+                <div class="pub-journal"><em>17th Conference on Computational Plasticity (COMPLAS)</em>, September 5–7, 2023, Barcelona, Spain.</div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="text-center margin-40px-top">
+            <a href="publications.html#publication" target="_blank" class="butn theme"
+              ><span><i class="fa fa-search" style="margin-right: 8px;"></i> Search & Filter Publications</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- end publications section -->
 
       <!-- start separator -->
       <div class="separator-line-horrizontal-full bg-medium-light-gray"></div>
       <!-- end separator-->
 
-      <!-- start courses section -->
-      <!-- <section class="lg" id="courses">
+      <!-- start awards and certifications section -->
+      <section class="lg bg-light-sky" id="awards" style="padding: 80px 0;">
         <div class="container">
-          <div class="section-heading title-style7">
-            <h4 class="no-margin-bottom" style="font-family: Big John">
-              Courses, Tutorials, Talks, Seminars
-            </h4>
-          </div>
-
           <div class="row">
-            <div
-              class="col-lg-4 col-md-6 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="blog-style7">
-                <div
-                  class="padding-40px-tb padding-30px-lr xs-padding-30px-tb xs-padding-25px-lr"
-                >
-                  <ul class="no-margin-botton">
-                    <li
-                      class="display-inline-block font-size14 font-weight-600"
-                    >
-                      <p style="font-family: Lora SemiBold">
-                        AEEM 5115/6015 (Spring 2025)
-                      </p>
-                    </li>
-                  </ul>
-                  <h4
-                    class="font-size14 xs-font-size12 font-weight-300 line-height-32 xs-line-height-26"
-                  >
-                    <a
-                      href="AEEM6015.html#course-section"
-                      class="text-extra-dark-gray"
-                      style="font-family: Big John"
-                      >Modern Control</a
-                    >
-                    <p
-                      class="text-extra-dark-gray"
-                      style="font-family: Big John; opacity: 0"
-                    >
-                      test
-                    </p>
-                  </h4>
+            
+            <!-- Left Column: Certifications -->
+            <div class="col-lg-6 md-margin-40px-bottom">
+              <h2 class="section-title">Certifications</h2>
+              <div class="glass-card cert-card">
+                <div class="cert-icon">
+                  <i class="fa fa-certificate"></i>
                 </div>
-
-                <div class="blog-img">
-                  <img src="img/research/feedbackControl.png" alt="" />
+                <div class="cert-info">
+                  <h5>Using Python for Research</h5>
+                  <p>edX, HarvardX (Harvard University) — Jan 2020</p>
+                </div>
+              </div>
+              <div class="glass-card cert-card">
+                <div class="cert-icon">
+                  <i class="fa fa-terminal"></i>
+                </div>
+                <div class="cert-info">
+                  <h5>The Unix Workbench</h5>
+                  <p>Coursera (Johns Hopkins University) — Aug 2020</p>
+                </div>
+              </div>
+              <div class="glass-card cert-card">
+                <div class="cert-icon">
+                  <i class="fa fa-cube"></i>
+                </div>
+                <div class="cert-info">
+                  <h5>Material Behavior</h5>
+                  <p>Coursera (Georgia Institute of Technology) — Aug 2020</p>
+                </div>
+              </div>
+              <div class="glass-card cert-card">
+                <div class="cert-icon">
+                  <i class="fa fa-laptop"></i>
+                </div>
+                <div class="cert-info">
+                  <h5>A Hands-on Introduction to Engineering Simulations</h5>
+                  <p>edX, CornellX (Cornell University) — May 2018</p>
                 </div>
               </div>
             </div>
 
-            <div
-              class="col-lg-4 col-md-6 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="blog-style7">
-                <div
-                  class="padding-40px-tb padding-30px-lr xs-padding-30px-tb xs-padding-25px-lr"
-                >
-                  <ul class="no-margin-botton">
-                    <li
-                      class="display-inline-block font-size14 font-weight-600"
-                    >
-                      <p style="font-family: Lora SemiBold">
-                        AEEM 4042 (Fall 2024)
-                      </p>
-                    </li>
-                  </ul>
-                  <h4
-                    class="font-size14 xs-font-size12 font-weight-300 line-height-32 xs-line-height-26"
-                  >
-                    <a
-                      href="AEEM4042.html#course-section"
-                      class="text-extra-dark-gray"
-                      style="font-family: Big John"
-                      >Fundamentals of Control Theory</a
-                    >
-                  </h4>
+            <!-- Right Column: Awards and Honors -->
+            <div class="col-lg-6">
+              <h2 class="section-title">Awards & Achievements</h2>
+              
+              <!-- Award Item 1 -->
+              <div class="glass-card cert-card">
+                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                  <i class="fa fa-trophy"></i>
                 </div>
-
-                <div class="blog-img">
-                  <img src="img/research/feedbackControl.png" alt="" />
+                <div class="cert-info">
+                  <h5>Society Membership</h5>
+                  <p>Member of The Minerals, Metals &amp; Materials Society (TMS), USA — 2025</p>
                 </div>
               </div>
+
+              <!-- Award Item 2 -->
+              <div class="glass-card cert-card">
+                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                  <i class="fa fa-plane"></i>
+                </div>
+                <div class="cert-info">
+                  <h5>Institution of Eminence Funds, IIT Bombay</h5>
+                  <p>Awarded to attend the international conference TMS 2025, USA — 2025</p>
+                </div>
+              </div>
+
+              <!-- Award Item 3 -->
+              <div class="glass-card cert-card">
+                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                  <i class="fa fa-plane"></i>
+                </div>
+                <div class="cert-info">
+                  <h5>IIT Bombay Travel Grant</h5>
+                  <p>Awarded to attend the international conference COMPLAS 2023, Spain — 2023</p>
+                </div>
+              </div>
+
+              <!-- Award Item 4 -->
+              <div class="glass-card cert-card">
+                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                  <i class="fa fa-graduation-cap"></i>
+                </div>
+                <div class="cert-info">
+                  <h5>MHRD Teaching Assistantship Through Project</h5>
+                  <p>Awarded by the Industrial Research and Consultancy Centre (IRCC) — 2019</p>
+                </div>
+              </div>
+
+              <!-- Award Item 5 -->
+              <div class="glass-card cert-card">
+                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                  <i class="fa fa-star"></i>
+                </div>
+                <div class="cert-info">
+                  <h5>All India Rank 69</h5>
+                  <p>Achieved rank 69 in the Graduate Aptitude Test in Engineering (GATE) — 2014</p>
+                </div>
+              </div>
+
+              <!-- Award Item 6 -->
+              <div class="glass-card cert-card">
+                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                  <i class="fa fa-users"></i>
+                </div>
+                <div class="cert-info">
+                  <h5>Permanent Associate Membership</h5>
+                  <p>Awarded permanent membership at the Aeronautical Society of India — 2013</p>
+                </div>
+              </div>
+
             </div>
 
-            <div
-              class="col-lg-4 col-md-6 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="blog-style7">
-                <div
-                  class="padding-40px-tb padding-30px-lr xs-padding-30px-tb xs-padding-25px-lr"
-                >
-                  <ul class="no-margin-botton">
-                    <li
-                      class="display-inline-block font-size14 font-weight-600"
-                    >
-                      <p style="font-family: Lora SemiBold">
-                        AEEM 2013 (Spring 2024)
-                      </p>
-                    </li>
-                  </ul>
-                  <h4
-                    class="font-size14 xs-font-size12 font-weight-300 line-height-32 xs-line-height-26"
-                  >
-                    <a
-                      href="AEEM2013.html#course-section"
-                      class="text-extra-dark-gray"
-                      style="font-family: Big John"
-                      >Introduction to Systems Engineering</a
-                    >
-                  </h4>
-                </div>
-
-                <div class="blog-img">
-                  <img
-                    src="img/courses/saddlepoint3.png"
-                    alt=""
-                    style="display: block; margin: auto"
-                  />
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- <div
-              class="col-lg-4 col-md-6 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="blog-style7">
-                <div
-                  class="padding-40px-tb padding-30px-lr xs-padding-30px-tb xs-padding-25px-lr"
-                >
-                  <ul class="no-margin-botton">
-                    <li
-                      class="display-inline-block font-size14 font-weight-600"
-                    >
-                      <p style="font-family: Lora SemiBold">
-                        AE 305 / AE 717 (Spring Semester at IITB, 2019-2021)
-                      </p>
-                    </li>
-                  </ul>
-                  <h4
-                    class="font-size14 xs-font-size12 font-weight-300 line-height-32 xs-line-height-26"
-                  >
-                    <a
-                      href="AE305.html#course-section"
-                      class="text-extra-dark-gray"
-                      style="font-family: Big John"
-                      >Flight Dynamics and Control</a
-                    >
-                  </h4>
-                </div>
-
-                <div class="blog-img">
-                  <img src="img/courses/aeroplane1.png" alt="" />
-                </div>
-              </div>
-            </div> -->
-          <!-- <div class="row" style="margin-top: 25px;">
-            <div
-              class="col-lg-4 col-md-6 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="blog-style7">
-                <div class="blog-img">
-                  <img src="img/courses/aeroplane2.png" alt="" />
-                </div>
-                <div
-                  class="padding-40px-tb padding-30px-lr xs-padding-30px-tb xs-padding-25px-lr"
-                >
-                  <ul class="no-margin-botton">
-                    <li
-                      class="display-inline-block font-size14 font-weight-600"
-                    >
-                      <p style="font-family: Lora SemiBold">
-                        AEEM 9074 (Reading Course, Fall)
-                      </p>
-                    </li>
-                  </ul>
-                  <h4
-                    class="font-size14 xs-font-size12 font-weight-300 line-height-32 xs-line-height-26"
-                  >
-                    <a
-                      href="AEEM9074-Fall.html#course-section"
-                      class="text-extra-dark-gray"
-                      style="font-family: Big John"
-                      >Introduction to Navigation and Guidance</a
-                    >
-                  </h4>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="blog-style7">
-                <div class="blog-img">
-                  <img src="img/courses/graph-tile2.png" alt="" />
-                </div>
-                <div
-                  class="padding-40px-tb padding-30px-lr xs-padding-30px-tb xs-padding-25px-lr"
-                >
-                  <ul class="no-margin-botton">
-                    <li
-                      class="display-inline-block font-size14 font-weight-600"
-                    >
-                      <p style="font-family: Lora SemiBold">
-                        AEEM 9074 (Reading Course, Spring)
-                      </p>
-                    </li>
-                  </ul>
-                  <h4
-                    class="font-size14 xs-font-size12 font-weight-300 line-height-32 xs-line-height-26"
-                  >
-                    <a
-                      href="AEEM9074-Spring.html#course-section"
-                      class="text-extra-dark-gray"
-                      style="font-family: Big John"
-                      >Control of Networked Cyber-Physical Systems</a
-                    >
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- <div class="col-lg-4 col-md-12 margin-20px-top">
-              <div
-                class="blog-style7 margin-30px-bottom mobile-margin-25px-bottom"
-              >
-                <div
-                  class="padding-40px-tb padding-30px-lr xs-padding-30px-tb xs-padding-25px-lr"
-                >
-                  <h4
-                    class="font-size14 xs-font-size12 font-weight-300 line-height-32 xs-line-height-26"
-                  >
-                    <p
-                      class="text-extra-dark-gray"
-                      style="font-family: Big John"
-                    >
-                      Weekly Graduate Seminar/Technical Presentation, (UTSA,
-                      2022-2023)
-                    </p>
-                  </h4>
-                </div>
-              </div> -->
-          <!-- <div class="blog-style7">
-                <div
-                  class="padding-40px-tb padding-30px-lr xs-padding-30px-tb xs-padding-25px-lr"
-                >
-                  <h4
-                    class="font-size14 xs-font-size12 font-weight-300 line-height-32 xs-line-height-26"
-                  >
-                    <p
-                      class="text-extra-dark-gray"
-                      style="font-family: Big John"
-                    >
-                      Invited Talks at the Intelligent Systems and Control Lab,
-                      IITB
-                    </p>
-                  </h4>
-                </div>
-              </div> -->
-          <!-- </div> -->
-          <!-- <div class="col-lg-4 col-md-12 margin-20px-top">
-              <div
-                class="blog-style7 margin-30px-bottom mobile-margin-25px-bottom"
-              >
-                <div
-                  class="padding-40px-tb padding-30px-lr xs-padding-30px-tb xs-padding-25px-lr"
-                >
-                  <h4
-                    class="font-size14 xs-font-size12 font-weight-300 line-height-32 xs-line-height-26"
-                  >
-                    <p
-                      class="text-extra-dark-gray"
-                      style="font-family: Big John"
-                    >
-                      Seminar on Principles of Flight, (UTSA, 2023)
-                    </p>
-                  </h4>
-                </div>
-              </div>
-            </div> -->
-          <!-- <div class="col-lg-4 col-md-12 margin-20px-top">
-              <div
-                class="blog-style7 margin-30px-bottom mobile-margin-25px-bottom"
-              >
-                <div
-                  class="padding-40px-tb padding-30px-lr xs-padding-30px-tb xs-padding-25px-lr"
-                >
-                  <h4
-                    class="font-size14 xs-font-size12 font-weight-300 line-height-32 xs-line-height-26"
-                  >
-                    <p
-                      class="text-extra-dark-gray"
-                      style="font-family: Big John"
-                    >
-                      Weekly Graduate Seminar/Technical Presentation, (Fall
-                      Semester at UTSA)
-                    </p>
-                  </h4>
-                </div>
-              </div>
-            </div> -->
-          <!-- </div> -->
+          </div>
         </div>
       </section>
-      <!-- end courses section -->
+      <!-- end awards and certifications section -->
 
       <!-- start separator -->
       <div class="separator-line-horrizontal-full bg-medium-light-gray"></div>
