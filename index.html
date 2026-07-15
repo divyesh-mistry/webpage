@@ -77,9 +77,167 @@
 
     <!-- news-slider js -->
     <script src="js/news-slider.js"></script>
+
+    <!-- Inline Dark Theme Overrides & Global Particle Background Style -->
+    <style>
+      /* Force dark theme globally and override templates */
+      html, body, .main-wrapper, section, footer, .bg-white, .bg-light-sky, .bg-light, .bg-dark, .footer-style9 {
+        background-color: #090d16 !important;
+        background: #090d16 !important;
+        color: #e5e7eb !important;
+      }
+      
+      /* Grid overlay on main wrapper */
+      .main-wrapper {
+        background-image: 
+          linear-gradient(rgba(6, 182, 212, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(6, 182, 212, 0.035) 1px, transparent 1px) !important;
+        background-size: 40px 40px !important;
+        background-attachment: fixed !important;
+      }
+      
+      /* Dynamic canvas in background */
+      #particle-canvas {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        z-index: 0 !important;
+        pointer-events: none !important;
+      }
+
+      /* Elevate other elements above background canvas */
+      header, section, footer, .timeline-container, .glass-card, .container {
+        position: relative;
+        z-index: 2;
+      }
+      
+      /* Banner styling adjustments */
+      .banner-section {
+        background: radial-gradient(circle at center, rgba(9, 13, 22, 0.2) 0%, #090d16 90%), url('img/research_ds/Md_flow.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+      
+      /* Contrast fixes for text elements */
+      p, li, span, address, td, th {
+        color: #e5e7eb !important;
+      }
+      
+      .timeline-details li::before {
+        content: '::' !important;
+        font-family: 'Fira Code', monospace !important;
+        color: #06b6d4 !important;
+        font-weight: bold;
+      }
+      
+      .text-muted {
+        color: #9ca3af !important;
+      }
+      
+      .timeline-date {
+        background: rgba(6, 182, 212, 0.15) !important;
+        color: #06b6d4 !important;
+        border: 1px solid rgba(6, 182, 212, 0.25) !important;
+      }
+      
+      /* Card backgrounds must remain slightly transparent dark gray to allow readability */
+      .glass-card {
+        background: rgba(17, 24, 39, 0.85) !important;
+        border: 1px solid rgba(6, 182, 212, 0.25) !important;
+      }
+      
+      /* Footer list styling */
+      footer ul.footer-list-style3 li a {
+        color: #9ca3af !important;
+      }
+      footer ul.footer-list-style3 li a:hover {
+        color: #06b6d4 !important;
+      }
+
+      /* Responsive / Mobile & Tablet Layout Adjustments */
+      @media (max-width: 991px) {
+        .section-title {
+          font-size: 1.85rem !important;
+        }
+        .banner-section {
+          padding: 160px 0 100px 0 !important;
+        }
+      }
+
+      @media (max-width: 767px) {
+        /* Spacings and Padding */
+        section {
+          padding: 60px 0 !important;
+        }
+        .glass-card {
+          padding: 20px !important;
+        }
+        
+        /* Hero Banner */
+        .banner-section {
+          padding: 120px 0 80px 0 !important;
+          text-align: center !important;
+        }
+        .banner-section h1 {
+          font-size: 2.25rem !important;
+          line-height: 1.2 !important;
+        }
+        .hero-subtitle {
+          font-size: 1rem !important;
+          letter-spacing: 1px !important;
+        }
+        .banner-section p {
+          font-size: 16px !important;
+          margin: 15px auto !important;
+        }
+        
+        /* Timelines */
+        .timeline-container {
+          padding-left: 20px !important;
+        }
+        .timeline-container::before {
+          left: 4px !important;
+        }
+        .timeline-dot {
+          left: -24px !important;
+          width: 14px !important;
+          height: 14px !important;
+          top: 10px !important;
+          border-width: 3px !important;
+        }
+        .timeline-date {
+          padding: 4px 10px !important;
+          font-size: 0.75rem !important;
+        }
+        .timeline-role {
+          font-size: 1.15rem !important;
+        }
+        .timeline-institution {
+          font-size: 0.95rem !important;
+        }
+        
+        /* Competencies grid */
+        .competencies-grid {
+          grid-template-columns: 1fr !important;
+          gap: 15px !important;
+        }
+        .skill-badge {
+          font-size: 0.75rem !important;
+          padding: 5px 10px !important;
+        }
+        
+        /* Ph.D. split card image */
+        .Ph.D.-card img {
+          max-height: 200px !important;
+        }
+      }
+    </style>
   </head>
 
   <body>
+    <canvas id="particle-canvas"></canvas>
     <!-- start page loading -->
     <div id="preloader">
       <div class="row loader">
@@ -186,7 +344,7 @@
           </div>
         </div>
 
-        <canvas id="particle-canvas"></canvas>
+
 
         <!-- start banner shape -->
         <div class="banner-shape">
@@ -1719,19 +1877,19 @@
         if (!canvas) return;
         const ctx = canvas.getContext('2d');
         
-        let width = canvas.width = canvas.offsetWidth;
-        let height = canvas.height = canvas.offsetHeight;
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
         
         const particles = [];
-        const particleCount = 70;
-        const connectionDistance = 120;
+        const particleCount = 80;
+        const connectionDistance = 150;
         
         class Particle {
           constructor() {
             this.x = Math.random() * width;
             this.y = Math.random() * height;
-            this.vx = (Math.random() - 0.5) * 0.6;
-            this.vy = (Math.random() - 0.5) * 0.6;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
             this.radius = Math.random() * 2 + 1;
           }
           
@@ -1746,7 +1904,7 @@
           draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(6, 182, 212, 0.7)';
+            ctx.fillStyle = 'rgba(6, 182, 212, 0.4)';
             ctx.fill();
           }
         }
@@ -1766,7 +1924,7 @@
               const dist = Math.sqrt(dx * dx + dy * dy);
               
               if (dist < connectionDistance) {
-                const alpha = (1 - dist / connectionDistance) * 0.15;
+                const alpha = (1 - dist / connectionDistance) * 0.12;
                 ctx.beginPath();
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
@@ -1787,8 +1945,8 @@
         }
         
         window.addEventListener('resize', () => {
-          width = canvas.width = canvas.offsetWidth;
-          height = canvas.height = canvas.offsetHeight;
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
         });
         
         animate();
