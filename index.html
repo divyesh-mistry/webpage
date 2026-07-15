@@ -69,6 +69,12 @@
       href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
     />
 
+    <!-- devicons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
     <!-- news-slider js -->
     <script src="js/news-slider.js"></script>
   </head>
@@ -369,19 +375,45 @@
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <span class="timeline-date">Jan 2019 – Dec 2025</span>
-              <div class="glass-card">
-                <div class="timeline-role">Doctorate (Ph.D.) in Aerospace Engineering</div>
-                <div class="timeline-institution">Indian Institute of Technology - Bombay, Mumbai, India</div>
-                <ul class="timeline-details">
-                  <li><strong>Thesis:</strong> Multiscale Modeling of Prior Particle Boundaries in Nickel-based Superalloys</li>
-                  <li><strong>CGPA:</strong> 9.36 / 10</li>
-                  <li><strong>Advisors:</strong> Prof. Amuthan A. Ramabathiran, Prof. P. J. Guruprasad</li>
-                  <li><strong>Funding:</strong> MHRD Teaching Assistantship through Project</li>
-                  <li><strong>Key Subjects:</strong> Multiscale Modeling, Continuum Mechanics, Plasticity, Computational Mechanics</li>
-                </ul>
-                <div style="margin-top: 20px; text-align: center;">
-                  <img src="img/people/phddefence.jpg?v=3" alt="Ph.D. Defence" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08); max-height: 250px; object-fit: cover;" />
-                  <p class="margin-5px-top text-muted font-size13" style="margin-bottom: 0;">Successful Ph.D. Defence at IIT Bombay</p>
+              <div class="glass-card Ph.D.-card" style="border-left: 4px solid var(--accent-cyan) !important;">
+                <div class="row align-items-center">
+                  <!-- Left side: Details -->
+                  <div class="col-lg-7 col-md-12">
+                    <div class="timeline-role" style="font-size: 1.6rem; color: #fff; margin-bottom: 5px;">Doctorate (Ph.D.) in Aerospace Engineering</div>
+                    <div class="timeline-institution" style="font-size: 1.15rem; color: var(--accent-cyan); font-weight: 600; margin-bottom: 20px;">
+                      <i class="fa fa-university" style="margin-right: 8px;"></i> Indian Institute of Technology Bombay, Mumbai, India
+                    </div>
+                    
+                    <div style="background: rgba(6, 182, 212, 0.05); border-left: 3px solid var(--accent-cyan); padding: 15px; border-radius: 4px; margin-bottom: 20px;">
+                      <h6 style="color: #fff; font-weight: 700; margin-bottom: 5px; font-size: 15px;">THESIS:</h6>
+                      <p style="font-size: 15px; line-height: 1.6; font-style: italic; color: var(--text-dark); margin-bottom: 0;">
+                        "Multiscale Modeling of Prior Particle Boundaries in Nickel-based Superalloys"
+                      </p>
+                    </div>
+
+                    <ul class="timeline-details" style="padding-left: 0; list-style: none;">
+                      <li style="margin-bottom: 8px; font-size: 15px;">
+                        <strong style="color: var(--accent-cyan);">Advisors:</strong> Prof. Amuthan A. Ramabathiran, Prof. P. J. Guruprasad
+                      </li>
+                      <li style="margin-bottom: 8px; font-size: 15px;">
+                        <strong style="color: var(--accent-cyan);">Funding &amp; Honors:</strong> MHRD Teaching Assistantship through Research Project
+                      </li>
+                      <li style="margin-bottom: 8px; font-size: 15px;">
+                        <strong style="color: var(--accent-cyan);">Core Coursework:</strong> Multiscale Modeling, Continuum Mechanics, Theory of Plasticity, Computational Mechanics
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Right side: Ph.D. Defense Photo -->
+                  <div class="col-lg-5 col-md-12 text-center mt-3 mt-lg-0">
+                    <div style="position: relative; display: inline-block; padding: 6px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--glass-border); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                      <img src="img/people/phddefence.jpg?v=3" alt="Successful Ph.D. Defence at IIT Bombay" style="width: 100%; border-radius: 8px; max-height: 240px; object-fit: cover;" />
+                      <div style="position: absolute; bottom: 15px; left: 15px; right: 15px; background: rgba(9, 13, 22, 0.85); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(6, 182, 212, 0.2); backdrop-filter: blur(4px);">
+                        <p style="font-size: 12px; color: #fff; margin: 0; font-family: 'Fira Code', monospace; font-weight: 500;">
+                          <i class="fa fa-graduation-cap" style="color: var(--accent-cyan); margin-right: 5px;"></i> Successful Ph.D. Defence
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -393,7 +425,6 @@
                 <div class="timeline-institution">Indian Institute of Technology - Kharagpur, West Bengal, India</div>
                 <ul class="timeline-details">
                   <li><strong>Thesis:</strong> A Mesh-Free Model for Static Analysis of Smart Composite Beams</li>
-                  <li><strong>CGPA:</strong> 8.85 / 10</li>
                   <li><strong>Advisor:</strong> Prof. Manas Chandra Ray</li>
                   <li><strong>Funding:</strong> MHRD GATE Fellowship</li>
                   <li><strong>Key Subjects:</strong> Solid Mechanics, Fracture Mechanics, Finite Element Methods, Composites, Elasticity, Vibration</li>
@@ -428,14 +459,14 @@
                 <div class="competency-icon">
                   <i class="fa fa-cubes"></i>
                 </div>
-                <h4 class="competency-title">Atomistic & Multiscale Modelling</h4>
+                <h4 class="competency-title">Atomistic &amp; Multiscale Modelling</h4>
               </div>
               <div class="competency-badges">
-                <span class="skill-badge">Molecular Dynamics (MD)</span>
-                <span class="skill-badge">Discrete Dislocation Dynamics (DDD)</span>
-                <span class="skill-badge">Atomistic Simulations</span>
-                <span class="skill-badge">Microstructure Evolution</span>
-                <span class="skill-badge">Defect Mechanics</span>
+                <span class="skill-badge"><i class="fa fa-braille" style="color: var(--accent-cyan); margin-right: 6px;"></i>Molecular Dynamics (MD)</span>
+                <span class="skill-badge"><i class="fa fa-line-chart" style="color: var(--accent-cyan); margin-right: 6px;"></i>Discrete Dislocation Dynamics (DDD)</span>
+                <span class="skill-badge"><i class="fa fa-database" style="color: var(--accent-cyan); margin-right: 6px;"></i>Atomistic Simulations</span>
+                <span class="skill-badge"><i class="fa fa-sliders" style="color: var(--accent-cyan); margin-right: 6px;"></i>Microstructure Evolution</span>
+                <span class="skill-badge"><i class="fa fa-compress" style="color: var(--accent-cyan); margin-right: 6px;"></i>Defect Mechanics</span>
               </div>
             </div>
 
@@ -448,12 +479,12 @@
                 <h4 class="competency-title">Computational Modeling Tools</h4>
               </div>
               <div class="competency-badges">
-                <span class="skill-badge">LAMMPS</span>
-                <span class="skill-badge">OVITO</span>
-                <span class="skill-badge">Atomsk</span>
-                <span class="skill-badge">ABAQUS</span>
-                <span class="skill-badge">ANSYS</span>
-                <span class="skill-badge">COMSOL</span>
+                <span class="skill-badge"><i class="fa fa-cubes" style="color: var(--accent-cyan); margin-right: 6px;"></i>LAMMPS</span>
+                <span class="skill-badge"><i class="fa fa-eye" style="color: var(--accent-teal); margin-right: 6px;"></i>OVITO</span>
+                <span class="skill-badge"><i class="fa fa-diamond" style="color: var(--accent-indigo); margin-right: 6px;"></i>Atomsk</span>
+                <span class="skill-badge"><i class="fa fa-gears" style="color: var(--accent-cyan); margin-right: 6px;"></i>ABAQUS</span>
+                <span class="skill-badge"><i class="fa fa-globe" style="color: var(--accent-teal); margin-right: 6px;"></i>ANSYS</span>
+                <span class="skill-badge"><i class="fa fa-bolt" style="color: var(--accent-indigo); margin-right: 6px;"></i>COMSOL</span>
               </div>
             </div>
 
@@ -463,16 +494,16 @@
                 <div class="competency-icon">
                   <i class="fa fa-code"></i>
                 </div>
-                <h4 class="competency-title">Programming & Scientific Computing</h4>
+                <h4 class="competency-title">Programming &amp; Scientific Computing</h4>
               </div>
               <div class="competency-badges">
-                <span class="skill-badge">Python</span>
-                <span class="skill-badge">HPC (MPI/OpenMP)</span>
-                <span class="skill-badge">C++</span>
-                <span class="skill-badge">Fortran</span>
-                <span class="skill-badge">Bash Scripting</span>
-                <span class="skill-badge">Parallel Frameworks</span>
-                <span class="skill-badge">Git</span>
+                <span class="skill-badge"><i class="devicon-python-plain colored" style="margin-right: 6px;"></i>Python</span>
+                <span class="skill-badge"><i class="fa fa-server" style="color: var(--accent-cyan); margin-right: 6px;"></i>HPC (MPI/OpenMP)</span>
+                <span class="skill-badge"><i class="devicon-cplusplus-plain colored" style="margin-right: 6px;"></i>C++</span>
+                <span class="skill-badge"><i class="devicon-fortran-line colored" style="margin-right: 6px;"></i>Fortran</span>
+                <span class="skill-badge"><i class="devicon-bash-plain colored" style="margin-right: 6px;"></i>Bash Scripting</span>
+                <span class="skill-badge"><i class="fa fa-sitemap" style="color: var(--accent-indigo); margin-right: 6px;"></i>Parallel Frameworks</span>
+                <span class="skill-badge"><i class="devicon-git-plain colored" style="margin-right: 6px;"></i>Git</span>
               </div>
             </div>
 
@@ -482,15 +513,15 @@
                 <div class="competency-icon">
                   <i class="fa fa-line-chart"></i>
                 </div>
-                <h4 class="competency-title">Data Analysis & Visualization</h4>
+                <h4 class="competency-title">Data Analysis &amp; Visualization</h4>
               </div>
               <div class="competency-badges">
-                <span class="skill-badge">NumPy</span>
-                <span class="skill-badge">Pandas</span>
-                <span class="skill-badge">SciPy</span>
-                <span class="skill-badge">Matplotlib</span>
-                <span class="skill-badge">Automated Post-Processing</span>
-                <span class="skill-badge">Simulation Data Analysis</span>
+                <span class="skill-badge"><i class="devicon-numpy-plain colored" style="margin-right: 6px;"></i>NumPy</span>
+                <span class="skill-badge"><i class="devicon-pandas-plain colored" style="margin-right: 6px;"></i>Pandas</span>
+                <span class="skill-badge"><i class="fa fa-calculator" style="color: var(--accent-cyan); margin-right: 6px;"></i>SciPy</span>
+                <span class="skill-badge"><i class="fa fa-area-chart" style="color: var(--accent-teal); margin-right: 6px;"></i>Matplotlib</span>
+                <span class="skill-badge"><i class="fa fa-cogs" style="color: var(--accent-indigo); margin-right: 6px;"></i>Automated Post-Processing</span>
+                <span class="skill-badge"><i class="fa fa-line-chart" style="color: var(--accent-cyan); margin-right: 6px;"></i>Simulation Data Analysis</span>
               </div>
             </div>
 
@@ -500,13 +531,13 @@
                 <div class="competency-icon">
                   <i class="fa fa-desktop"></i>
                 </div>
-                <h4 class="competency-title">Tools & Environments</h4>
+                <h4 class="competency-title">Tools &amp; Environments</h4>
               </div>
               <div class="competency-badges">
-                <span class="skill-badge">Linux (Ubuntu)</span>
-                <span class="skill-badge">HPC Clusters</span>
-                <span class="skill-badge">GitHub</span>
-                <span class="skill-badge">LaTeX</span>
+                <span class="skill-badge"><i class="devicon-linux-plain colored" style="margin-right: 6px;"></i>Linux (Ubuntu)</span>
+                <span class="skill-badge"><i class="fa fa-server" style="color: var(--accent-teal); margin-right: 6px;"></i>HPC Clusters</span>
+                <span class="skill-badge"><i class="devicon-github-original" style="color: #fff; margin-right: 6px;"></i>GitHub</span>
+                <span class="skill-badge"><i class="devicon-latex-original" style="color: #fff; margin-right: 6px;"></i>LaTeX</span>
               </div>
             </div>
 
