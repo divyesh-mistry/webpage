@@ -146,6 +146,42 @@
       .glass-card {
         background: rgba(17, 24, 39, 0.85) !important;
         border: 1px solid rgba(6, 182, 212, 0.25) !important;
+        animation: border-glow 6s infinite ease-in-out;
+      }
+      
+      .timeline-dot {
+        animation: pulse-cyan 2.5s infinite ease-in-out;
+      }
+      
+      .skill-badge:hover {
+        animation: float-effect 0.8s infinite ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes border-glow {
+        0% { border-color: rgba(6, 182, 212, 0.2) !important; }
+        50% { border-color: rgba(99, 102, 241, 0.6) !important; }
+        100% { border-color: rgba(6, 182, 212, 0.2) !important; }
+      }
+
+      @keyframes pulse-cyan {
+        0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(6, 182, 212, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+      }
+
+      @keyframes float-effect {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+        100% { transform: translateY(0px); }
+      }
+      
+      .pub-item {
+        animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
       }
       
       /* Footer list styling */
@@ -1147,7 +1183,7 @@
       <!-- end research section -->
 
       <!-- start publications section -->
-      <section class="lg" id="publications" style="padding: 80px 0; background-color: #ffffff;">
+      <section class="lg" id="publications" style="padding: 80px 0;">
         <div class="container">
           <h2 class="section-title">Selected Publications</h2>
           
@@ -1155,57 +1191,129 @@
             <div class="col-md-12">
               
               <!-- Pub 1 -->
-              <div class="pub-item">
-                <a href="https://doi.org/10.1016/j.commatsci.2025.114122" target="_blank" class="pub-title">
-                  Size-Dependent Power Laws for Edge Dislocations in Nickel Superalloys: A Molecular Dynamics Study
-                </a>
-                <div class="pub-authors"><strong>Mistry D. A.</strong>, &amp; Ramabathiran, A. A.</div>
-                <div class="pub-journal"><em>Computational Materials Science</em>, 259 (2025), DOI: 10.1016/j.commatsci.2025.114122</div>
+              <div class="glass-card pub-item" style="border-left: 4px solid var(--accent-cyan) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.1s;">
+                <div class="d-flex align-items-start">
+                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-cyan);">
+                    <i class="fa fa-file-text"></i>
+                  </div>
+                  <div>
+                    <span style="font-family: 'Fira Code', monospace; font-size: 10px; color: var(--accent-cyan); display: block; margin-bottom: 5px;">[sys:journal_article]</span>
+                    <a href="https://doi.org/10.1016/j.commatsci.2025.114122" target="_blank" class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px;">
+                      Size-Dependent Power Laws for Edge Dislocations in Nickel Superalloys: A Molecular Dynamics Study
+                    </a>
+                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
+                      <strong>Mistry D. A.</strong>, &amp; Ramabathiran, A. A.
+                    </div>
+                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
+                      <em>Computational Materials Science</em>, 259 (2025), DOI: 10.1016/j.commatsci.2025.114122
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <!-- Pub 2 -->
-              <div class="pub-item">
-                <span class="pub-title">
-                  A Discrete Dislocation Dynamics Study of Prior Particle Boundary Effects in Ni-Based Superalloys
-                </span>
-                <div class="pub-authors"><strong>Mistry D. A.</strong>, Tawqeer N. Tak, &amp; Guruprasad, P. J.</div>
-                <div class="pub-journal"><em>Journal of Engineering Materials and Technology (ASME)</em> (Revision Under Review)</div>
+              <div class="glass-card pub-item" style="border-left: 4px solid var(--accent-cyan) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.2s;">
+                <div class="d-flex align-items-start">
+                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-cyan);">
+                    <i class="fa fa-file-text"></i>
+                  </div>
+                  <div>
+                    <span style="font-family: 'Fira Code', monospace; font-size: 10px; color: var(--accent-cyan); display: block; margin-bottom: 5px;">[sys:under_review]</span>
+                    <span class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px; color: #fff;">
+                      A Discrete Dislocation Dynamics Study of Prior Particle Boundary Effects in Ni-Based Superalloys
+                    </span>
+                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
+                      <strong>Mistry D. A.</strong>, Tawqeer N. Tak, &amp; Guruprasad, P. J.
+                    </div>
+                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
+                      <em>Journal of Engineering Materials and Technology (ASME)</em> (Revision Under Review)
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <!-- Pub 3 -->
-              <div class="pub-item">
-                <span class="pub-title">
-                  Polycrystalline Discrete Dislocation Dynamics of Ni-Based Superalloys: Interactions with Prior Particle Boundaries and Second Phases Using Atomistically Informed Inputs
-                </span>
-                <div class="pub-authors"><strong>Mistry D. A.</strong>, Tawqeer N. Tak, &amp; Guruprasad, P. J.</div>
-                <div class="pub-journal"><em>Manuscript in Preparation</em></div>
+              <div class="glass-card pub-item" style="border-left: 4px solid var(--accent-indigo) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.3s;">
+                <div class="d-flex align-items-start">
+                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-indigo);">
+                    <i class="fa fa-edit"></i>
+                  </div>
+                  <div>
+                    <span style="font-family: 'Fira Code', monospace; font-size: 10px; color: var(--accent-indigo); display: block; margin-bottom: 5px;">[sys:in_preparation]</span>
+                    <span class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px; color: #fff;">
+                      Polycrystalline Discrete Dislocation Dynamics of Ni-Based Superalloys: Interactions with Prior Particle Boundaries and Second Phases Using Atomistically Informed Inputs
+                    </span>
+                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
+                      <strong>Mistry D. A.</strong>, Tawqeer N. Tak, &amp; Guruprasad, P. J.
+                    </div>
+                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
+                      <em>Manuscript in Preparation</em>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <!-- Pub 4 -->
-              <div class="pub-item">
-                <span class="pub-title">
-                  Multiscale Modeling of Dislocation–Precipitate–PPB Interactions in Powder-Metallurgy Nickel Superalloys
-                </span>
-                <div class="pub-authors"><strong>Mistry D. A.</strong>, Avik Mahata, Amuthan A. Ramabathiran, P. J. Guruprasad, &amp; Tawqeer N. Tak</div>
-                <div class="pub-journal"><em>Engineering Mechanics Institute Conference (EMI 2026)</em>, June 2–5, 2026, Boulder, Colorado, USA.</div>
+              <div class="glass-card pub-item" style="border-left: 4px solid var(--accent-teal) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.4s;">
+                <div class="d-flex align-items-start">
+                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-teal);">
+                    <i class="fa fa-users"></i>
+                  </div>
+                  <div>
+                    <span style="font-family: 'Fira Code', monospace; font-size: 10px; color: var(--accent-teal); display: block; margin-bottom: 5px;">[sys:conference_proceeding]</span>
+                    <span class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px; color: #fff;">
+                      Multiscale Modeling of Dislocation–Precipitate–PPB Interactions in Powder-Metallurgy Nickel Superalloys
+                    </span>
+                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
+                      <strong>Mistry D. A.</strong>, Avik Mahata, Amuthan A. Ramabathiran, P. J. Guruprasad, &amp; Tawqeer N. Tak
+                    </div>
+                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
+                      <em>Engineering Mechanics Institute Conference (EMI 2026)</em>, June 2–5, 2026, Boulder, Colorado, USA.
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <!-- Pub 5 -->
-              <div class="pub-item">
-                <span class="pub-title">
-                  Hierarchical Multiscale Modeling of Plasticity in Ni-Based Superalloys: The Combined Role of Prior Particle Boundaries and Second Phases
-                </span>
-                <div class="pub-authors"><strong>Mistry D. A.</strong>, Tawqeer N. Tak, &amp; Guruprasad, P. J.</div>
-                <div class="pub-journal"><em>14th International Symposium on Plasticity and Impact Mechanics (IMPLAST 2025)</em>, October 12–16, 2025, IIT Roorkee, India.</div>
+              <div class="glass-card pub-item" style="border-left: 4px solid var(--accent-teal) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.5s;">
+                <div class="d-flex align-items-start">
+                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-teal);">
+                    <i class="fa fa-users"></i>
+                  </div>
+                  <div>
+                    <span style="font-family: 'Fira Code', monospace; font-size: 10px; color: var(--accent-teal); display: block; margin-bottom: 5px;">[sys:conference_proceeding]</span>
+                    <span class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px; color: #fff;">
+                      Hierarchical Multiscale Modeling of Plasticity in Ni-Based Superalloys: The Combined Role of Prior Particle Boundaries and Second Phases
+                    </span>
+                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
+                      <strong>Mistry D. A.</strong>, Tawqeer N. Tak, &amp; Guruprasad, P. J.
+                    </div>
+                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
+                      <em>14th International Symposium on Plasticity and Impact Mechanics (IMPLAST 2025)</em>, October 12–16, 2025, IIT Roorkee, India.
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <!-- Pub 6 -->
-              <div class="pub-item">
-                <a href="https://complas2023.cimne.com/event/contribution/b63495cd-acfe-11ed-b019-000c29ddfc0c" target="_blank" class="pub-title">
-                  An Atomistically Informed Discrete Dislocation Dynamics Study of Prior Particle Boundaries in Ni-Based Superalloys
-                </a>
-                <div class="pub-authors"><strong>Mistry D. A.</strong>, Guruprasad, P. J., &amp; Ramabathiran, A. A.</div>
-                <div class="pub-journal"><em>17th Conference on Computational Plasticity (COMPLAS)</em>, September 5–7, 2023, Barcelona, Spain.</div>
+              <div class="glass-card pub-item" style="border-left: 4px solid var(--accent-cyan) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.6s;">
+                <div class="d-flex align-items-start">
+                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-cyan);">
+                    <i class="fa fa-file-text"></i>
+                  </div>
+                  <div>
+                    <span style="font-family: 'Fira Code', monospace; font-size: 10px; color: var(--accent-cyan); display: block; margin-bottom: 5px;">[sys:conference_proceeding]</span>
+                    <a href="https://complas2023.cimne.com/event/contribution/b63495cd-acfe-11ed-b019-000c29ddfc0c" target="_blank" class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px;">
+                      An Atomistically Informed Discrete Dislocation Dynamics Study of Prior Particle Boundaries in Ni-Based Superalloys
+                    </a>
+                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
+                      <strong>Mistry D. A.</strong>, Guruprasad, P. J., &amp; Ramabathiran, A. A.
+                    </div>
+                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
+                      <em>17th Conference on Computational Plasticity (COMPLAS)</em>, September 5–7, 2023, Barcelona, Spain.
+                    </div>
+                  </div>
+                </div>
               </div>
 
             </div>
@@ -1881,16 +1989,28 @@
         let height = canvas.height = window.innerHeight;
         
         const particles = [];
-        const particleCount = 80;
-        const connectionDistance = 150;
+        const particleCount = 100; // More particles for multiscale feel
         
         class Particle {
           constructor() {
             this.x = Math.random() * width;
             this.y = Math.random() * height;
-            this.vx = (Math.random() - 0.5) * 0.5;
-            this.vy = (Math.random() - 0.5) * 0.5;
-            this.radius = Math.random() * 2 + 1;
+            // Multiscale: Some are large (continuum/precipitates), some small (atoms)
+            this.type = Math.random() > 0.85 ? 'macro' : 'micro';
+            
+            if (this.type === 'macro') {
+              this.radius = Math.random() * 4 + 3; // 3 to 7
+              this.vx = (Math.random() - 0.5) * 0.2;
+              this.vy = (Math.random() - 0.5) * 0.2;
+              this.color = 'rgba(99, 102, 241, 0.6)'; // Indigo for macro
+              this.connectionDistance = 250;
+            } else {
+              this.radius = Math.random() * 1.5 + 0.5; // 0.5 to 2
+              this.vx = (Math.random() - 0.5) * 0.6;
+              this.vy = (Math.random() - 0.5) * 0.6;
+              this.color = 'rgba(6, 182, 212, 0.4)'; // Cyan for micro
+              this.connectionDistance = 100;
+            }
           }
           
           update() {
@@ -1904,8 +2024,15 @@
           draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(6, 182, 212, 0.4)';
+            ctx.fillStyle = this.color;
             ctx.fill();
+            // Glow for macro
+            if (this.type === 'macro') {
+              ctx.shadowBlur = 10;
+              ctx.shadowColor = 'rgba(99, 102, 241, 0.8)';
+            } else {
+              ctx.shadowBlur = 0;
+            }
           }
         }
         
@@ -1923,13 +2050,21 @@
               const dy = particles[i].y - particles[j].y;
               const dist = Math.sqrt(dx * dx + dy * dy);
               
-              if (dist < connectionDistance) {
-                const alpha = (1 - dist / connectionDistance) * 0.12;
+              // Use the larger connection distance of the two particles
+              const maxDist = Math.max(particles[i].connectionDistance, particles[j].connectionDistance);
+              
+              if (dist < maxDist) {
+                const alpha = (1 - dist / maxDist) * 0.15;
                 ctx.beginPath();
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
-                ctx.strokeStyle = `rgba(6, 182, 212, ${alpha})`;
-                ctx.lineWidth = 1;
+                // Color based on interaction type
+                if (particles[i].type === 'macro' || particles[j].type === 'macro') {
+                   ctx.strokeStyle = `rgba(99, 102, 241, ${alpha})`;
+                } else {
+                   ctx.strokeStyle = `rgba(6, 182, 212, ${alpha})`;
+                }
+                ctx.lineWidth = (particles[i].type === 'macro' || particles[j].type === 'macro') ? 1.5 : 0.5;
                 ctx.stroke();
               }
             }
