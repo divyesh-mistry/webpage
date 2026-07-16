@@ -1,5 +1,5 @@
 .main-wrapper {
-  background: #ffffff none repeat scroll 0 0;
+  background: #090d16 none repeat scroll 0 0;
   margin: 0 auto;
   overflow-x: hidden;
   position: relative;
@@ -7,7 +7,7 @@
 }
 
 .main-wrapper.wrapper-boxed {
-  background-color: #ffffff;
+  background-color: #090d16;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
   max-width: 1200px;
