@@ -156,6 +156,18 @@
       .skill-badge:hover {
         animation: float-effect 0.8s infinite ease-in-out;
       }
+      
+      .cta-glow {
+        background: linear-gradient(90deg, var(--accent-cyan), var(--accent-indigo));
+        color: #fff !important;
+        border: none !important;
+        box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+        transition: all 0.3s ease;
+      }
+      .cta-glow:hover {
+        box-shadow: 0 0 30px rgba(6, 182, 212, 0.7);
+        transform: translateY(-3px);
+      }
 
       @keyframes fadeIn {
         from { opacity: 0; transform: translateY(20px); }
@@ -420,15 +432,13 @@
               <a href="files/cv_divyesh.pdf" target="_blank"
                 ><button
                   type="button"
-                  class="btn btn-outline-primary btn-lg"
+                  class="btn btn-primary cta-glow"
                   style="
                     border-radius: 40px;
                     width: 80%;
-                    font-family: 'Outfit', sans-serif;
+                    font-family: 'Montserrat', sans-serif;
                     font-weight: bold;
                     font-size: 16px;
-                    border-color: var(--accent-blue);
-                    color: var(--accent-blue);
                   "
                 >
                   <i class="fa fa-download" style="margin-right: 8px;"></i> Download CV
@@ -576,8 +586,11 @@
                   <!-- Left side: Details -->
                   <div class="col-lg-7 col-md-12">
                     <div class="timeline-role" style="font-size: 1.6rem; color: #fff; margin-bottom: 5px;">Doctorate (Ph.D.) in Aerospace Engineering</div>
-                    <div class="timeline-institution" style="font-size: 1.15rem; color: var(--accent-cyan); font-weight: 600; margin-bottom: 20px;">
-                      <i class="fa fa-university" style="margin-right: 8px;"></i> Indian Institute of Technology Bombay, Mumbai, India
+                    <div class="timeline-institution" style="font-size: 1.15rem; color: var(--accent-cyan); font-weight: 600; margin-bottom: 20px; display: flex; align-items: center;">
+                      <div style="background-color: #fff; padding: 4px; border-radius: 4px; display: inline-block; margin-right: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                        <img src="img/content/iitb_logo.png" alt="IIT Bombay Logo" style="width: 32px; height: 32px; object-fit: contain;" />
+                      </div>
+                      Indian Institute of Technology Bombay, Mumbai, India
                     </div>
                     
                     <div style="background: rgba(6, 182, 212, 0.05); border-left: 3px solid var(--accent-cyan); padding: 15px; border-radius: 4px; margin-bottom: 20px;">
@@ -618,7 +631,12 @@
               <span class="timeline-date">Jun 2014 – Jul 2016</span>
               <div class="glass-card">
                 <div class="timeline-role">M.Tech. in Mechanical Engineering (Mechanical System Design)</div>
-                <div class="timeline-institution">Indian Institute of Technology - Kharagpur, West Bengal, India</div>
+                <div class="timeline-institution" style="display: flex; align-items: center; margin-bottom: 15px;">
+                  <div style="background-color: #fff; padding: 4px; border-radius: 4px; display: inline-block; margin-right: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                    <img src="img/content/iit-khargpur.jpg" alt="IIT Kharagpur Logo" style="width: 32px; height: 32px; object-fit: contain;" />
+                  </div>
+                  Indian Institute of Technology - Kharagpur, West Bengal, India
+                </div>
                 <ul class="timeline-details">
                   <li><strong>Thesis:</strong> A Mesh-Free Model for Static Analysis of Smart Composite Beams</li>
                   <li><strong>Advisor:</strong> Prof. Manas Chandra Ray</li>
@@ -644,7 +662,7 @@
       <!-- end education section -->
 
       <!-- start competencies section -->
-      <section class="lg bg-light-sky" id="competencies" style="padding: 80px 0;">
+      <section class="lg" id="competencies" style="padding: 80px 0;">
         <div class="container">
           <h2 class="section-title section-title-center">Core Competencies</h2>
           <div class="competencies-grid">
@@ -749,6 +767,21 @@
             <h4 class="no-margin-bottom" style="  font-family: 'Montserrat', sans-serif;">
               Research Projects
             </h4>
+          </div>
+
+          <!-- Featured Research Diagram -->
+          <div class="row margin-60px-bottom">
+            <div class="col-md-12">
+              <div class="glass-card" style="padding: 30px; text-align: center; border-top: 4px solid var(--accent-teal) !important;">
+                <h4 style="color: #fff; margin-bottom: 25px; font-weight: 700; font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">Multiscale Modeling Paradigm</h4>
+                <p style="font-family: 'Montserrat', sans-serif; color: var(--text-muted); margin-bottom: 25px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                  A comprehensive framework bridging quantum mechanics, molecular dynamics, mesoscale modeling, macroscale simulations, and continuum theory to capture intricate material behaviors across length and time scales.
+                </p>
+                <div style="background-color: #f8f9fa; padding: 20px; border-radius: 12px; box-shadow: inset 0 0 15px rgba(0,0,0,0.2); display: inline-block;">
+                  <img src="img/multiscale_new.png" alt="Multiscale Modeling Framework" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e5e7eb;" />
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- start a row -->
@@ -874,18 +907,18 @@
                   style="
                     text-align: center;
                     margin-top: 25px;
-                    font-family: VLANÈLLA;
+                    font-family: 'Montserrat', sans-serif;
                   "
                   class="font-size14"
                 >
                   Polycrystalline DDD 
                 </h6>
-                <p style="font-family: Big John PRO; text-align: justify">
+                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
                   Under compressive loading for clustered configuration.
                 </p>
                 <a
                   href="polyDDD.html"
-                  style="font-family: Big John PRO"
+                  style="font-family: 'Montserrat', sans-serif;"
                   >Learn more<i
                     class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
                     aria-hidden="true"
@@ -910,18 +943,18 @@
                   style="
                     text-align: center;
                     margin-top: 25px;
-                    font-family: VLANÈLLA;
+                    font-family: 'Montserrat', sans-serif;
                   "
                   class="font-size14"
                 >
                  Effect of PPBs
                 </h6>
-                <p style="font-family: Big John PRO; text-align: justify">
+                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
                   Prior Particle boundary effect using Polycrystalline DDD framework.
                 </p>
                 <a
                   href="ppbDD.html#research-section"
-                  style="font-family: Big John PRO"
+                  style="font-family: 'Montserrat', sans-serif;"
                   >Learn more<i
                     class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
                     aria-hidden="true"
@@ -946,19 +979,19 @@
                   style="
                     text-align: center;
                     margin-top: 25px;
-                    font-family: VLANÈLLA;
+                    font-family: 'Montserrat', sans-serif;
                   "
                   class="font-size14"
                 >
                   Dislocation motion across different size of precipitates.
                 </h6>
-                <p style="font-family: Big John PRO; text-align: justify">
+                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
                   A molecular dynamics study of size effects for critical
                   resolved shear stress in nickel superalloys
                 </p>
                 <a
                   href="mobility.html#research-section"
-                  style="font-family: Big John PRO"
+                  style="font-family: 'Montserrat', sans-serif;"
                   >Learn more<i
                     class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
                     aria-hidden="true"
@@ -984,20 +1017,20 @@
                   style="
                     text-align: center;
                     margin-top: 25px;
-                    font-family: VLANÈLLA;
+                    font-family: 'Montserrat', sans-serif;
                   "
                   class="font-size14"
                 >
                   Learning and control in autonomous systems
                 </h6>
-                <p style="font-family: Big John PRO; text-align: justify">
+                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
                   Investigating fundamental aspects in learning and control for an 
                   autonomous system, with an emphasis on learning in complex large-scale
                   interconnected systems.
                 </p>
                 <a
                   href="learning-control.html#research-section"
-                  style="font-family: Big John PRO"
+                  style="font-family: 'Montserrat', sans-serif;"
                   >Learn more<i
                     class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
                     aria-hidden="true"
@@ -1018,19 +1051,19 @@
                   style="
                     text-align: center;
                     margin-top: 25px;
-                    font-family: VLANÈLLA;
+                    font-family: 'Montserrat', sans-serif;
                   "
                   class="font-size14"
                 >
                   Formation control of Multiagent systems
                 </h6>
-                <p style="font-family: Big John PRO; text-align: justify">
+                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
                   Protocols based on local information only for formation, mapping, localization, coverage,
                   and surveillance tasks in 2D and 3D spaces with anisotropic sensing patterns.
                 </p>
                 <a
                   href="multiagent-formation.html#research-section"
-                  style="font-family: Big John PRO"
+                  style="font-family: 'Montserrat', sans-serif;"
                   >Learn more<i
                     class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
                     aria-hidden="true"
@@ -1051,18 +1084,18 @@
                   style="
                     text-align: center;
                     margin-top: 25px;
-                    font-family: VLANÈLLA;
+                    font-family: 'Montserrat', sans-serif;
                   "
                   class="font-size14"
                 >
                   Multivehicle motion planning and control
                 </h6>
-                <p style="font-family: Big John PRO; text-align: justify">
+                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
                   Motion planning algorithms that handle uncertainties, adapt to dynamic environments, and maintain consistent performance under adverse conditions.
                 </p>
                 <a
                   href="path-following.html#research-section"
-                  style="font-family: Big John PRO"
+                  style="font-family: 'Montserrat', sans-serif;"
                   >Learn more<i
                     class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
                     aria-hidden="true"
@@ -1088,18 +1121,18 @@
                   style="
                     text-align: center;
                     margin-top: 25px;
-                    font-family: VLANÈLLA;
+                    font-family: 'Montserrat', sans-serif;
                   "
                   class="font-size14"
                 >
                   Autonomy and Decision-Making in Heterogeneous Agents
                 </h6>
-                <p style="font-family: Big John PRO; text-align: justify">
+                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
                   Empowering diverse agents with autonomy and intelligent decision-making, forging a harmonious symphony of heterogeneous capabilities.
                 </p>
                 <a
                   href="HRI.html#research-section"
-                  style="font-family: Big John PRO"
+                  style="font-family: 'Montserrat', sans-serif;"
                   >Learn more<i
                     class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
                     aria-hidden="true"
@@ -1120,19 +1153,19 @@
                   style="
                     text-align: center;
                     margin-top: 25px;
-                    font-family: VLANÈLLA;
+                    font-family: 'Montserrat', sans-serif;
                   "
                   class="font-size14"
                 >
                   Information fusion in guidance, navigation, and control
                 </h6>
-                <p style="font-family: Big John PRO; text-align: justify">
+                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
                   Designing a scalable architecture in multivehicle scenarios 
                   by reconciling the information-related aspects in guidance, navigation, and control.
                 </p>
                 <a
                   href="ifgnc.html#research-section"
-                  style="font-family: Big John PRO"
+                  style="font-family: 'Montserrat', sans-serif;"
                   >Learn more<i
                     class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
                     aria-hidden="true"
@@ -1154,18 +1187,18 @@
                   style="
                     text-align: center;
                     margin-top: 25px;
-                    font-family: VLANÈLLA;
+                    font-family: 'Montserrat', sans-serif;
                   "
                   class="font-size14"
                 >
                 High-fidelity Aerial Mobility and Manipulation
                 </h6>
-                <p style="font-family: Big John PRO; text-align: justify">
+                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
                   Unleashing the future of airborne mobility and precision manipulation, and redefining the boundaries of aerial possibilities.
                 </p>
                 <a
                   href="mas-resilience.html#research-section"
-                  style="font-family: Big John PRO"
+                  style="font-family: 'Montserrat', sans-serif;"
                   >Learn more<i
                     class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
                     aria-hidden="true"
@@ -1339,7 +1372,7 @@
       <!-- end separator-->
 
       <!-- start awards and certifications section -->
-      <section class="lg bg-light-sky" id="awards" style="padding: 80px 0;">
+      <section class="lg" id="awards" style="padding: 80px 0;">
         <div class="container">
           <div class="row">
             
@@ -1388,6 +1421,17 @@
             <div class="col-lg-6">
               <h2 class="section-title">Awards & Achievements</h2>
               
+              <!-- Award Item 0: Permanent Membership -->
+              <div class="glass-card cert-card">
+                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                  <i class="fa fa-users"></i>
+                </div>
+                <div class="cert-info">
+                  <h5>Permanent Membership</h5>
+                  <p>Associate Member, Aeronautical Society of India — 2013</p>
+                </div>
+              </div>
+
               <!-- Award Item 1 -->
               <div class="glass-card cert-card">
                 <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
@@ -1688,63 +1732,7 @@
         </div> -->
       </section>
       <!-- end service section-->
-      <!-- start achievements section -->
-      <section class="lg" id="achievements" style="padding: 80px 0;">
-        <div class="container">
-          <h2 class="section-title">Certifications &amp; Achievements</h2>
-          
-          <div class="row" style="margin-bottom: 40px;">
-            <div class="col-md-12">
-              <div class="glass-card" style="padding: 20px; text-align: center; border: 1px solid rgba(6, 182, 212, 0.3) !important;">
-                <h4 style="color: var(--accent-cyan); margin-bottom: 15px; font-weight: 700;">Multiscale Modeling Research Paradigm</h4>
-                <img src="img/multiscale.png" alt="Multiscale Modeling" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" />
-              </div>
-            </div>
-          </div>
 
-          <div class="row">
-            <!-- Permanent Membership -->
-            <div class="col-md-4" style="margin-bottom: 25px;">
-              <div class="glass-card" style="padding: 25px; text-align: center; height: 100%; border-top: 4px solid var(--accent-cyan) !important;">
-                <div style="height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                  <img src="img/content/aesilogo.jpg" alt="Aeronautical Society of India Logo" style="max-height: 90px; border-radius: 8px;" />
-                </div>
-                <h5 style="color: #fff; font-size: 18px; margin-bottom: 15px; font-weight: bold;">Permanent Membership</h5>
-                <p style="font-size: 15px; color: var(--text-muted); text-align: justify; margin: 0; line-height: 1.6;">
-                  Awarded permanent membership as an <b>Associate Member</b> at the <b>Aeronautical Society of India</b> in 2013, recognizing professional contributions and engagement in the field of aeronautics.
-                </p>
-              </div>
-            </div>
-            
-            <!-- IIT Kharagpur Alumni -->
-            <div class="col-md-4" style="margin-bottom: 25px;">
-              <div class="glass-card" style="padding: 25px; text-align: center; height: 100%; border-top: 4px solid var(--accent-indigo) !important;">
-                <div style="height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                  <img src="img/content/iit-khargpur.jpg" alt="IIT Kharagpur Logo" style="max-height: 90px; background: #fff; padding: 5px; border-radius: 8px;" />
-                </div>
-                <h5 style="color: #fff; font-size: 18px; margin-bottom: 15px; font-weight: bold;">IIT Kharagpur Alumni</h5>
-                <p style="font-size: 15px; color: var(--text-muted); text-align: justify; margin: 0; line-height: 1.6;">
-                  Earned M.Tech in Mechanical Engineering from the <b>Indian Institute of Technology (IIT) Kharagpur</b>, contributing to academic and research excellence.
-                </p>
-              </div>
-            </div>
-
-            <!-- IIT Bombay Alumni -->
-            <div class="col-md-4" style="margin-bottom: 25px;">
-              <div class="glass-card" style="padding: 25px; text-align: center; height: 100%; border-top: 4px solid var(--accent-teal) !important;">
-                <div style="height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                  <img src="img/content/iitb_logo.png" alt="IIT Bombay Logo" style="max-height: 90px; background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 10px rgba(255,255,255,0.1);" />
-                </div>
-                <h5 style="color: #fff; font-size: 18px; margin-bottom: 15px; font-weight: bold;">IIT Bombay Alumni</h5>
-                <p style="font-size: 15px; color: var(--text-muted); text-align: justify; margin: 0; line-height: 1.6;">
-                  Earned B.Tech from the <b>Indian Institute of Technology (IIT) Bombay</b>, laying the foundation for a distinguished career in aerospace research.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- end achievements section -->
 
       <section class="lg" id="emi-conference" style="padding: 80px 0;">
         <div class="container">
