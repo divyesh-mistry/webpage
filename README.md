@@ -17,10 +17,7 @@ Production site: `https://divyesh-mistry.github.io/webpage/`
 
 ## Professional Documents
 
-- `files/Divyesh_Mistry_Professional_Resume.pdf`
-- `files/Divyesh_Mistry_Academic_CV.pdf`
-
-The PDFs are generated reproducibly with `tools/generate_professional_documents.py`.
+- `files/Divyesh_CV.pdf` - original curriculum vitae
 
 ## Local Preview
 
