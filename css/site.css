@@ -106,8 +106,9 @@ p { font-size: 16px; line-height: 1.75; }
 .plain-list strong, .plain-list span { display: block; }
 .plain-list span { margin-top: 5px; color: var(--muted); line-height: 1.55; }
 .education-feature { display: grid; grid-template-columns: 1.2fr .8fr; gap: 54px; align-items: center; }
+.education-gallery { display: grid; grid-template-columns: 1.35fr .65fr; gap: 14px; align-items: stretch; }
 .milestone-photo { margin: 0; border: 1px solid var(--line); background: var(--white); }
-.milestone-photo img { display: block; width: 100%; height: auto; }
+.milestone-photo img { display: block; width: 100%; height: 300px; padding: 8px; object-fit: contain; background: #edf2f3; }
 .milestone-photo figcaption { padding: 13px 16px; color: var(--muted); font-size: 13px; }
 .compact-list { margin-top: 24px; }
 .education-secondary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; margin-top: 54px; padding-top: 42px; border-top: 1px solid var(--line); }
@@ -162,7 +163,7 @@ p { font-size: 16px; line-height: 1.75; }
   .hero .lead, .subpage-hero p { font-size: 17px; }
   .section { padding: 62px 0; }
   h2 { font-size: 30px; }
-  .signals, .expertise-grid, .research-grid, .two-column, .contact-grid, .finding-grid, .pipeline, .evidence-grid, .education-secondary, .conference-gallery { grid-template-columns: 1fr; }
+  .signals, .expertise-grid, .research-grid, .two-column, .contact-grid, .finding-grid, .pipeline, .evidence-grid, .education-gallery, .education-secondary, .conference-gallery { grid-template-columns: 1fr; }
   .signal, .signal:nth-child(2), .signal:last-child { border-right: 1px solid var(--line-dark); }
   .about-grid { gap: 34px; }
   .portrait { height: 470px; }
@@ -173,6 +174,7 @@ p { font-size: 16px; line-height: 1.75; }
   .subpage-hero { min-height: 390px; }
   .subpage-hero h1 { font-size: 36px; }
   .evidence-grid img { height: auto; }
+  .milestone-photo img { height: auto; max-height: 480px; }
   .conference-frame { height: auto; min-height: 220px; }
   .conference-frame img { height: auto; max-height: 520px; }
 }
