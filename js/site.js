@@ -44,6 +44,8 @@ filters.forEach((button) => {
 });
 
 document.querySelectorAll('video[autoplay]').forEach((video) => {
+  const playbackRate = Number(video.dataset.playbackRate);
+  if (playbackRate > 0) video.playbackRate = playbackRate;
   const play = video.play();
   if (play && typeof play.catch === 'function') play.catch(() => {});
 });
