@@ -394,6 +394,17 @@ header {
   margin-bottom: 15px;
 }
 
+.timeline-location {
+  margin: -7px 0 17px;
+  color: var(--text-muted) !important;
+  font-size: 0.93rem;
+}
+
+.timeline-location i {
+  margin-right: 7px;
+  color: var(--accent-cyan);
+}
+
 .timeline-details li {
   color: var(--text-dark) !important;
 }
