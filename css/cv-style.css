@@ -195,6 +195,72 @@ header {
   aspect-ratio: 4 / 3;
 }
 
+.motion-section {
+  padding: 82px 0;
+  background: rgba(5, 8, 14, 0.72) !important;
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.motion-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.75fr) minmax(480px, 1.25fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.motion-copy h2 {
+  margin: 0 0 20px;
+  font-size: clamp(1.9rem, 3vw, 3rem);
+  line-height: 1.15;
+}
+
+.motion-copy p {
+  color: #aeb8c8 !important;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.motion-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 12px;
+  color: var(--accent-cyan) !important;
+  font-weight: 700;
+}
+
+.motion-paper {
+  margin-top: 24px;
+  padding: 18px 0 18px 18px;
+  border-left: 3px solid var(--accent-teal);
+}
+
+.motion-paper span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--accent-teal) !important;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.motion-paper strong {
+  display: block;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.motion-media video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #000;
+  border: 1px solid rgba(255,255,255,.16);
+}
+
 .hero-visual-note {
   position: absolute;
   right: 0;
@@ -547,6 +613,7 @@ footer ul.footer-list-style3 li a:hover {
   .banner-section { min-height: auto; padding: 130px 0 72px !important; }
   .hero-layout { grid-template-columns: 1fr; gap: 34px; }
   .hero-visual { min-height: 360px; }
+  .motion-layout { grid-template-columns: 1fr; gap: 32px; }
 }
 
 @media (max-width: 767px) {
@@ -566,6 +633,7 @@ footer ul.footer-list-style3 li a:hover {
   .hero-visual video { width: 100%; max-height: 360px; }
   .hero-visual-note { position: static; margin-top: 10px; }
   .hero-actions { justify-content: flex-start; }
+  .motion-section { padding: 60px 0 !important; }
   .banner-section h1 {
     font-size: 2.25rem !important;
     line-height: 1.2 !important;
