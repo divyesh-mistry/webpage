@@ -115,9 +115,7 @@
       
       /* Banner styling adjustments */
       .banner-section {
-        background: radial-gradient(circle at center, rgba(9, 13, 22, 0.2) 0%, #090d16 90%), url('img/research_ds/Md_flow.jpg') !important;
-        background-size: cover !important;
-        background-position: center !important;
+        background: #090d16 !important;
       }
       
       /* Contrast fixes for text elements */
@@ -126,8 +124,8 @@
       }
       
       .timeline-details li::before {
-        content: '::' !important;
-        font-family: 'Fira Code', monospace !important;
+        content: '\2022' !important;
+        font-family: 'Outfit', sans-serif !important;
         color: #06b6d4 !important;
         font-weight: bold;
       }
@@ -281,6 +279,34 @@
           max-height: 200px !important;
         }
       }
+
+      body,
+      button,
+      input,
+      textarea,
+      select,
+      [style*="font-family"] {
+        font-family: 'Outfit', Arial, sans-serif !important;
+        letter-spacing: 0 !important;
+      }
+
+      .glass-card::after {
+        content: none !important;
+        display: none !important;
+      }
+
+      #preloader {
+        background: #090d16 !important;
+      }
+
+      .butn.theme span {
+        color: #071019 !important;
+      }
+
+      .butn.theme:hover span,
+      .butn.white-hover span {
+        color: #ffffff !important;
+      }
     </style>
   </head>
 
@@ -367,38 +393,28 @@
       <!-- start banner section-->
       <section
       class="bg-img banner-section cover-background"
-      data-overlay-dark="7"
-      data-background="img/research_ds/Md_flow.jpg"
       id="home"
       >
-        <div class="container absolute-middle-center z-index-9">
-          <div class="row">
-            <div class="col-lg-8 sm-margin-40px-bottom">
-              <h1
-                class="font-size60 md-font-size42 sm-font-size38 xs-font-size30 font-weight-800 text-white"
-              >
-              Dr. Divyesh A. Mistry
-              </h1>
+        <div class="container">
+          <div class="hero-layout">
+            <div class="hero-copy">
+              <div class="hero-kicker">Multiscale mechanics of structural materials</div>
+              <h1>Dr. Divyesh A. Mistry</h1>
               <div class="hero-subtitle">Computational Materials Scientist</div>
-              <p class="width-95 xs-width-100 line-height-30 font-size20 text-white margin-20px-top" style="opacity: 0.9;">
-                Computational Materials Scientist | PhD, IIT Bombay
+              <p class="hero-summary">
+                Connecting atomistic mechanisms, discrete dislocation dynamics, and continuum-scale response to understand plasticity, fracture, and microstructural barriers in advanced alloys.
               </p>
-              <div class="margin-30px-top sm-margin-25px-top">
-                <a href="#about" class="butn theme white-hover"
-                  ><span>Learn More</span></a
-                >
+              <div class="actions hero-actions margin-30px-top sm-margin-25px-top">
+                <a href="#research" class="butn theme"><span>Explore Research</span></a>
+                <a href="publications.html" class="butn white-hover"><span>View Publications</span></a>
               </div>
+            </div>
+            <div class="hero-visual">
+              <img src="img/research_updates/asme-ppb-schematic.jpg" alt="Polycrystalline discrete dislocation dynamics model showing a prior particle boundary cluster and dislocation interactions" />
+              <div class="hero-visual-note">Published ASME research on prior particle boundary effects</div>
             </div>
           </div>
         </div>
-
-
-
-        <!-- start banner shape -->
-        <div class="banner-shape">
-          <!-- <img src="img/content/banner9-shape.png" alt="" /> -->
-        </div>
-        <!-- end banner shape -->
       </section>
       <!-- end banner section-->
 
@@ -617,7 +633,7 @@
                     <div style="position: relative; display: inline-block; padding: 6px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--glass-border); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
                       <img src="img/people/phddefence.jpg?v=3" alt="Successful Ph.D. Defence at IIT Bombay" style="width: 100%; border-radius: 8px; max-height: 240px; object-fit: cover;" />
                       <div style="position: absolute; bottom: 15px; left: 15px; right: 15px; background: rgba(9, 13, 22, 0.85); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(6, 182, 212, 0.2); backdrop-filter: blur(4px);">
-                        <p style="font-size: 12px; color: #fff; margin: 0; font-family: 'Fira Code', monospace; font-weight: 500;">
+                        <p style="font-size: 12px; color: #fff; margin: 0; font-weight: 500;">
                           <i class="fa fa-graduation-cap" style="color: var(--accent-cyan); margin-right: 5px;"></i> Successful Ph.D. Defence
                         </p>
                       </div>
@@ -1286,7 +1302,6 @@
                     <i class="fa fa-edit"></i>
                   </div>
                   <div>
-                    <span style="font-family: 'Fira Code', monospace; font-size: 10px; color: var(--accent-indigo); display: block; margin-bottom: 5px;">[research_software:open_source]</span>
                     <a href="https://github.com/divyesh-mistry/ddd-w-poly" target="_blank" rel="noopener" class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px; color: #fff;">
                       Polycrystalline Tungsten Discrete Dislocation Dynamics Workflow
                     </a>

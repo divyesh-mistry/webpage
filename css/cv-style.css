@@ -1,6 +1,6 @@
-/* cv-style.css - Computational Physics Theme for Dr. Divyesh Mistry */
+/* cv-style.css - Computational Materials Theme for Dr. Divyesh A. Mistry */
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --primary: #090d16;        /* Deep Space / Lattice Black */
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', sans-serif !important;
   font-weight: 700;
   color: #fff !important;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
 }
 
 p, li, span, address, td, th {
@@ -63,7 +63,7 @@ p, li, span, address, td, th {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border) !important;
-  border-radius: 12px !important;
+  border-radius: 6px !important;
   padding: 30px;
   box-shadow: var(--card-shadow);
   transition: var(--transition);
@@ -94,24 +94,6 @@ p, li, span, address, td, th {
   transform: translateX(100%);
 }
 
-/* Add custom active terminal indicator in top right of glass cards */
-.glass-card::after {
-  content: '[sys:active]';
-  font-family: 'Fira Code', monospace;
-  font-size: 9px;
-  color: var(--accent-cyan);
-  opacity: 0.15;
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  letter-spacing: 0.5px;
-  transition: var(--transition);
-}
-
-.glass-card:hover::after {
-  opacity: 0.7;
-}
-
 /* Navigation Overrides */
 header {
   backdrop-filter: blur(16px) !important;
@@ -121,9 +103,9 @@ header {
 }
 
 .navbar-brand h6 {
-  font-family: 'Fira Code', monospace !important;
+  font-family: 'Outfit', sans-serif !important;
   font-weight: 700 !important;
-  letter-spacing: 0.5px;
+  letter-spacing: 0;
   color: #fff !important;
 }
 
@@ -143,11 +125,80 @@ header {
 /* Hero Section */
 .banner-section {
   position: relative;
-  padding: 220px 0 140px 0;
-  background: radial-gradient(circle at center, rgba(9, 13, 22, 0.4) 0%, var(--primary) 90%), url('../img/research_ds/Md_flow.jpg') !important;
-  background-size: cover !important;
-  background-position: center !important;
+  min-height: 82vh;
+  padding: 150px 0 80px;
+  overflow: hidden;
+  background: #090d16 !important;
   border-bottom: 1px solid rgba(6, 182, 212, 0.15) !important;
+}
+
+.banner-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, #090d16 0%, rgba(9, 13, 22, 0.97) 40%, rgba(9, 13, 22, 0.28) 68%, rgba(9, 13, 22, 0.08) 100%);
+}
+
+.hero-layout {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  align-items: center;
+  gap: 54px;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.75rem, 5vw, 5.25rem) !important;
+  line-height: 1.02 !important;
+  max-width: 720px;
+  margin-bottom: 20px;
+}
+
+.hero-kicker {
+  color: var(--accent-cyan) !important;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+}
+
+.hero-summary {
+  max-width: 670px;
+  color: #cbd5e1 !important;
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+.hero-visual {
+  position: relative;
+  z-index: 2;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-visual img {
+  width: min(760px, 100%);
+  max-height: 560px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow: 0 30px 80px rgba(0,0,0,.38);
+}
+
+.hero-visual-note {
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  padding: 10px 14px;
+  color: #e5e7eb !important;
+  background: rgba(9,13,22,.92);
+  border-left: 3px solid var(--accent-cyan);
+  font-size: 0.82rem;
 }
 
 #particle-canvas {
@@ -161,13 +212,13 @@ header {
 }
 
 .hero-subtitle {
-  font-family: 'Fira Code', monospace !important;
+  font-family: 'Outfit', sans-serif !important;
   font-size: 1.15rem;
   color: var(--accent-cyan) !important;
   font-weight: 600;
   margin-top: 15px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.04em;
   text-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
 }
 
@@ -178,8 +229,8 @@ header {
   padding-bottom: 15px;
   font-weight: 800;
   font-size: 2.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  text-transform: none;
+  letter-spacing: 0;
   color: #fff !important;
 }
 
@@ -245,7 +296,7 @@ header {
 }
 
 .timeline-date {
-  font-family: 'Fira Code', monospace !important;
+  font-family: 'Outfit', sans-serif !important;
   display: inline-block;
   padding: 6px 14px;
   background: rgba(6, 182, 212, 0.15) !important;
@@ -277,8 +328,8 @@ header {
 }
 
 .timeline-details li::before {
-  content: '::' !important;
-  font-family: 'Fira Code', monospace !important;
+  content: '\2022' !important;
+  font-family: 'Outfit', sans-serif !important;
   color: var(--accent-cyan) !important;
   font-weight: bold;
 }
@@ -301,7 +352,7 @@ header {
 }
 
 .skill-badge {
-  font-family: 'Fira Code', monospace !important;
+  font-family: 'Outfit', sans-serif !important;
   padding: 6px 12px;
   background: rgba(6, 182, 212, 0.1) !important;
   color: #fff !important;
@@ -478,14 +529,19 @@ footer ul.footer-list-style3 li a:hover {
   box-shadow: 0 0 20px rgba(6, 182, 212, 0.3) !important;
 }
 
+/* Keep legacy inline font declarations visually consistent. */
+[style*="font-family"] {
+  font-family: 'Outfit', sans-serif !important;
+}
+
 /* Responsive / Mobile & Tablet Layout Adjustments */
 @media (max-width: 991px) {
   .section-title {
     font-size: 1.85rem !important;
   }
-  .banner-section {
-    padding: 160px 0 100px 0 !important;
-  }
+  .banner-section { min-height: auto; padding: 130px 0 72px !important; }
+  .hero-layout { grid-template-columns: 1fr; gap: 34px; }
+  .hero-visual { min-height: 360px; }
 }
 
 @media (max-width: 767px) {
@@ -498,10 +554,12 @@ footer ul.footer-list-style3 li a:hover {
   }
   
   /* Hero Banner */
-  .banner-section {
-    padding: 120px 0 80px 0 !important;
-    text-align: center !important;
-  }
+  .banner-section { padding: 110px 0 54px !important; text-align: left !important; }
+  .banner-section::before { background: linear-gradient(180deg, #090d16 0%, rgba(9,13,22,.94) 62%, rgba(9,13,22,.35) 100%); }
+  .hero-layout { display: flex; flex-direction: column; align-items: stretch; }
+  .hero-visual { min-height: 260px; }
+  .hero-visual-note { position: static; margin-top: 10px; }
+  .hero-actions { justify-content: flex-start; }
   .banner-section h1 {
     font-size: 2.25rem !important;
     line-height: 1.2 !important;
@@ -555,4 +613,3 @@ footer ul.footer-list-style3 li a:hover {
     max-height: 200px !important;
   }
 }
-

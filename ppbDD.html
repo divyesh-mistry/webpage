@@ -6,11 +6,14 @@
   <meta name="author" content="Dr. Divyesh A. Mistry">
   <meta name="description" content="Published research on prior particle boundary effects in Ni-based superalloys using polycrystalline discrete dislocation dynamics.">
   <title>Prior Particle Boundary Effects | Dr. Divyesh A. Mistry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     :root { --ink:#e5e7eb; --muted:#a7b0c0; --panel:#111827; --line:#253247; --cyan:#22d3ee; --gold:#f5c451; }
     * { box-sizing:border-box; }
-    body { margin:0; background:#090d16; color:var(--ink); font-family:Arial,sans-serif; letter-spacing:0; }
+    body { margin:0; background:#090d16; color:var(--ink); font-family:'Outfit',Arial,sans-serif; letter-spacing:0; }
     a { color:var(--cyan); }
     .site-nav { position:sticky; top:0; z-index:20; background:rgba(9,13,22,.96); border-bottom:1px solid var(--line); }
     .nav-inner { max-width:1160px; margin:auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
@@ -36,8 +39,12 @@
     .findings { display:grid; grid-template-columns:repeat(3,1fr); gap:26px; margin-top:32px; }
     .finding { border-top:2px solid var(--cyan); padding-top:18px; }
     .finding h3 { color:#fff; font-size:18px; }
+    .evidence { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:30px; }
+    .evidence figure { margin:0; background:var(--panel); border:1px solid var(--line); overflow:hidden; }
+    .evidence img { display:block; width:100%; aspect-ratio:4/3; object-fit:contain; background:#070b12; }
+    .evidence figcaption { padding:16px 18px 18px; color:var(--muted); font-size:14px; line-height:1.6; }
     .footer { border-top:1px solid var(--line); padding:30px 24px; text-align:center; color:var(--muted); }
-    @media(max-width:760px){ .grid,.findings{grid-template-columns:1fr}.nav-inner{align-items:flex-start;flex-direction:column}.hero{min-height:65vh}.hero-inner{padding-top:110px} }
+    @media(max-width:760px){ .grid,.findings,.evidence{grid-template-columns:1fr}.nav-inner{align-items:flex-start;flex-direction:column}.hero{min-height:65vh}.hero-inner{padding-top:110px} }
   </style>
 </head>
 <body>
@@ -82,6 +89,22 @@
           <article class="finding"><h3>Strain hardening</h3><p>Larger and more distributed PPB populations increase dislocation immobilization and strengthen the hardening response.</p></article>
           <article class="finding"><h3>Residual stress</h3><p>PPB-adjacent regions retain stronger compressive residual stresses after unloading and subsequent annealing.</p></article>
           <article class="finding"><h3>Spatial organization</h3><p>Cluster topology changes the distribution of plastic activity, demonstrating that PPB arrangement matters alongside boundary count.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="band">
+      <div class="content">
+        <h2>Microstructure-resolved evidence</h2>
+        <p>Complementary field maps show how PPB-constrained deformation persists beyond the global stress--strain response and remains spatially tied to the surrounding grain structure.</p>
+        <div class="evidence">
+          <figure>
+            <img src="img/research_updates/asme-residual-stress-fields.jpg" alt="Residual normal-stress fields around prior particle boundary clusters in polycrystalline DDD configurations">
+            <figcaption>Residual normal-stress fields reveal localized heterogeneity around PPB clusters and their surrounding grain network.</figcaption>
+          </figure>
+          <figure>
+            <img src="img/research_updates/asme-gnd-density-fields.jpg" alt="Geometrically necessary dislocation density fields for configurations containing prior particle boundaries">
+            <figcaption>GND-density fields provide a complementary view of the persistent strain gradients associated with PPB-constrained deformation.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
