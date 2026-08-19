@@ -82,7 +82,8 @@ p { font-size: 16px; line-height: 1.75; }
 .research-card { overflow: hidden; border: 1px solid var(--line-dark); border-radius: 6px; background: var(--panel); }
 .research-visual { height: 330px; display: grid; place-items: center; overflow: hidden; padding: 18px; background: #f8fafb; }
 .research-visual.dark-visual { background: #020507; }
-.research-visual img { display: block; width: 100%; height: 100%; max-height: 100%; object-fit: contain; }
+.research-visual img, .research-visual video { display: block; width: 100%; height: 100%; max-height: 100%; object-fit: contain; }
+.card-video { background: #000; }
 .research-card-body { padding: 24px; }
 .tag { display: inline-block; margin-bottom: 12px; color: var(--gold); font-size: 12px; font-weight: 700; text-transform: uppercase; }
 .research-card h3 { font-size: 23px; line-height: 1.25; }
@@ -141,6 +142,10 @@ p { font-size: 16px; line-height: 1.75; }
 .evidence-grid figure { margin: 0; border: 1px solid var(--line); background: var(--white); }
 .evidence-grid img { display: block; width: 100%; height: 390px; padding: 12px; object-fit: contain; }
 .evidence-grid figcaption { padding: 14px 18px 18px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.video-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.video-pair figure { margin: 0; border: 1px solid var(--line-dark); background: var(--panel); }
+.project-video { display: block; width: 100%; aspect-ratio: 1.52; object-fit: contain; background: #000; }
+.video-pair figcaption { padding: 14px 18px 18px; color: var(--muted-dark); font-size: 14px; line-height: 1.55; }
 [hidden] { display: none !important; }
 @media (max-width: 900px) {
   .hero { min-height: 600px; height: auto; }
@@ -164,7 +169,7 @@ p { font-size: 16px; line-height: 1.75; }
   .hero .lead, .subpage-hero p { font-size: 17px; }
   .section { padding: 62px 0; }
   h2 { font-size: 30px; }
-  .signals, .expertise-grid, .research-grid, .two-column, .contact-grid, .finding-grid, .pipeline, .evidence-grid, .education-gallery, .education-secondary, .conference-gallery { grid-template-columns: 1fr; }
+  .signals, .expertise-grid, .research-grid, .two-column, .contact-grid, .finding-grid, .pipeline, .evidence-grid, .video-pair, .education-gallery, .education-secondary, .conference-gallery { grid-template-columns: 1fr; }
   .signal, .signal:nth-child(2), .signal:last-child { border-right: 1px solid var(--line-dark); }
   .about-grid { gap: 34px; }
   .portrait { height: 470px; }
