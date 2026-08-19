@@ -181,13 +181,18 @@ header {
   justify-content: center;
 }
 
-.hero-visual img {
+.hero-visual img,
+.hero-visual video {
   width: min(760px, 100%);
   max-height: 560px;
   object-fit: contain;
-  background: #fff;
+  background: #05070b;
   border: 1px solid rgba(255,255,255,.22);
   box-shadow: 0 30px 80px rgba(0,0,0,.38);
+}
+
+.hero-visual video {
+  aspect-ratio: 4 / 3;
 }
 
 .hero-visual-note {
@@ -558,6 +563,7 @@ footer ul.footer-list-style3 li a:hover {
   .banner-section::before { background: linear-gradient(180deg, #090d16 0%, rgba(9,13,22,.94) 62%, rgba(9,13,22,.35) 100%); }
   .hero-layout { display: flex; flex-direction: column; align-items: stretch; }
   .hero-visual { min-height: 260px; }
+  .hero-visual video { width: 100%; max-height: 360px; }
   .hero-visual-note { position: static; margin-top: 10px; }
   .hero-actions { justify-content: flex-start; }
   .banner-section h1 {
