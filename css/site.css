@@ -145,6 +145,7 @@ p { font-size: 16px; line-height: 1.75; }
 .video-pair { display: flex; gap: 24px; align-items: stretch; }
 .video-pair figure { flex: 1 1 0; min-width: 0; margin: 0; border: 1px solid var(--line); background: var(--white); }
 .project-video { display: block; width: 100%; height: 390px; padding: 12px; object-fit: contain; background: #000; }
+.mobile-motion { display: none; width: 100%; height: 390px; padding: 12px; object-fit: contain; background: #000; }
 .video-pair figcaption { padding: 14px 18px 18px; color: var(--muted); font-size: 14px; line-height: 1.55; }
 [hidden] { display: none !important; }
 @media (max-width: 900px) {
@@ -172,7 +173,8 @@ p { font-size: 16px; line-height: 1.75; }
   .signals, .expertise-grid, .research-grid, .two-column, .contact-grid, .finding-grid, .pipeline, .evidence-grid, .education-gallery, .education-secondary, .conference-gallery { grid-template-columns: 1fr; }
   .video-pair { gap: 14px; overflow-x: auto; padding-bottom: 8px; }
   .video-pair figure { flex: 0 0 min(72vw, 320px); }
-  .project-video { height: 260px; }
+  .desktop-video { display: none; }
+  .mobile-motion { display: block; height: 260px; }
   .signal, .signal:nth-child(2), .signal:last-child { border-right: 1px solid var(--line-dark); }
   .about-grid { gap: 34px; }
   .portrait { height: 470px; }
