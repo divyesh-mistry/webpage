@@ -44,8 +44,9 @@ button, input { font: inherit; }
 .button:hover, .button:focus-visible { filter: brightness(1.08); }
 .signal-bar { background: var(--bg); border-top: 1px solid var(--line-dark); }
 .signals { width: min(calc(100% - 48px), var(--shell)); margin: auto; display: grid; grid-template-columns: repeat(4, 1fr); }
-.signal { min-height: 96px; padding: 22px 24px; border-left: 1px solid var(--line-dark); }
+.signal { min-height: 96px; display: grid; grid-template-columns: 27px minmax(0, 1fr); gap: 13px; align-items: start; padding: 22px 20px; border-left: 1px solid var(--line-dark); }
 .signal:last-child { border-right: 1px solid var(--line-dark); }
+.signal-icon { margin-top: 2px; color: var(--cyan); font-size: 18px; }
 .signal strong { display: block; color: var(--white); font-size: 15px; }
 .signal span { display: block; margin-top: 6px; color: var(--muted-dark); font-size: 13px; line-height: 1.4; }
 .section { padding: 82px 0; }
