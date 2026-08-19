@@ -1,2094 +1,299 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <!-- meta tags -->
-    <meta charset="utf-8" />
-    <meta name="author" content="Dr. Divyesh A. Mistry" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta
-      name="keywords"
-      content="Divyesh, Mistry, Lammps, Multiscale Modeling, Discrete Dislocation Dynamics, research"
-    />
-    <meta
-      name="description"
-      content="Dr. Divyesh A. Mistry - Researcher in Multiscale Modeling"
-    />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Divyesh A. Mistry | Computational Materials Scientist</title>
+  <meta name="description" content="Research portfolio of Dr. Divyesh A. Mistry, a computational materials scientist working across molecular dynamics, discrete dislocation dynamics, fracture, plasticity, and high-performance computing.">
+  <meta name="author" content="Dr. Divyesh A. Mistry">
+  <link rel="canonical" href="https://divyesh-mistry.github.io/webpage/">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="img/web/asme-ppb-interaction.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="css/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dr. Divyesh A. Mistry | Computational Materials Scientist">
+  <meta property="og:description" content="Multiscale research in dislocation mechanics, fracture, advanced alloys, and reproducible scientific computing.">
+  <meta property="og:url" content="https://divyesh-mistry.github.io/webpage/">
+  <meta property="og:image" content="https://divyesh-mistry.github.io/webpage/img/web/asme-ppb-interaction.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dr. Divyesh A. Mistry | Computational Materials Scientist">
+  <meta name="twitter:description" content="Multiscale research in dislocation mechanics, fracture, advanced alloys, and reproducible scientific computing.">
+  <meta name="twitter:image" content="https://divyesh-mistry.github.io/webpage/img/web/asme-ppb-interaction.webp">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr. Divyesh A. Mistry",
+    "url": "https://divyesh-mistry.github.io/webpage/",
+    "image": "https://divyesh-mistry.github.io/webpage/img/web/divyesh-profile.webp",
+    "jobTitle": "Computational Materials Scientist",
+    "email": "mailto:d.mistryg@gmail.com",
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "Indian Institute of Technology Bombay"},
+      {"@type": "CollegeOrUniversity", "name": "Indian Institute of Technology Kharagpur"}
+    ],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=feQuDO8AAAAJ&hl=en",
+      "https://github.com/divyesh-mistry",
+      "https://www.linkedin.com/in/dr-divyesh-mistry-7b40a95b/",
+      "https://www.researchgate.net/profile/Divyesh-Mistry-2"
+    ],
+    "knowsAbout": ["Molecular dynamics", "Discrete dislocation dynamics", "Fracture mechanics", "Plasticity", "High-performance computing"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- title  -->
-    <title>Dr. Divyesh A. Mistry</title>
-
-    <link
-      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      id="bootstrap-css"
-    />
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <!-- owl carousel -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"
-    />
-
-    <!-- news-slider css -->
-    <link rel="stylesheet" href="css/news-slider.css" />
-
-    <!-- plugins css -->
-    <link rel="stylesheet" href="css/plugins.css" />
-
-    <!-- switcher css -->
-    <link href="css/switcher.css" rel="stylesheet" />
-
-    <!-- custom css -->
-    <link href="css/styles-2.css" rel="stylesheet" id="colors" />
-    <link href="css/cv-style.css" rel="stylesheet" />
-
-    <!-- fonts css -->
-    <link rel="stylesheet" href="css/fonts.css" />
-
-    <!-- font awesome -->
-    <script src="https://use.fontawesome.com/5a31214411.js"></script>
-
-    <!-- academicons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
-    />
-
-    <!-- devicons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-
-    <!-- news-slider js -->
-    <script src="js/news-slider.js"></script>
-
-    <!-- Inline Dark Theme Overrides & Global Particle Background Style -->
-    <style>
-      /* Force dark theme globally and override templates */
-      html, body, .main-wrapper, section, footer, .bg-white, .bg-light-sky, .bg-light, .bg-dark, .footer-style9 {
-        background-color: #090d16 !important;
-        background: #090d16 !important;
-        color: #e5e7eb !important;
-      }
-      
-      /* Grid overlay on main wrapper */
-      .main-wrapper {
-        background-image: 
-          linear-gradient(rgba(6, 182, 212, 0.035) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(6, 182, 212, 0.035) 1px, transparent 1px) !important;
-        background-size: 40px 40px !important;
-        background-attachment: fixed !important;
-      }
-      
-      /* Dynamic canvas in background */
-      #particle-canvas {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        z-index: 0 !important;
-        pointer-events: none !important;
-      }
-
-      /* Elevate other elements above background canvas */
-      header, section, footer, .timeline-container, .glass-card, .container {
-        position: relative;
-        z-index: 2;
-      }
-      
-      /* Banner styling adjustments */
-      .banner-section {
-        background: #090d16 !important;
-      }
-      
-      /* Contrast fixes for text elements */
-      p, li, span, address, td, th {
-        color: #e5e7eb !important;
-      }
-      
-      .timeline-details li::before {
-        content: '\2022' !important;
-        font-family: 'Outfit', sans-serif !important;
-        color: #06b6d4 !important;
-        font-weight: bold;
-      }
-      
-      .text-muted {
-        color: #9ca3af !important;
-      }
-      
-      .timeline-date {
-        background: rgba(6, 182, 212, 0.15) !important;
-        color: #06b6d4 !important;
-        border: 1px solid rgba(6, 182, 212, 0.25) !important;
-      }
-      
-      /* Card backgrounds must remain slightly transparent dark gray to allow readability */
-      .glass-card {
-        background: rgba(17, 24, 39, 0.85) !important;
-        border: 1px solid rgba(6, 182, 212, 0.25) !important;
-        animation: border-glow 6s infinite ease-in-out;
-      }
-      
-      .timeline-dot {
-        animation: pulse-cyan 2.5s infinite ease-in-out;
-      }
-      
-      .skill-badge:hover {
-        animation: float-effect 0.8s infinite ease-in-out;
-      }
-      
-      .cta-glow {
-        background: linear-gradient(90deg, var(--accent-cyan), var(--accent-indigo));
-        color: #fff !important;
-        border: none !important;
-        box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
-        transition: all 0.3s ease;
-      }
-      .cta-glow:hover {
-        box-shadow: 0 0 30px rgba(6, 182, 212, 0.7);
-        transform: translateY(-3px);
-      }
-
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-      
-      @keyframes border-glow {
-        0% { border-color: rgba(6, 182, 212, 0.2) !important; }
-        50% { border-color: rgba(99, 102, 241, 0.6) !important; }
-        100% { border-color: rgba(6, 182, 212, 0.2) !important; }
-      }
-
-      @keyframes pulse-cyan {
-        0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4); }
-        70% { box-shadow: 0 0 0 10px rgba(6, 182, 212, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
-      }
-
-      @keyframes float-effect {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-4px); }
-        100% { transform: translateY(0px); }
-      }
-      
-      .pub-item {
-        animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
-      }
-      
-      /* Footer list styling */
-      footer ul.footer-list-style3 li a {
-        color: #9ca3af !important;
-      }
-      footer ul.footer-list-style3 li a:hover {
-        color: #06b6d4 !important;
-      }
-
-      /* Responsive / Mobile & Tablet Layout Adjustments */
-      @media (max-width: 991px) {
-        .section-title {
-          font-size: 1.85rem !important;
-        }
-        .banner-section {
-          padding: 160px 0 100px 0 !important;
-        }
-      }
-
-      @media (max-width: 767px) {
-        /* Spacings and Padding */
-        section {
-          padding: 60px 0 !important;
-        }
-        .glass-card {
-          padding: 20px !important;
-        }
-        
-        /* Hero Banner */
-        .banner-section {
-          padding: 120px 0 80px 0 !important;
-          text-align: center !important;
-        }
-        .banner-section h1 {
-          font-size: 2.25rem !important;
-          line-height: 1.2 !important;
-        }
-        .hero-subtitle {
-          font-size: 1rem !important;
-          letter-spacing: 1px !important;
-        }
-        .banner-section p {
-          font-size: 16px !important;
-          margin: 15px auto !important;
-        }
-        
-        /* Timelines */
-        .timeline-container {
-          padding-left: 20px !important;
-        }
-        .timeline-container::before {
-          left: 4px !important;
-        }
-        .timeline-dot {
-          left: -24px !important;
-          width: 14px !important;
-          height: 14px !important;
-          top: 10px !important;
-          border-width: 3px !important;
-        }
-        .timeline-date {
-          padding: 4px 10px !important;
-          font-size: 0.75rem !important;
-        }
-        .timeline-role {
-          font-size: 1.15rem !important;
-        }
-        .timeline-institution {
-          font-size: 0.95rem !important;
-        }
-        
-        /* Competencies grid */
-        .competencies-grid {
-          grid-template-columns: 1fr !important;
-          gap: 15px !important;
-        }
-        .skill-badge {
-          font-size: 0.75rem !important;
-          padding: 5px 10px !important;
-        }
-        
-        /* Ph.D. split card image */
-        .Ph.D.-card img {
-          max-height: 200px !important;
-        }
-      }
-
-      body,
-      button,
-      input,
-      textarea,
-      select,
-      [style*="font-family"] {
-        font-family: 'Outfit', Arial, sans-serif !important;
-        letter-spacing: 0 !important;
-      }
-
-      .glass-card::after {
-        content: none !important;
-        display: none !important;
-      }
-
-      #preloader {
-        background: #090d16 !important;
-      }
-
-      .butn.theme span {
-        color: #071019 !important;
-      }
-
-      .butn.theme:hover span,
-      .butn.white-hover span {
-        color: #ffffff !important;
-      }
-    </style>
-  </head>
-
-  <body>
-    <canvas id="particle-canvas"></canvas>
-    <!-- start page loading -->
-    <div id="preloader">
-      <div class="row loader">
-        <div class="loader-icon"></div>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#home">Dr. Divyesh A. Mistry</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation">Menu</button>
+      <div class="nav-links" id="primary-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="#contact">Contact</a>
       </div>
-    </div>
-    <!-- end page loading -->
+    </nav>
+  </header>
 
-    <!-- start main-wrapper section -->
-    <div class="main-wrapper">
-      <!-- start header section -->
-      <header class="header-style1 menu_area-light">
-        <div class="navbar-default border-bottom1 border-color-light-white">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-12 col-lg-12">
-                <div class="menu_area alt-font">
-                  <nav class="navbar navbar-expand-lg navbar-light no-padding">
-                    <div class="navbar-header navbar-header-custom">
-                      <!-- start logo -->
-                      <a href="#home" class="navbar-brand logo4">
-                        <h6
-                          style="
-                            margin-top: 7%;
-                            text-transform: uppercase;
-                            font-family: 'Montserrat', sans-serif;                           
-                            color: #fff;
-                          "
-                        >
-                          Dr. Divyesh A. Mistry
-                        </h6>
-                      </a>
-                      <!-- end logo -->
-                    </div>
-
-                    <div class="navbar-toggler"></div>
-
-                    <!-- menu area -->
-                    <ul
-                      class="navbar-nav ml-auto"
-                      id="nav"
-                      style="display: none"
-                    >
-                      <li>
-                        <a href="#home">Home</a>
-                      </li>
-                      <li>
-                        <a href="#about">About</a>
-                      </li>
-                      <li>
-                        <a href="#experience">Experience</a>
-                      </li>
-                      <li>
-                        <a href="#education">Education</a>
-                      </li>
-                      <li>
-                        <a href="#competencies">Competencies</a>
-                      </li>
-                      <li>
-                        <a href="#research">Research</a>
-                      </li>
-                      <li>
-                        <a href="#publications">Publications</a>
-                      </li>
-                      <li>
-                        <a href="#contact">Contact</a>
-                      </li>
-                    </ul>
-                    <!-- end menu area -->
-                  </nav>
-                </div>
-              </div>
-            </div>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Computational materials scientist</p>
+          <h1 id="hero-title">Dr. Divyesh A. Mistry</h1>
+          <p class="lead">Connecting atomistic mechanisms, discrete dislocation dynamics, and continuum-scale response to understand plasticity, fracture, and microstructural barriers in advanced structural materials.</p>
+          <div class="actions">
+            <a class="button" href="#research">Explore research</a>
+            <a class="button secondary" href="publications.html">View publications</a>
+            <a class="button secondary" href="files/Divyesh_Mistry_Professional_Resume.pdf" target="_blank" rel="noopener">Professional resume</a>
+            <a class="button secondary" href="files/Divyesh_Mistry_Academic_CV.pdf" target="_blank" rel="noopener">Academic CV</a>
           </div>
         </div>
-      </header>
-      <!-- end header section -->
+      </div>
+    </section>
 
-      <!-- start banner section-->
-      <section
-      class="bg-img banner-section cover-background"
-      id="home"
-      >
-        <div class="container">
-          <div class="hero-layout">
-            <div class="hero-copy">
-              <div class="hero-kicker">Multiscale mechanics of structural materials</div>
-              <h1>Dr. Divyesh A. Mistry</h1>
-              <div class="hero-subtitle">Computational Materials Scientist</div>
-              <p class="hero-summary">
-                Connecting atomistic mechanisms, discrete dislocation dynamics, and continuum-scale response to understand plasticity, fracture, and microstructural barriers in advanced alloys.
-              </p>
-              <div class="actions hero-actions margin-30px-top sm-margin-25px-top">
-                <a href="#research" class="butn theme"><span>Explore Research</span></a>
-                <a href="publications.html" class="butn white-hover"><span>View Publications</span></a>
-              </div>
-            </div>
-            <div class="hero-visual">
-              <img src="img/research_updates/asme-ppb-interaction-dark.jpg" alt="Polycrystalline dislocation model showing a prior particle boundary region and localized dislocation interactions" />
-              <div class="hero-visual-note">Microstructure-sensitive dislocation mechanics</div>
-            </div>
+    <aside class="signal-bar" aria-label="Research profile highlights">
+      <div class="signals">
+        <div class="signal"><strong>MD + DDD</strong><span>Mechanistic multiscale simulation</span></div>
+        <div class="signal"><strong>Advanced alloys</strong><span>Tungsten and nickel superalloys</span></div>
+        <div class="signal"><strong>HPC workflows</strong><span>Automated, reproducible computation</span></div>
+        <div class="signal"><strong>Open research</strong><span>Software, examples, and documentation</span></div>
+      </div>
+    </aside>
+
+    <section class="section" id="about">
+      <div class="shell about-grid">
+        <img class="portrait" src="img/web/divyesh-profile.webp" alt="Dr. Divyesh A. Mistry at the Engineering Mechanics Institute Conference in Boulder" width="720" height="720" decoding="async">
+        <div class="about-copy">
+          <p class="eyebrow">Research profile</p>
+          <h2>Mechanics across scales, built around physical mechanisms.</h2>
+          <p class="summary">Dr. Divyesh A. Mistry develops physics-based computational descriptions of deformation and fracture in structural materials.</p>
+          <p>His work combines molecular dynamics, discrete dislocation dynamics, microstructure generation, continuum mechanics, and scientific data analysis to connect defect-scale interactions with collective material response. Current and recent applications include prior-particle-boundary effects in nickel-based superalloys and crack-tip plasticity in tungsten-based materials.</p>
+          <p>He completed his Ph.D. in Aerospace Engineering at the Indian Institute of Technology Bombay and previously served as a Visiting Researcher in Computational Materials Science at Merrimack College from April 2026 through July 31, 2026.</p>
+          <div class="profile-links" aria-label="Professional profiles">
+            <a href="https://scholar.google.com/citations?user=feQuDO8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://github.com/divyesh-mistry" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/dr-divyesh-mistry-7b40a95b/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.researchgate.net/profile/Divyesh-Mistry-2" target="_blank" rel="noopener">ResearchGate</a>
           </div>
         </div>
-      </section>
-      <!-- end banner section-->
+      </div>
+    </section>
 
-      <!-- start about section -->
-      <section class="lg" id="about">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 text-center xs-margin-25px-bottom">
-              <div
-                class="display-inline-block position-relative margin-30px-bottom xs-margin-20px-bottom"
-              >
-                <div class="my-image">
-                  <img
-                    src="img/people/profile.jpg?v=3"
-                    alt="Dr. Divyesh A. Mistry"
-                    title="Dr. Divyesh A. Mistry"
-                    class="collaborator-avatar"
-                  />
-                  <style>
-                    .my-image img {
-                      width: 250px;
-                      height: 250px;
-                      border-radius: 50%;
-                      object-fit: cover;
-                      border: 4px solid var(--accent-blue);
-                      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.15);
-                    }
-                  </style>
-                </div>
-              </div>
-              <a href="files/cv_divyesh.pdf" target="_blank" rel="noopener"
-                ><button
-                  type="button"
-                  class="btn btn-primary cta-glow"
-                  style="
-                    border-radius: 40px;
-                    width: 80%;
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: bold;
-                    font-size: 16px;
-                  "
-                >
-                  <i class="fa fa-download" style="margin-right: 8px;"></i> Download CV
-                </button></a
-              >
-            </div>
-            <div class="col-md-8 text-left xs-margin-25px-bottom">
-              <h2 class="section-title">Dr. Divyesh A. Mistry</h2>
-              <p
-                class="font-size18 line-height-32 margin-30px-bottom"
-                style="font-family: 'Outfit', sans-serif; text-align: justify;"
-              >
-                <strong>Dr. Divyesh A. Mistry</strong> is a computational materials scientist.
-                His research centers on physics-informed multiscale descriptions of plasticity, defect evolution, and fracture in 
-                advanced structural materials, including nickel-based superalloys and tungsten alloys. He integrates molecular dynamics,
- 
-                discrete dislocation dynamics, and continuum mechanics to identify mechanistic links between defect-scale interactions 
-                and macroscopic constitutive responses.
-              </p>
-              <p
-                class="font-size18 line-height-32 margin-30px-bottom"
-                style="font-family: 'Outfit', sans-serif; text-align: justify;"
-              >
-                Dr. Mistry completed his <strong>Ph.D. in Aerospace Engineering</strong> from the <strong>Indian Institute of Technology Bombay</strong>, 
-                where he was awarded the prestigious MHRD Teaching Assistantship. He holds an <strong>M.Tech. in Mechanical Engineering</strong> 
-                from the <strong>Indian Institute of Technology Kharagpur</strong>, specializing in Mechanical System Design.
-              </p>
-            </div>
-
-            <div class="col-md-12 margin-30px-top">
-              <div class="glass-card">
-                <h4 style="margin-bottom: 15px; color: var(--accent-blue);">
-                  <i class="fa fa-user-circle" style="margin-right: 10px;"></i> Professional Summary
-                </h4>
-                <p style="font-size: 16px; line-height: 1.8; text-align: justify; margin-bottom: 0;">
-                  Computational Materials Scientist with over 5 years of experience specializing in atomistic simulations and multiscale modeling of deformation mechanisms in advanced structural materials. Expert in deploying large-scale molecular dynamics (MD) workflows using LAMMPS on high-performance computing (HPC) platforms to characterize defect evolution, dislocation dynamics, and fracture under extreme thermo-mechanical loading conditions. Highly proficient in utilizing Python for scientific computing, high-volume simulation data analysis, and predictive model development. Proven track record of conducting microstructure-sensitive modeling of high-temperature alloys and refractory metals, directly transferable to predicting material behavior in nuclear and reactor environments.
-                </p>
-              </div>
-            </div>
-          </div>
+    <section class="section soft" aria-labelledby="expertise-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Core expertise</p>
+          <h2 id="expertise-title">A computational toolkit for difficult materials questions.</h2>
         </div>
-      </section>
-
-      <!-- start experience section -->
-      <section class="lg" id="experience" style="padding: 80px 0; background-color: #f8fafc;">
-        <div class="container">
-          <h2 class="section-title">Professional Experience</h2>
-          <div class="timeline-container">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-date">April 2026 – July 31, 2026</span>
-              <div class="glass-card">
-                <div class="timeline-role">Visiting Researcher, Computational Materials Science</div>
-                <div class="timeline-institution">Merrimack College | Refractory Metals &amp; Extreme Environments Initiative</div>
-                <div class="timeline-location"><i class="fa fa-map-marker" aria-hidden="true"></i> 315 Turnpike Street, North Andover, MA 01845, USA</div>
-                <ul class="timeline-details">
-                  <li>Conducted multiscale MD and DDD research on crack-tip plasticity, defect evolution, and ductile-to-brittle transition behavior in tungsten and tungsten-rhenium alloys.</li>
-                  <li>Developed automated LAMMPS and HPC workflows to quantify temperature-dependent fracture mechanisms and the effects of dislocations and irradiation-induced defects.</li>
-                  <li>Built Python analysis pipelines for large atomistic and dislocation-network datasets, accelerating reproducible post-processing and mechanistic interpretation.</li>
-                  <li>Integrated atomistic fracture observations with mesoscale dislocation-network evolution in a forthcoming multiscale tungsten study.</li>
-                  <li>Collaborated on technical reports and research proposals and mentored students in computational mechanics and parallel molecular dynamics.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-date">Jan 2025 – Dec 2025</span>
-              <div class="glass-card">
-                <div class="timeline-role">Junior Research Fellow (DRDO Project)</div>
-                <div class="timeline-institution">IIT Bombay, Aerospace Engineering, Mumbai, India</div>
-                <ul class="timeline-details">
-                  <li>Conducted research on the constitutive modelling and high strain-rate response of Shape Memory Alloy (SMA)-based composites for aerospace and defense applications.</li>
-                  <li>Performed dynamic impact experiments using Split Hopkinson Pressure Bar (SHPB) systems to characterize material behaviour under high strain-rate loading.</li>
-                  <li>Integrated experimental observations with numerical simulations to calibrate and validate constitutive models for aerospace structural applications.</li>
-                  <li>Assisted in project execution, data analysis, and mentoring of junior researchers in experimental characterization and computational modelling.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-date">Jan 2019 – June 2025</span>
-              <div class="glass-card">
-                <div class="timeline-role">Ph.D. Research Scholar</div>
-                <div class="timeline-institution">IIT Bombay, Aerospace Engineering, Mumbai, India</div>
-                <ul class="timeline-details">
-                  <li>Designed and executed large-scale atomistic simulations using LAMMPS on high-performance computing platforms to investigate generalized stacking fault energies, defect mobilities, and dislocation core structures.</li>
-                  <li>Developed a physics-informed hierarchical multiscale framework that maps atomistic-derived parameters (drag coefficients, obstacle strengths, and lattice strain fields) directly into mesoscale continuum models.</li>
-                  <li>Engineered automated post-processing and data-mining pipelines using Python to parse high-volume molecular dynamics (MD) trajectory data, track defect coordinates, and analyze structural evolution via OVITO.</li>
-                  <li>Authored a custom parallel polycrystalline Discrete Dislocation Dynamics (DDD) code coupled with Finite Element Analysis (FEA) to simulate 3D defect interactions and slip localization near internal interfaces.</li>
-                  <li>Utilized parallel computing (MPI) to scale atomistic simulations up to multi-million atom systems, establishing quantitative relationships between alloy microstructures and mechanical response under high stress fields.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-date">Jan 2019 – Dec 2023</span>
-              <div class="glass-card">
-                <div class="timeline-role">Graduate Teaching Assistant</div>
-                <div class="timeline-institution">IIT Bombay, Aerospace Engineering, Mumbai, India</div>
-                <ul class="timeline-details">
-                  <li>Assisted instruction in Continuum Mechanics, Finite Element Methods (FEM), and Multiscale Modelling for undergraduate and postgraduate engineering courses.</li>
-                  <li>Developed and supervised computational laboratory exercises involving numerical methods, finite element analysis, and scientific programming.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-date">June 2016 – Dec 2018</span>
-              <div class="glass-card">
-                <div class="timeline-role">Assistant Professor</div>
-                <div class="timeline-institution">CMR Institute of Technology, Mechanical Engineering, Bangalore, India</div>
-                <ul class="timeline-details">
-                  <li>Taught undergraduate courses in Finite Element Methods, Experimental Stress Analysis, and Solid Mechanics.</li>
-                  <li>Developed computational laboratory modules using ANSYS, MATLAB, and Python to support engineering analysis and numerical modelling.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-date">June 2014 – July 2016</span>
-              <div class="glass-card">
-                <div class="timeline-role">Graduate Teaching Assistant & M.Tech. Researcher</div>
-                <div class="timeline-institution">IIT Kharagpur, Mechanical Engineering, Kharagpur, India</div>
-                <ul class="timeline-details">
-                  <li>Developed and validated computational models using ABAQUS and ANSYS for structural mechanics and vibration analyses.</li>
-                  <li>Conducted laboratory instruction in Finite Element Modelling, Vibration Analysis, and Tribology, integrating theoretical concepts with numerical simulations.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div class="expertise-grid">
+          <article class="expertise-item"><h3>Atomistic simulation</h3><p>LAMMPS-based molecular dynamics, defect analysis, generalized stacking-fault behavior, crack-tip processes, and OVITO/DXA workflows.</p></article>
+          <article class="expertise-item"><h3>Dislocation mechanics</h3><p>Three-dimensional DDD, Frank-Read sources, obstacle and boundary interactions, network evolution, and microstructure-sensitive hardening.</p></article>
+          <article class="expertise-item"><h3>Scientific computing</h3><p>Python, NumPy, Pandas, C/C++, Fortran, Linux/Unix, version control, workflow automation, and high-performance computing.</p></article>
+          <article class="expertise-item"><h3>Visualization and data</h3><p>Reproducible post-processing and technical visualization using ParaView, OVITO, Neper, and custom analysis pipelines.</p></article>
         </div>
-      </section>
-      <!-- end experience section -->
+      </div>
+    </section>
 
-      <!-- start education section -->
-      <section class="lg" id="education" style="padding: 80px 0;">
-        <div class="container">
-          <h2 class="section-title">Education</h2>
-          <div class="timeline-container">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-date">Jan 2019 – Dec 2025</span>
-              <div class="glass-card Ph.D.-card" style="border-left: 4px solid var(--accent-cyan) !important;">
-                <div class="row align-items-center">
-                  <!-- Left side: Details -->
-                  <div class="col-lg-7 col-md-12">
-                    <div class="timeline-role" style="font-size: 1.6rem; color: #fff; margin-bottom: 5px;">Doctorate (Ph.D.) in Aerospace Engineering</div>
-                    <div class="timeline-institution" style="font-size: 1.15rem; color: var(--accent-cyan); font-weight: 600; margin-bottom: 20px; display: flex; align-items: center;">
-                      <div style="background-color: #fff; padding: 4px; border-radius: 4px; display: inline-block; margin-right: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-                        <img src="img/content/iitb_logo.png" alt="IIT Bombay Logo" style="width: 32px; height: 32px; object-fit: contain;" />
-                      </div>
-                      Indian Institute of Technology Bombay, Mumbai, India
-                    </div>
-                    
-                    <div style="background: rgba(6, 182, 212, 0.05); border-left: 3px solid var(--accent-cyan); padding: 15px; border-radius: 4px; margin-bottom: 20px;">
-                      <h6 style="color: #fff; font-weight: 700; margin-bottom: 5px; font-size: 15px;">THESIS:</h6>
-                      <p style="font-size: 15px; line-height: 1.6; font-style: italic; color: var(--text-dark); margin-bottom: 0;">
-                        "Multiscale Modeling of Prior Particle Boundaries in Nickel-based Superalloys"
-                      </p>
-                    </div>
-
-                    <ul class="timeline-details" style="padding-left: 0; list-style: none;">
-                      <li style="margin-bottom: 8px; font-size: 15px;">
-                        <strong style="color: var(--accent-cyan);">Advisors:</strong> Prof. Amuthan A. Ramabathiran, Prof. P. J. Guruprasad
-                      </li>
-                      <li style="margin-bottom: 8px; font-size: 15px;">
-                        <strong style="color: var(--accent-cyan);">Funding &amp; Honors:</strong> MHRD Teaching Assistantship through Research Project
-                      </li>
-                      <li style="margin-bottom: 8px; font-size: 15px;">
-                        <strong style="color: var(--accent-cyan);">Core Coursework:</strong> Multiscale Modeling, Continuum Mechanics, Theory of Plasticity, Computational Mechanics
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- Right side: Ph.D. Defense Photo -->
-                  <div class="col-lg-5 col-md-12 text-center mt-3 mt-lg-0">
-                    <div style="position: relative; display: inline-block; padding: 6px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--glass-border); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                      <img src="img/people/phddefence.jpg?v=3" alt="Successful Ph.D. Defence at IIT Bombay" style="width: 100%; border-radius: 8px; max-height: 240px; object-fit: cover;" />
-                      <div style="position: absolute; bottom: 15px; left: 15px; right: 15px; background: rgba(9, 13, 22, 0.85); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(6, 182, 212, 0.2); backdrop-filter: blur(4px);">
-                        <p style="font-size: 12px; color: #fff; margin: 0; font-weight: 500;">
-                          <i class="fa fa-graduation-cap" style="color: var(--accent-cyan); margin-right: 5px;"></i> Successful Ph.D. Defence
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-date">Jun 2014 – Jul 2016</span>
-              <div class="glass-card">
-                <div class="timeline-role">M.Tech. in Mechanical Engineering (Mechanical System Design)</div>
-                <div class="timeline-institution" style="display: flex; align-items: center; margin-bottom: 15px;">
-                  <div style="background-color: #fff; padding: 4px; border-radius: 4px; display: inline-block; margin-right: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-                    <img src="img/content/iit-khargpur.jpg" alt="IIT Kharagpur Logo" style="width: 32px; height: 32px; object-fit: contain;" />
-                  </div>
-                  Indian Institute of Technology - Kharagpur, West Bengal, India
-                </div>
-                <ul class="timeline-details">
-                  <li><strong>Thesis:</strong> A Mesh-Free Model for Static Analysis of Smart Composite Beams</li>
-                  <li><strong>Advisor:</strong> Prof. Manas Chandra Ray</li>
-                  <li><strong>Funding:</strong> MHRD GATE Fellowship</li>
-                  <li><strong>Key Subjects:</strong> Solid Mechanics, Fracture Mechanics, Finite Element Methods, Composites, Elasticity, Vibration</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-date">Dec 2013</span>
-              <div class="glass-card">
-                <div class="timeline-role">B.E. in Aeronautical Engineering (Aero Mechanical)</div>
-                <div class="timeline-institution">The Aeronautical Society of India, New Delhi</div>
-                <ul class="timeline-details">
-                  <li><strong>Key Subjects:</strong> Aircraft Structures, Aerodynamics, Propulsion, Stability & Control, Solid and Fluid Mechanics</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <section class="section" id="experience">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2>Research, teaching, and engineering practice.</h2>
         </div>
-      </section>
-      <!-- end education section -->
-
-      <!-- start competencies section -->
-      <section class="lg" id="competencies" style="padding: 80px 0;">
-        <div class="container">
-          <h2 class="section-title section-title-center">Core Competencies</h2>
-          <div class="competencies-grid">
-            
-            <!-- Atomistic & Multiscale Modelling -->
-            <div class="glass-card competency-card">
-              <div class="competency-header">
-                <div class="competency-icon">
-                  <i class="fa fa-cubes"></i>
-                </div>
-                <h4 class="competency-title">Atomistic &amp; Multiscale Modelling</h4>
-              </div>
-              <div class="competency-badges">
-                <span class="skill-badge"><i class="fa fa-braille" style="color: var(--accent-cyan); margin-right: 6px;"></i>Molecular Dynamics (MD)</span>
-                <span class="skill-badge"><i class="fa fa-line-chart" style="color: var(--accent-cyan); margin-right: 6px;"></i>Discrete Dislocation Dynamics (DDD)</span>
-                <span class="skill-badge"><i class="fa fa-database" style="color: var(--accent-cyan); margin-right: 6px;"></i>Atomistic Simulations</span>
-                <span class="skill-badge"><i class="fa fa-sliders" style="color: var(--accent-cyan); margin-right: 6px;"></i>Microstructure Evolution</span>
-                <span class="skill-badge"><i class="fa fa-compress" style="color: var(--accent-cyan); margin-right: 6px;"></i>Defect Mechanics</span>
-              </div>
+        <div class="timeline">
+          <article class="role-row">
+            <div class="role-date">Apr 2026 - Jul 31, 2026</div>
+            <div class="role-body">
+              <h3>Visiting Researcher, Computational Materials Science</h3>
+              <p class="role-org">Merrimack College, Refractory Metals &amp; Extreme Environments Initiative<br>315 Turnpike Street, North Andover, MA 01845, USA</p>
+              <ul>
+                <li>Conducted multiscale MD and DDD investigations of crack-tip plasticity, defect evolution, and ductile-to-brittle transition behavior in tungsten and tungsten-rhenium alloys.</li>
+                <li>Developed automated LAMMPS, Python, and HPC workflows for temperature-dependent fracture simulations and large-scale post-processing.</li>
+                <li>Connected atomistic fracture observations with mesoscale dislocation-network evolution for a forthcoming multiscale tungsten study.</li>
+              </ul>
             </div>
-
-            <!-- Computational Modeling Tools -->
-            <div class="glass-card competency-card">
-              <div class="competency-header">
-                <div class="competency-icon">
-                  <i class="fa fa-wrench"></i>
-                </div>
-                <h4 class="competency-title">Computational Modeling Tools</h4>
-              </div>
-              <div class="competency-badges">
-                <span class="skill-badge"><i class="fa fa-cubes" style="color: var(--accent-cyan); margin-right: 6px;"></i>LAMMPS</span>
-                <span class="skill-badge"><i class="fa fa-eye" style="color: var(--accent-teal); margin-right: 6px;"></i>OVITO</span>
-                <span class="skill-badge"><i class="fa fa-diamond" style="color: var(--accent-indigo); margin-right: 6px;"></i>Atomsk</span>
-                <span class="skill-badge"><i class="fa fa-gears" style="color: var(--accent-cyan); margin-right: 6px;"></i>ABAQUS</span>
-                <span class="skill-badge"><i class="fa fa-globe" style="color: var(--accent-teal); margin-right: 6px;"></i>ANSYS</span>
-                <span class="skill-badge"><i class="fa fa-bolt" style="color: var(--accent-indigo); margin-right: 6px;"></i>COMSOL</span>
-              </div>
+          </article>
+          <article class="role-row">
+            <div class="role-date">Jan 2025 - Dec 2025</div>
+            <div class="role-body">
+              <h3>Junior Research Fellow, DRDO Project</h3>
+              <p class="role-org">Indian Institute of Technology Bombay, Aerospace Engineering</p>
+              <ul>
+                <li>Investigated constitutive behavior and high-strain-rate response of shape-memory-alloy-based composites for aerospace and defense applications.</li>
+                <li>Combined Split Hopkinson Pressure Bar experiments with numerical simulation for constitutive-model calibration and validation.</li>
+              </ul>
             </div>
-
-            <!-- Programming & Scientific Computing -->
-            <div class="glass-card competency-card">
-              <div class="competency-header">
-                <div class="competency-icon">
-                  <i class="fa fa-code"></i>
-                </div>
-                <h4 class="competency-title">Programming &amp; Scientific Computing</h4>
-              </div>
-              <div class="competency-badges">
-                <span class="skill-badge"><i class="devicon-python-plain colored" style="margin-right: 6px;"></i>Python</span>
-                <span class="skill-badge"><i class="fa fa-server" style="color: var(--accent-cyan); margin-right: 6px;"></i>HPC (MPI/OpenMP)</span>
-                <span class="skill-badge"><i class="devicon-cplusplus-plain colored" style="margin-right: 6px;"></i>C++</span>
-                <span class="skill-badge"><i class="devicon-fortran-line colored" style="margin-right: 6px;"></i>Fortran</span>
-                <span class="skill-badge"><i class="devicon-bash-plain colored" style="margin-right: 6px;"></i>Bash Scripting</span>
-                <span class="skill-badge"><i class="fa fa-sitemap" style="color: var(--accent-indigo); margin-right: 6px;"></i>Parallel Frameworks</span>
-                <span class="skill-badge"><i class="devicon-git-plain colored" style="margin-right: 6px;"></i>Git</span>
-              </div>
+          </article>
+          <article class="role-row">
+            <div class="role-date">Jan 2019 - Jun 2025</div>
+            <div class="role-body">
+              <h3>Ph.D. Research Scholar</h3>
+              <p class="role-org">Indian Institute of Technology Bombay, Aerospace Engineering</p>
+              <ul>
+                <li>Developed atomistic and discrete dislocation dynamics models of defect mobility, precipitate strengthening, and prior-particle-boundary effects in nickel-based superalloys.</li>
+                <li>Built physics-informed workflows linking atomistic parameters with mesoscale dislocation mechanics using LAMMPS, Python, and HPC systems.</li>
+              </ul>
             </div>
-
-            <!-- Data Analysis & Visualization -->
-            <div class="glass-card competency-card">
-              <div class="competency-header">
-                <div class="competency-icon">
-                  <i class="fa fa-line-chart"></i>
-                </div>
-                <h4 class="competency-title">Data Analysis &amp; Visualization</h4>
-              </div>
-              <div class="competency-badges">
-                <span class="skill-badge"><i class="devicon-numpy-plain colored" style="margin-right: 6px;"></i>NumPy</span>
-                <span class="skill-badge"><i class="devicon-pandas-plain colored" style="margin-right: 6px;"></i>Pandas</span>
-                <span class="skill-badge"><i class="fa fa-calculator" style="color: var(--accent-cyan); margin-right: 6px;"></i>SciPy</span>
-                <span class="skill-badge"><i class="fa fa-area-chart" style="color: var(--accent-teal); margin-right: 6px;"></i>Matplotlib</span>
-                <span class="skill-badge"><i class="fa fa-cogs" style="color: var(--accent-indigo); margin-right: 6px;"></i>Automated Post-Processing</span>
-                <span class="skill-badge"><i class="fa fa-line-chart" style="color: var(--accent-cyan); margin-right: 6px;"></i>Simulation Data Analysis</span>
-              </div>
+          </article>
+          <article class="role-row">
+            <div class="role-date">Jun 2016 - Dec 2018</div>
+            <div class="role-body">
+              <h3>Assistant Professor, Mechanical Engineering</h3>
+              <p class="role-org">CMR Institute of Technology, Bengaluru, India</p>
+              <p>Taught finite element methods, experimental stress analysis, and solid mechanics, supported by computational modules using ANSYS, MATLAB, and Python.</p>
             </div>
-
-            <!-- Tools & Environments -->
-            <div class="glass-card competency-card">
-              <div class="competency-header">
-                <div class="competency-icon">
-                  <i class="fa fa-desktop"></i>
-                </div>
-                <h4 class="competency-title">Tools &amp; Environments</h4>
-              </div>
-              <div class="competency-badges">
-                <span class="skill-badge"><i class="devicon-linux-plain colored" style="margin-right: 6px;"></i>Linux (Ubuntu)</span>
-                <span class="skill-badge"><i class="fa fa-server" style="color: var(--accent-teal); margin-right: 6px;"></i>HPC Clusters</span>
-                <span class="skill-badge"><i class="devicon-github-original" style="color: #fff; margin-right: 6px;"></i>GitHub</span>
-                <span class="skill-badge"><i class="devicon-latex-original" style="color: #fff; margin-right: 6px;"></i>LaTeX</span>
-              </div>
-            </div>
-
-          </div>
+          </article>
         </div>
-      </section>
-      <!-- end competencies section -->
+      </div>
+    </section>
 
-      <!-- start research section -->
-      <section class="lg" id="research">
-        <div class="container">
-          <div class="section-heading title-style7">
-            <h4 class="no-margin-bottom" style="  font-family: 'Montserrat', sans-serif;">
-              Research Projects
-            </h4>
-          </div>
-
-          <!-- Featured Research Diagram -->
-          <div class="row margin-60px-bottom">
-            <div class="col-md-12">
-              <div class="glass-card" style="padding: 30px; text-align: center; border-top: 4px solid var(--accent-teal) !important;">
-                <h4 style="color: #fff; margin-bottom: 25px; font-weight: 700; font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">Multiscale Modeling Paradigm</h4>
-                <p style="font-family: 'Montserrat', sans-serif; color: var(--text-muted); margin-bottom: 25px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                  A comprehensive framework bridging quantum mechanics, molecular dynamics, mesoscale modeling, macroscale simulations, and continuum theory to capture intricate material behaviors across length and time scales.
-                </p>
-                <div style="background-color: #f8f9fa; padding: 20px; border-radius: 12px; box-shadow: inset 0 0 15px rgba(0,0,0,0.2); display: inline-block;">
-                  <img src="img/multiscale_new.png" alt="Multiscale Modeling Framework" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e5e7eb;" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- start a row -->
-          <div class="row margin-60px-bottom">
-            <div
-              class="col-lg-4 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="services-block6">
-                <div class="service-pic">
-                  <img src="img/research_updates/asme-ppb-schematic.jpg" alt="Polycrystalline DDD model containing a prior particle boundary cluster" />
-                </div>
-              </div>
-              <div>
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;;
-                  "
-                  class="font-size15"
-                >
-                Prior Particle Boundary Effects in Ni-based Superalloys
-                </h6>
-                <p style="  font-family: 'Montserrat', sans-serif;text-align: justify">
-                  Published ASME research using polycrystalline DDD to resolve how PPB size, number, and spatial arrangement influence dislocation pinning, strain hardening, and residual-stress retention.
-                </p>
-                <a
-                  href="ppbDD.html"
-                  style="  font-family: 'Montserrat', sans-serif;"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-            <div class="services-block6">
-              <div class="service-pic">
-                  <video controls autoplay loop muted style="max-width: 100%; height: auto;">
-                      <source src="video/dd_avalanch.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-              <div>
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;
-                  "
-                  class="font-size15"
-                >
-                Dislocation Avalanche Mechanisms in Metallic Materials
-                </h6>
-                <p style="  font-family: 'Montserrat', sans-serif; text-align: justify">
-                   Dislocation Dynamics (DDD) framework, implemented in FORTRAN, to explore the intricate mechanisms of dislocation avalanche dynamics and their influence on material behavior. Post-processing and data analysis are conducted using C++ and Python for visualization and data manipulation capabilities.
-                </p>
-                <a
-                  href="publications.html"
-                  style="font-family: 'Montserrat', sans-serif"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-sm-6 xs-margin-20px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="services-block6">
-                <div class="service-pic">
-                  <img src="img/research_ds/meshfree.png" alt="" />
-                </div>
-              </div>
-              <div>
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;;
-                  "
-                  class="font-size15"
-                >
-                A Simple Mesh Free Model for Static Analysis of Smart Composite Beams
-
-                </h6>
-                <p style="  font-family: 'Montserrat', sans-serif; text-align: justify">
-                 Research has focused on Piezoelectric laminated beams for static and dynamic behaviors, including bending, vibration, buckling, and control. This study introduces a novel Element-Free Galerkin (EFG) method for simulating piezoelectric laminated beams. 
-                </p>
-                <a
-                  href="files_ds/divyeshMtechthesis.pdf"
-                  target="_blank" rel="noopener"
-                  style="  font-family: 'Montserrat', sans-serif;"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <!-- end a row -->
-
-          <!-- start a row-->
-          <div class="row margin-60px-bottom">
-            <div
-              class="col-lg-4 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="services-block6">
-                <div class="service-pic">
-                  <img src="img/research_updates/tungsten-ddd-evolution.jpg" alt="Four stages of polycrystalline tungsten dislocation-network evolution" />
-                </div>
-              </div>
-              <div>
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;
-                  "
-                  class="font-size14"
-                >
-                  Polycrystalline Tungsten DDD
-                </h6>
-                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
-                  Open, modular Neper-OpenDiS workflow for source initialization, network evolution, quantitative analysis, and ParaView-ready output.
-                </p>
-                <a
-                  href="polyDDD.html"
-                  style="font-family: 'Montserrat', sans-serif;"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div> 
-
-            <div
-              class="col-lg-4 col-sm-6 xs-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="services-block6">
-                <div class="service-pic">
-                  <img src="img/research_updates/asme-residual-stress-fields.jpg" alt="Residual stress fields around prior particle boundary clusters" />
-                </div>
-              </div>
-              <div>
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;
-                  "
-                  class="font-size14"
-                >
-                 Published ASME Study of PPBs
-                </h6>
-                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
-                  PPBs act as strong internal barriers that reshape dislocation accumulation, hardening, and post-unloading stress recovery.
-                </p>
-                <a
-                  href="ppbDD.html"
-                  style="font-family: 'Montserrat', sans-serif;"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-sm-6 xs-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="services-block6">
-                <div class="service-pic">
-                  <video controls autoplay loop muted style="max-width: 100%; height: auto;">
-                      <source src="video/cmrson.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-              <div>  
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;
-                  "
-                  class="font-size14"
-                >
-                  Size-dependent Dislocation Motion near Precipitates
-                </h6>
-                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
-                  Molecular-dynamics evidence for two size-dependent strengthening regimes in a gamma/gamma-prime nickel-superalloy model.
-                </p>
-                <a
-                  href="https://doi.org/10.1016/j.commatsci.2025.114122"
-                  target="_blank" rel="noopener"
-                  style="font-family: 'Montserrat', sans-serif;"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div>
-          </div> 
-          <!-- end a row -->
-
-          <!-- start a row -->
-          <!-- <div class="row margin-60px-bottom">
-            <div
-              class="col-lg-4 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="services-block6">
-                <div class="service-pic">
-                  <img src="img/research/learning-control-tile.png" alt="" />
-                </div>
-              </div>
-              <div>
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;
-                  "
-                  class="font-size14"
-                >
-                  Learning and control in autonomous systems
-                </h6>
-                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
-                  Investigating fundamental aspects in learning and control for an 
-                  autonomous system, with an emphasis on learning in complex large-scale
-                  interconnected systems.
-                </p>
-                <a
-                  href="learning-control.html#research-section"
-                  style="font-family: 'Montserrat', sans-serif;"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="services-block6">
-                <div class="service-pic">
-                  <img src="img/research/formation-tile.png" alt="" />
-                </div>
-              </div>
-              <div>
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;
-                  "
-                  class="font-size14"
-                >
-                  Formation control of Multiagent systems
-                </h6>
-                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
-                  Protocols based on local information only for formation, mapping, localization, coverage,
-                  and surveillance tasks in 2D and 3D spaces with anisotropic sensing patterns.
-                </p>
-                <a
-                  href="multiagent-formation.html#research-section"
-                  style="font-family: 'Montserrat', sans-serif;"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-sm-6 xs-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="services-block6">
-                <div class="service-pic">
-                  <img src="img/research/Path.png" alt=""  />
-                </div>
-              </div>
-              <div>
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;
-                  "
-                  class="font-size14"
-                >
-                  Multivehicle motion planning and control
-                </h6>
-                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
-                  Motion planning algorithms that handle uncertainties, adapt to dynamic environments, and maintain consistent performance under adverse conditions.
-                </p>
-                <a
-                  href="path-following.html#research-section"
-                  style="font-family: 'Montserrat', sans-serif;"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div>
-          </div> -->
-          <!-- end a row -->
-
-          <!-- start a row -->
-          <!-- <div class="row">
-            <div
-              class="col-lg-4 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="services-block6">
-                <div class="service-pic">
-                  <img src="img/research/HRI.png" alt="" />
-                </div>
-              </div>
-              <div>
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;
-                  "
-                  class="font-size14"
-                >
-                  Autonomy and Decision-Making in Heterogeneous Agents
-                </h6>
-                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
-                  Empowering diverse agents with autonomy and intelligent decision-making, forging a harmonious symphony of heterogeneous capabilities.
-                </p>
-                <a
-                  href="HRI.html#research-section"
-                  style="font-family: 'Montserrat', sans-serif;"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-sm-6 sm-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="services-block6">
-                <div class="service-pic">
-                  <img src="img/research/Network.png" alt="" />
-                </div>
-              </div>
-              <div>
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;
-                  "
-                  class="font-size14"
-                >
-                  Information fusion in guidance, navigation, and control
-                </h6>
-                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
-                  Designing a scalable architecture in multivehicle scenarios 
-                  by reconciling the information-related aspects in guidance, navigation, and control.
-                </p>
-                <a
-                  href="ifgnc.html#research-section"
-                  style="font-family: 'Montserrat', sans-serif;"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-sm-6 xs-margin-30px-bottom mobile-margin-25px-bottom"
-            >
-              <div class="services-block6">
-                <div class="service-pic">
-                  <img src="img/research/network-security-tile.png" alt=""  />
-                </div>
-              </div>
-              <div>
-                <h6
-                  style="
-                    text-align: center;
-                    margin-top: 25px;
-                    font-family: 'Montserrat', sans-serif;
-                  "
-                  class="font-size14"
-                >
-                High-fidelity Aerial Mobility and Manipulation
-                </h6>
-                <p style="font-family: 'Montserrat', sans-serif; text-align: justify">
-                  Unleashing the future of airborne mobility and precision manipulation, and redefining the boundaries of aerial possibilities.
-                </p>
-                <a
-                  href="mas-resilience.html#research-section"
-                  style="font-family: 'Montserrat', sans-serif;"
-                  >Learn more<i
-                    class="fa fa-long-arrow-right vertical-align-middle margin-5px-left"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
-            </div>
-
-            
-          </div> -->
-          <!-- end a row -->
-
+    <section class="section dark" id="research">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Featured research</p>
+          <h2>From local defect interactions to collective material response.</h2>
+          <p>Four connected research directions show how the work moves between atomic structure, discrete line mechanics, polycrystalline constraints, and engineering-scale interpretation.</p>
         </div>
-      </section>
-      <!-- end research section -->
-
-      <section class="motion-section" aria-labelledby="motion-title">
-        <div class="container">
-          <div class="motion-layout">
-            <div class="motion-copy">
-              <div class="hero-kicker">Research in motion</div>
-              <h2 id="motion-title">From crack-tip instability to defect activity</h2>
-              <p>
-                This atomistic sequence visualizes the coupled evolution of crack advance, local structural rearrangement, and dislocation activity in tungsten. It complements the quantitative fracture analysis without interrupting the opening view of the portfolio.
-              </p>
-              <div class="motion-paper">
-                <span>Upcoming journal paper</span>
-                <strong>Multiscale fracture and collective dislocation evolution in tungsten-based materials</strong>
-              </div>
-              <a href="publications.html" class="motion-link">View publication record <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-            </div>
-            <div class="motion-media">
-              <video autoplay muted loop playsinline preload="metadata" controls poster="img/research_updates/tungsten-crack-tip-poster.jpg" aria-label="Atomistic simulation of crack-tip deformation and defect activity in tungsten">
-                <source src="video/tungsten-crack-tip.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <img src="img/web/asme-ppb-schematic.webp" alt="Schematic of dislocation interactions with prior particle boundary clusters in a nickel-based superalloy" width="1400" height="674" loading="lazy" decoding="async">
+            <div class="research-card-body"><span class="tag">Published research | DDD</span><h3>Prior particle boundary effects in nickel-based superalloys</h3><p>Polycrystalline DDD reveals how PPB clusters promote dislocation pile-ups, back stresses, hardening, and persistent residual stress.</p><a href="ppbDD.html">Explore the research</a></div>
+          </article>
+          <article class="research-card">
+            <img src="img/web/tungsten-ddd-evolution.webp" alt="Four-stage evolution of a three-dimensional dislocation network in polycrystalline tungsten" width="1077" height="1000" loading="lazy" decoding="async">
+            <div class="research-card-body"><span class="tag">Open research software | DDD</span><h3>Polycrystalline tungsten dislocation-network workflow</h3><p>A modular, reproducible framework for Neper microstructures, BCC source initialization, network evolution, and quantitative analysis.</p><a href="polyDDD.html">View workflow and code</a></div>
+          </article>
+          <article class="research-card">
+            <img src="img/web/gamma-prime-md.webp" alt="Atomistic model of gamma-prime precipitates and dislocations in a nickel superalloy" width="888" height="676" loading="lazy" decoding="async">
+            <div class="research-card-body"><span class="tag">Published research | MD</span><h3>Size-dependent strengthening in nickel superalloys</h3><p>Molecular dynamics identifies two power-law regimes in critical resolved shear stress and connects the transition to dislocation-core length scales.</p><a href="https://doi.org/10.1016/j.commatsci.2025.114122" target="_blank" rel="noopener">Read the journal article</a></div>
+          </article>
+          <article class="research-card">
+            <img src="img/web/phd-defense.webp" alt="Dr. Divyesh A. Mistry beside his doctoral presentation on multiscale modeling of prior particle boundaries" width="1200" height="760" loading="lazy" decoding="async">
+            <div class="research-card-body"><span class="tag">Multiscale mechanics</span><h3>Mechanistic integration across simulation scales</h3><p>The research program connects atomistic defect properties with mesoscale collective dynamics while keeping the assumptions and predictive scope of each method explicit.</p><a href="publications.html">Review publications and outputs</a></div>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- start publications section -->
-      <section class="lg" id="publications" style="padding: 80px 0;">
-        <div class="container">
-          <h2 class="section-title">Selected Publications</h2>
-          
-          <div class="row">
-            <div class="col-md-12">
-              <!-- Highlighted latest publication -->
-              <div class="glass-card pub-item highlight-card" style="border-left: 6px solid var(--accent-gold) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.1s; background: rgba(255,255,255,0.1);">
-                <div class="d-flex align-items-start">
-                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-gold);">
-                    <i class="fa fa-file-text"></i>
-                  </div>
-                  <div>
-                    <span class="badge" style="background: var(--accent-gold); color:#000; margin-bottom:5px; display:inline-block;">Latest Publication</span>
-                    <a href="https://doi.org/10.1115/1.4072448" target="_blank" rel="noopener" class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px; color: #fff;">
-                      A Discrete Dislocation Dynamics Study of Prior Particle Boundary Effects in Ni-based Superalloys
-                    </a>
-                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
-                      <strong>Mistry D. A.</strong>, Tawqeer Nasir Tak, R. Sankarasubramanian, &amp; P. J. Guruprasad
-                    </div>
-                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
-                      <em>Journal of Engineering Materials and Technology</em>. Accepted manuscript posted August 4, 2026. DOI: 10.1115/1.4072448.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End highlighted latest publication -->
-              
-              <!-- Pub 1 -->
-              <div class="glass-card pub-item" style="border-left: 4px solid var(--accent-cyan) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.1s;">
-                <div class="d-flex align-items-start">
-                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-cyan);">
-                    <i class="fa fa-file-text"></i>
-                  </div>
-                  <div>
-                    <a href="https://doi.org/10.1016/j.commatsci.2025.114122" target="_blank" rel="noopener" class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px;">
-                      Size-Dependent Power Laws for Edge Dislocations in Nickel Superalloys: A Molecular Dynamics Study
-                    </a>
-                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
-                      <strong>Mistry D. A.</strong>, &amp; Ramabathiran, A. A.
-                    </div>
-                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
-                      <em>Computational Materials Science</em>, 259 (2025), DOI: 10.1016/j.commatsci.2025.114122
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pub 2 -->
-              <div class="glass-card pub-item" style="border-left: 4px solid var(--accent-cyan) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.2s;">
-                <div class="d-flex align-items-start">
-                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-cyan);">
-                    <i class="fa fa-file-text"></i>
-                  </div>
-                  <div>
-                    <span class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px; color: #fff;">
-                      Multiscale fracture and collective dislocation evolution in tungsten-based materials
-                    </span>
-                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
-                      <strong>Mistry D. A.</strong> and collaborators
-                    </div>
-                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
-                      <em>Upcoming journal article.</em> Full bibliographic details will be released after submission.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pub 3 -->
-              <div class="glass-card pub-item" style="border-left: 4px solid var(--accent-indigo) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.3s;">
-                <div class="d-flex align-items-start">
-                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-indigo);">
-                    <i class="fa fa-edit"></i>
-                  </div>
-                  <div>
-                    <a href="https://github.com/divyesh-mistry/ddd-w-poly" target="_blank" rel="noopener" class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px; color: #fff;">
-                      Polycrystalline Tungsten Discrete Dislocation Dynamics Workflow
-                    </a>
-                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
-                      <strong>Dr. Divyesh A. Mistry</strong>
-                    </div>
-                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
-                      Public GitHub release with a reproducible 15-grain example, modular Python package, tests, and citation metadata.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Pub 5 -->
-              <div class="glass-card pub-item" style="border-left: 4px solid var(--accent-teal) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.5s;">
-                <div class="d-flex align-items-start">
-                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-teal);">
-                    <i class="fa fa-users"></i>
-                  </div>
-                  <div>
-                    <span class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px; color: #fff;">
-                      Hierarchical Multiscale Modeling of Plasticity in Ni-Based Superalloys: The Combined Role of Prior Particle Boundaries and Second Phases
-                    </span>
-                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
-                      <strong>Mistry D. A.</strong>, Tawqeer N. Tak, &amp; Guruprasad, P. J.
-                    </div>
-                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
-                      <em>14th International Symposium on Plasticity and Impact Mechanics (IMPLAST 2025)</em>, October 12–16, 2025, IIT Roorkee, India.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pub 6 -->
-              <div class="glass-card pub-item" style="border-left: 4px solid var(--accent-cyan) !important; padding: 20px; margin-bottom: 20px; animation-delay: 0.6s;">
-                <div class="d-flex align-items-start">
-                  <div style="font-size: 20px; margin-right: 15px; color: var(--accent-cyan);">
-                    <i class="fa fa-file-text"></i>
-                  </div>
-                  <div>
-                    <a href="https://complas2023.cimne.com/event/contribution/b63495cd-acfe-11ed-b019-000c29ddfc0c" target="_blank" rel="noopener" class="pub-title" style="font-size: 18px; font-weight: 700; line-height: 1.4; display: block; margin-bottom: 8px;">
-                      An Atomistically Informed Discrete Dislocation Dynamics Study of Prior Particle Boundaries in Ni-Based Superalloys
-                    </a>
-                    <div class="pub-authors" style="font-size: 15px; margin-bottom: 5px;">
-                      <strong>Mistry D. A.</strong>, Guruprasad, P. J., &amp; Ramabathiran, A. A.
-                    </div>
-                    <div class="pub-journal" style="font-size: 13px; color: var(--text-muted);">
-                      <em>17th Conference on Computational Plasticity (COMPLAS)</em>, September 5–7, 2023, Barcelona, Spain.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="text-center margin-40px-top">
-            <a href="publications.html" class="butn theme"
-              ><span><i class="fa fa-search" style="margin-right: 8px;"></i> Search & Filter Publications</span></a
-            >
-          </div>
+    <section class="section dark" aria-labelledby="motion-title">
+      <div class="shell motion-grid">
+        <video class="motion-video" autoplay muted loop playsinline preload="metadata" poster="img/web/tungsten-crack-tip-poster.webp" aria-label="Atomistic crack-tip deformation in tungsten under tensile loading">
+          <source src="video/tungsten-crack-tip.mp4" type="video/mp4">
+        </video>
+        <div class="motion-copy">
+          <p class="eyebrow">Research in motion</p>
+          <h2 id="motion-title">Crack-tip instability and defect activity in tungsten.</h2>
+          <p>The animation provides a direct view of the evolving atomistic configuration used to examine temperature-sensitive crack-tip relaxation and fracture response.</p>
+          <span class="status-line">Related journal manuscript in preparation</span>
         </div>
-      </section>
-      <!-- end publications section -->
+      </div>
+    </section>
 
-      <!-- start separator -->
-      <div class="separator-line-horrizontal-full bg-medium-light-gray"></div>
-      <!-- end separator-->
-
-      <!-- start awards and certifications section -->
-      <section class="lg" id="awards" style="padding: 80px 0;">
-        <div class="container">
-          <div class="row">
-            
-            <!-- Left Column: Certifications -->
-            <div class="col-lg-6 md-margin-40px-bottom">
-              <h2 class="section-title">Certifications</h2>
-              <div class="glass-card cert-card">
-                <div class="cert-icon">
-                  <i class="fa fa-certificate"></i>
-                </div>
-                <div class="cert-info">
-                  <h5>Using Python for Research</h5>
-                  <p>edX, HarvardX (Harvard University) — Jan 2020</p>
-                </div>
-              </div>
-              <div class="glass-card cert-card">
-                <div class="cert-icon">
-                  <i class="fa fa-terminal"></i>
-                </div>
-                <div class="cert-info">
-                  <h5>The Unix Workbench</h5>
-                  <p>Coursera (Johns Hopkins University) — Aug 2020</p>
-                </div>
-              </div>
-              <div class="glass-card cert-card">
-                <div class="cert-icon">
-                  <i class="fa fa-cube"></i>
-                </div>
-                <div class="cert-info">
-                  <h5>Material Behavior</h5>
-                  <p>Coursera (Georgia Institute of Technology) — Aug 2020</p>
-                </div>
-              </div>
-              <div class="glass-card cert-card">
-                <div class="cert-icon">
-                  <i class="fa fa-laptop"></i>
-                </div>
-                <div class="cert-info">
-                  <h5>A Hands-on Introduction to Engineering Simulations</h5>
-                  <p>edX, CornellX (Cornell University) — May 2018</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Column: Awards and Honors -->
-            <div class="col-lg-6">
-              <h2 class="section-title">Awards & Achievements</h2>
-              
-              <!-- Award Item 0: Permanent Membership -->
-              <div class="glass-card cert-card">
-                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
-                  <i class="fa fa-users"></i>
-                </div>
-                <div class="cert-info">
-                  <h5>Permanent Membership</h5>
-                  <p>Associate Member, Aeronautical Society of India — 2013</p>
-                </div>
-              </div>
-
-              <!-- Award Item 1 -->
-              <div class="glass-card cert-card">
-                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
-                  <i class="fa fa-trophy"></i>
-                </div>
-                <div class="cert-info">
-                  <h5>Society Membership</h5>
-                  <p>Member of The Minerals, Metals &amp; Materials Society (TMS), USA — 2025</p>
-                </div>
-              </div>
-
-              <!-- Award Item 2 -->
-              <div class="glass-card cert-card">
-                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
-                  <i class="fa fa-plane"></i>
-                </div>
-                <div class="cert-info">
-                  <h5>Institution of Eminence Funds, IIT Bombay</h5>
-                  <p>Awarded to attend the international conference TMS 2025, USA — 2025</p>
-                </div>
-              </div>
-
-              <!-- Award Item 3 -->
-              <div class="glass-card cert-card">
-                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
-                  <i class="fa fa-plane"></i>
-                </div>
-                <div class="cert-info">
-                  <h5>IIT Bombay Travel Grant</h5>
-                  <p>Awarded to attend the international conference COMPLAS 2023, Spain — 2023</p>
-                </div>
-              </div>
-
-              <!-- Award Item 4 -->
-              <div class="glass-card cert-card">
-                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
-                  <i class="fa fa-graduation-cap"></i>
-                </div>
-                <div class="cert-info">
-                  <h5>MHRD Teaching Assistantship Through Project</h5>
-                  <p>Awarded by the Industrial Research and Consultancy Centre (IRCC) — 2019</p>
-                </div>
-              </div>
-
-              <!-- Award Item 5 -->
-              <div class="glass-card cert-card">
-                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
-                  <i class="fa fa-star"></i>
-                </div>
-                <div class="cert-info">
-                  <h5>All India Rank 69</h5>
-                  <p>Achieved rank 69 in the Graduate Aptitude Test in Engineering (GATE) — 2014</p>
-                </div>
-              </div>
-
-              <!-- Award Item 6 -->
-              <div class="glass-card cert-card">
-                <div class="cert-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
-                  <i class="fa fa-users"></i>
-                </div>
-                <div class="cert-info">
-                  <h5>Permanent Associate Membership</h5>
-                  <p>Awarded permanent membership at the Aeronautical Society of India — 2013</p>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
+    <section class="section" id="publications">
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">Selected outputs</p><h2>Publications and open research software.</h2></div>
+        <div class="publication-list">
+          <article class="publication"><div class="year">2026</div><div><h3>A Discrete Dislocation Dynamics Study of Prior Particle Boundary Effects in Ni-based Superalloys</h3><p>Divyesh A. Mistry, Tawqeer Nasir Tak, R. Sankarasubramanian, and P. J. Guruprasad. <em>Journal of Engineering Materials and Technology</em>. Published online.</p></div><a class="pub-link" href="https://doi.org/10.1115/1.4072448" target="_blank" rel="noopener">DOI</a></article>
+          <article class="publication"><div class="year">2025</div><div><h3>Size-dependent Power Laws for Edge Dislocations in Nickel Superalloys: A Molecular Dynamics Study</h3><p>Divyesh A. Mistry and Amuthan A. Ramabathiran. <em>Computational Materials Science</em> 259, 114122.</p></div><a class="pub-link" href="https://doi.org/10.1016/j.commatsci.2025.114122" target="_blank" rel="noopener">DOI</a></article>
+          <article class="publication"><div class="year">2026</div><div><h3>Polycrystalline Tungsten Discrete Dislocation Dynamics Workflow</h3><p>Open-source modular Python workflow with a reproducible 15-grain example, tests, documentation, and citation metadata.</p></div><a class="pub-link" href="https://github.com/divyesh-mistry/ddd-w-poly" target="_blank" rel="noopener">GitHub</a></article>
+          <article class="publication"><div class="year">In preparation</div><div><h3>Multiscale fracture and collective dislocation evolution in tungsten-based materials</h3><p>Upcoming journal manuscript connecting atomistic crack-tip processes with representative mesoscale dislocation-network evolution.</p></div><span></span></article>
         </div>
-      </section>
-      <!-- end awards and certifications section -->
+        <div class="actions"><a class="button light" href="publications.html">Complete publications page</a></div>
+      </div>
+    </section>
 
-      <!-- start separator -->
-      <div class="separator-line-horrizontal-full bg-medium-light-gray"></div>
-      <!-- end separator-->
-
-      <!-- start service section -->
-      <section class="lg" id="people">
-        <div class="container">
-          <div class="section-heading title-style7">
-            <h4 class="no-margin-bottom" style="font-family: Big John">
-              Collaborators
-            </h4>
-          </div>
-          <div class="row">
-            <div class="col-md-4 text-center xs-margin-25px-bottom">
-              <div
-                class="display-inline-block position-relative margin-30px-bottom xs-margin-20px-bottom"
-              >
-                <img
-                  src="img/people/Amuthan_Pic.jpg"
-                  alt=""
-                  class="people-icons"
-                  style="width: 150px; height: 150px"
-                />
-              </div>
-              <a href="https://amuthan.github.io/webpage/" target="_blank" rel="noopener">
-                <h6
-                  class="margin-10px-bottom font-size22 md-font-size18 xs-font-size14 work-together"
-                  style="font-family: Dosis-Bold; font-weight: 800"
-                >
-                Prof. Amuthan Ramabathiran
-                </h6></a
-              >
-            </div>
-            <div class="col-md-4 text-center xs-margin-25px-bottom">
-              <div
-                class="display-inline-block position-relative margin-30px-bottom xs-margin-20px-bottom"
-              >
-                <img
-                  src="img/people/pjguru.jpg"
-                  alt=""
-                  class="people-icons"
-                  style="width: 150px; height: 150px"
-                />
-              </div>
-              <a
-                href="https://www.aero.iitb.ac.in/~pjguru/index.html"
-                target="_blank" rel="noopener"
-              >
-                <h6
-                  class="margin-10px-bottom font-size22 md-font-size18 xs-font-size14 work-together"
-                  style="font-family: Dosis-Bold; font-weight: 800"
-                >
-                Prof. PJ Guruprasad
-                </h6></a
-              >
-            </div>
-            <div class="col-md-4 text-center">
-              <div
-                class="display-inline-block position-relative margin-30px-bottom xs-margin-20px-bottom"
-              >
-                <img
-                  src="img/people/tawqeer.jpeg"
-                  alt=""
-                  class="people-icons"
-                  style="width: 150px; height: 150px"
-                />
-              </div>
-              <a href="https://www.linkedin.com/in/tawqeer-nasir-55818525/" target="_blank" rel="noopener">
-                <h6
-                  class="margin-10px-bottom font-size22 md-font-size18 xs-font-size14 work-together"
-                  style="font-family: Dosis-Bold; font-weight: 800"
-                >
-                Tawqeer Nasir 
-                </h6></a
-              >
-            </div>
-          </div>
-          <br /><br /><br />
-          <div class="row">
-            <!-- <div class="col-md-4 text-center">
-              <div
-                class="display-inline-block position-relative margin-30px-bottom xs-margin-20px-bottom"
-              >
-                <img
-                  src="img/people/VS-face.png"
-                  alt=""
-                  class="people-icons"
-                  style="width: 150px; height: 150px"
-                />
-              </div>
-              <a href="https://vaibhavsinhacs.github.io" target="_blank" rel="noopener">
-                <h6
-                  class="margin-10px-bottom font-size22 md-font-size18 xs-font-size14 work-together"
-                  style="font-family: Dosis-Bold; font-weight: 800"
-                >
-                  Vaibhav Sinha
-                </h6></a
-              >
-            </div> -->
-
-            <div class="col-md-4 text-center">
-              <div
-                class="display-inline-block position-relative margin-30px-bottom xs-margin-20px-bottom"
-              >
-                <img
-                  src="img/people/mcray.png"
-                  alt=""
-                  class="people-icons"
-                  style="width: 150px; height: 150px"
-                />
-              </div>
-              <a
-                href="https://scholar.google.co.in/citations?user=5DdMpIUAAAAJ&hl=en&oi=ao"
-                target="_blank" rel="noopener"
-              >
-                <h6
-                  class="margin-10px-bottom font-size22 md-font-size18 xs-font-size14 work-together"
-                  style="font-family: Dosis-Bold; font-weight: 800"
-                >
-                  Prof. Manas Chandra Ray
-                </h6></a
-              >
-            </div>
-
-          </div>
-
-          <!-- <br><br><br>
-          <div class="row">
-
-            <div class="col-md-4 text-center xs-margin-25px-bottom">
-              <div
-                class="display-inline-block position-relative margin-30px-bottom xs-margin-20px-bottom"
-              >
-                <img
-                  src="img/people/Rishemjit_Kaur.jfif"
-                  alt=""
-                  class="people-icons"
-                  style="width: 150px; height: 150px"
-                />
-              </div>
-              <a href="https://www.linkedin.com/in/rishemjit-kaur-32709021/" target="_blank" rel="noopener">
-                <h6
-                  class="margin-10px-bottom font-size22 md-font-size18 xs-font-size14 work-together"
-                  style="
-                    font-family: Dosis-Bold;
-                    font-weight: 800;
-                  "
-                >
-                  Rishemjit Kaur
-                </h6></a>
-            </div>
-
-            <div class="col-md-4 text-center">
-              <div
-                class="display-inline-block position-relative margin-30px-bottom xs-margin-20px-bottom"
-              >
-                <img
-                  src="img/people/RKM.jpg"
-                  alt=""
-                  class="people-icons"
-                  style="width: 150px; height: 150px"
-                />
-              </div>
-                <h6
-                  class="margin-10px-bottom font-size22 md-font-size18 xs-font-size14 work-together"
-                  style="
-                    font-family: Dosis-Bold;
-                    font-weight: 800;
-                  "
-                >
-                  Rajiv Kumar Mishra
-                </h6>
-            </div> -->
-
-          <!-- <div class="col-md-4 text-center xs-margin-25px-bottom">
-              <div
-                class="display-inline-block position-relative margin-30px-bottom xs-margin-20px-bottom"
-              >
-                <img
-                  src="img/people/Rishemjit_Kaur.jfif"
-                  alt=""
-                  class="people-icons"
-                  style="width: 150px; height: 150px"
-                />
-              </div>
-              <a href="https://www.linkedin.com/in/rishemjit-kaur-32709021/" target="_blank" rel="noopener">
-                <h6
-                  class="margin-10px-bottom font-size22 md-font-size18 xs-font-size14 work-together"
-                  style="
-                    font-family: Dosis-Bold;
-                    font-weight: 800;
-                  "
-                >
-                  Rishemjit Kaur
-                </h6></a>
-            </div> -->
-          <!-- <div class="col-md-4 text-center">
-              <div
-                class="display-inline-block position-relative margin-30px-bottom xs-margin-20px-bottom"
-              >
-                <img
-                  src="img/people/RKM.jpg"
-                  alt=""
-                  class="people-icons"
-                  style="width: 150px; height: 150px"
-                />
-              </div>
-                <h6
-                  class="margin-10px-bottom font-size22 md-font-size18 xs-font-size14 work-together"
-                  style="
-                    font-family: Dosis-Bold;
-                    font-weight: 800;
-                  "
-                >
-                  Rajiv Mishra
-                </h6> 
-            </div>-->
-          <!-- </div> -->
-
-          <!-- <a href="students.html#course-section"
-            ><button class="btn-hover color-9">
-              SEE ALL MENTORING/ADVISING
-            </button></a
-          >
-        </div> -->
+    <section class="section soft" id="education">
+      <div class="shell two-column">
+        <div>
+          <div class="section-head"><p class="eyebrow">Education</p><h2>Training in mechanics and engineering.</h2></div>
+          <ul class="plain-list">
+            <li><strong>Ph.D., Aerospace Engineering</strong><span>Indian Institute of Technology Bombay | 2019-2025<br>Thesis: Multiscale Modeling of Prior Particle Boundaries in Nickel-based Superalloys.</span></li>
+            <li><strong>M.Tech., Mechanical Engineering</strong><span>Indian Institute of Technology Kharagpur | 2014-2016<br>Mechanical Systems Design.</span></li>
+            <li><strong>B.E., Aeronautical Engineering</strong><span>The Aeronautical Society of India | 2010-2013</span></li>
+          </ul>
         </div>
-      </section>
-      <!-- end service section-->
-
-
-      <section class="lg" id="emi-conference" style="padding: 80px 0;">
-        <div class="container">
-          <h2 class="section-title">Engineering Mechanics Institute Conference (EMI 2026)</h2>
-          <div class="glass-card">
-            <h4 style="color: var(--accent-indigo); margin-bottom: 15px;">
-              <i class="fa fa-university" style="margin-right: 10px;"></i> Featured Presentation: Boulder, Colorado, USA
-            </h4>
-            <p style="font-size: 17px; line-height: 1.8; text-align: justify; margin-bottom: 20px;">
-              Dr. Divyesh A. Mistry presented his work at the prestigious <strong>Engineering Mechanics Institute Conference (EMI 2026)</strong>, held from <strong>June 2–5, 2026</strong>, in Boulder, Colorado, USA. 
-              The conference brought together leading experts in computational mechanics and materials engineering.
-            </p>
-            <div style="background: rgba(79, 70, 229, 0.05); border-left: 4px solid var(--accent-indigo); padding: 15px 20px; border-radius: 4px; margin-bottom: 25px;">
-              <h5 style="margin-bottom: 5px; font-weight: 700;">Presentation Title:</h5>
-              <p style="font-size: 16px; font-style: italic; margin-bottom: 0; color: var(--primary);">
-                "Multiscale Modeling of Dislocation–Precipitate–PPB Interactions in Powder-Metallurgy Nickel Superalloys"
-              </p>
-              <p class="margin-5px-top text-muted font-size14" style="margin-bottom: 0;">
-                <strong>Authors:</strong> Divyesh A. Mistry, Avik Mahata, Amuthan A. Ramabathiran, P. J. Guruprasad, &amp; Tawqeer N. Tak
-              </p>
-            </div>
-
-            <h5 style="margin-bottom: 15px; font-weight: 700; color: var(--primary);">Conference Gallery</h5>
-            
-            <div class="row">
-              <div class="col-md-4 col-sm-6 sm-margin-20px-bottom">
-                <div class="text-center" style="background: #fff; padding: 10px; border-radius: 8px; border: 1px solid var(--glass-border); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
-                  <img src="img/emi/photo1.jpg" alt="EMI Conference Photo 1" style="width: 100%; height: 200px; border-radius: 6px; object-fit: cover;" onerror="this.src='img/research_ds/Md_flow.jpg';" />
-                  <p class="margin-8px-top text-muted font-size13" style="margin-bottom: 0;">Presentation Session at EMI 2026</p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 sm-margin-20px-bottom">
-                <div class="text-center" style="background: #fff; padding: 10px; border-radius: 8px; border: 1px solid var(--glass-border); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
-                  <img src="img/emi/photo2.jpg" alt="EMI Conference Photo 2" style="width: 100%; height: 200px; border-radius: 6px; object-fit: cover;" onerror="this.src='img/research_ds/src.png';" />
-                  <p class="margin-8px-top text-muted font-size13" style="margin-bottom: 0;">Discussions & Networking</p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="text-center" style="background: #fff; padding: 10px; border-radius: 8px; border: 1px solid var(--glass-border); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
-                  <img src="img/emi/photo3.jpg" alt="EMI Conference Photo 3" style="width: 100%; height: 200px; border-radius: 6px; object-fit: cover;" onerror="this.src='img/research_ds/two_surfaces_with_labels_and_color_bar.jpeg';" />
-                  <p class="margin-8px-top text-muted font-size13" style="margin-bottom: 0;">Boulder, Colorado Venue</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
+        <div>
+          <div class="section-head"><p class="eyebrow">Recognition</p><h2>Selected awards and professional activity.</h2></div>
+          <ul class="plain-list">
+            <li><strong>Engineering Mechanics Institute Conference 2026</strong><span>Research presentation in Boulder, Colorado, USA.</span></li>
+            <li><strong>Institution of Eminence travel support</strong><span>IIT Bombay support for TMS 2025, USA.</span></li>
+            <li><strong>IIT Bombay travel grant</strong><span>COMPLAS 2023, Barcelona, Spain.</span></li>
+            <li><strong>GATE 2014: All India Rank 69</strong><span>Graduate Aptitude Test in Engineering.</span></li>
+            <li><strong>Professional memberships</strong><span>The Minerals, Metals &amp; Materials Society and the Aeronautical Society of India.</span></li>
+          </ul>
         </div>
-      </section>
-      <!-- end emi conference section -->
+      </div>
+    </section>
 
-       <!-- start footer section -->
-       <footer class="footer-style9 bg-white" id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-6 sm-margin-30px-bottom">
-              <h3 class="footer-title-style9">Mailing Address</h3>
-              <address class="width-145 no-margin no-padding">
-                Divyesh A. Mistry<br />
-                Computational Materials Scientist<br />
-                Department of Aerospace Engineering<br />
-                Indian Institute of Technology Bombay<br />
-                Powai, Mumbai-400 076<br />
-                India
-              </address>
-              <br />
-              <i class="fa fa-envelope" aria-hidden="true"></i
-              ><a href="mailto:d.mistryg@gmail.com" style="margin-left: 3%"
-                >d.mistryg@gmail.com</a
-              >
-              <!-- <br />
-              <i class="fa fa-envelope" aria-hidden="true"></i
-                ><a
-                  href="mailto:abhinavsinha@aero.iitb.ac.in"
-                  style="margin-left: 3%"
-                  >abhinavsinha@aero.iitb.ac.in</a
-                >
-                <br />
-              <i class="fa fa-envelope" aria-hidden="true"></i
-              ><a href="mailto:sinha.abhinav@iitb.ac.in" style="margin-left: 3%"
-                >sinha.abhinav@iitb.ac.in</a
-              > -->
-            </div>
-
-            <div class="col-lg-3 col-md-6 sm-margin-30px-bottom">
-              <h3 class="footer-title-style9">Sitemap</h3>
-              <div>
-                <ul class="footer-list-style3">
-                  <li>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i
-                    ><a href="index.html#about"> About</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i
-                    ><a href="index.html#experience"> Experience</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i
-                    ><a href="index.html#education"> Education</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i
-                    ><a href="index.html#competencies"> Competencies</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i
-                    ><a href="index.html#research"> Research</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i
-                    ><a href="publications.html"> Publications</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i
-                    ><a href="index.html#awards"> Awards &amp; Certs</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i
-                    ><a href="index.html#people"> Collaborators</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i
-                    ><a href="index.html#emi-conference"> EMI Conference</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-md-6 xs-margin-30px-bottom">
-              <h3 class="footer-title-style9">Public Profiles</h3>
-              <div>
-                <ul class="footer-list-style3">
-                  <li>
-                    <a
-                      href="https://scholar.google.com/citations?user=feQuDO8AAAAJ&amp;hl=en"
-                      target="_blank" rel="noopener"
-                      ><i class="ai ai-google-scholar ai-2x"></i
-                    ></a>
-                    <span style="font-size: 16px; margin-left: 5%">
-                      Google Scholar</span
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.researchgate.net/profile/Divyesh-Mistry-2?ev=hdr_xprf"
-                      target="_blank" rel="noopener"
-                      ><i class="ai ai-researchgate ai-2x"></i
-                    ></a>
-                    <span style="font-size: 16px; margin-left: 5%">
-                      Researchgate</span
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/dr-divyesh-mistry-7b40a95b/"
-                      target="_blank" rel="noopener"
-                      ><i class="fa fa-linkedin-in fa-2x"></i
-                    ></a>
-                    <span style="font-size: 16px; margin-left: 5%">
-                      LinkedIn</span
-                    >
-                  </li>
-                  <li>
-                    <a href="https://github.com/divyesh-mistry" target="_blank" rel="noopener"
-                      ><i class="fa fa-github fa-2x"></i
-                    ></a>
-                    <span style="font-size: 16px; margin-left: 5%">
-                      Github</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <section class="section" id="conference">
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">EMI 2026 | Boulder, Colorado</p><h2>Multiscale Modeling of Dislocation-Precipitate-PPB Interactions in Powder-Metallurgy Nickel Superalloys</h2><p>Presented June 2-5, 2026 at the Engineering Mechanics Institute Conference.</p></div>
+        <div class="gallery">
+          <figure><img src="img/web/emi-presentation.webp" alt="Dr. Divyesh A. Mistry during his EMI 2026 presentation" width="960" height="620" loading="lazy" decoding="async"><figcaption>Conference presentation</figcaption></figure>
+          <figure><img src="img/web/emi-discussion.webp" alt="Technical discussion at the EMI 2026 conference" width="960" height="620" loading="lazy" decoding="async"><figcaption>Research discussion</figcaption></figure>
+          <figure><img src="img/web/emi-boulder.webp" alt="Conference visit in Boulder, Colorado" width="960" height="620" loading="lazy" decoding="async"><figcaption>Boulder, Colorado</figcaption></figure>
         </div>
-        <div class="footer-bar xs-font-size13">
-          <div class="container">
-            <div class="row">
-              <div
-                class="col-md-6 text-left xs-text-center xs-margin-5px-bottom"
-              >
-                <p>
-                  &copy; Dr. Divyesh A. Mistry
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>. All Rights Reserved.
-                </p>
-              </div>
-              <div class="col-md-6 text-right xs-text-center">
-                Designed and Developed by:
-                <a href="https://divyesh-mistry.github.io/webpage/" target="_blank" rel="noopener"
-                  >Dr. Divyesh A. Mistry</a
-                >
-              </div>
-            </div>
-          </div>
+      </div>
+    </section>
+
+    <section class="section soft" aria-labelledby="collaborators-title">
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">Collaboration</p><h2 id="collaborators-title">Research is a team effort.</h2><p>Selected collaborators and mentors connected to the published and ongoing work.</p></div>
+        <div class="collaborators">
+          <a href="https://amuthan.github.io/webpage/" target="_blank" rel="noopener">Prof. Amuthan A. Ramabathiran</a>
+          <a href="https://www.aero.iitb.ac.in/~pjguru/index.html" target="_blank" rel="noopener">Prof. P. J. Guruprasad</a>
+          <a href="https://www.linkedin.com/in/tawqeer-nasir-55818525/" target="_blank" rel="noopener">Tawqeer Nasir Tak</a>
+          <a href="https://scholar.google.co.in/citations?user=5DdMpIUAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Prof. Manas Chandra Ray</a>
+          <span>Avik Mahata</span>
         </div>
-      </footer>
-      <!-- end footer section -->
-    </div>
-    <!-- end main-wrapper section -->
+      </div>
+    </section>
 
-    <!-- start scroll to top -->
-    <a href="#home" class="scroll-to-top"
-      ><i class="fa fa-angle-up" aria-hidden="true"></i
-    ></a>
-    <!-- end scroll to top -->
+    <section class="section contact-section" id="contact">
+      <div class="shell contact-grid">
+        <div><p class="eyebrow">Professional contact</p><h2>Let us discuss computational materials research.</h2><p>For research collaborations, scientific software, academic opportunities, and computational materials roles, contact Dr. Divyesh A. Mistry directly.</p></div>
+        <div class="contact-links">
+          <a href="mailto:d.mistryg@gmail.com">d.mistryg@gmail.com</a>
+          <a href="files/Divyesh_Mistry_Professional_Resume.pdf" target="_blank" rel="noopener">Professional resume</a>
+          <a href="files/Divyesh_Mistry_Academic_CV.pdf" target="_blank" rel="noopener">Academic CV</a>
+          <a href="https://github.com/divyesh-mistry" target="_blank" rel="noopener">GitHub profile</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- including js files -->
-
-    <!-- jQuery -->
-    <script src="js/core.min.js"></script>
-
-    <!-- custom scripts -->
-    <script src="js/scroller.js"></script>
-
-    <!-- Dynamic Atom/Dislocation Particle Network Script -->
-    <script>
-      (function() {
-        const canvas = document.getElementById('particle-canvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        
-        let width = canvas.width = window.innerWidth;
-        let height = canvas.height = window.innerHeight;
-        
-        const particles = [];
-        const particleCount = 100; // More particles for multiscale feel
-        
-        class Particle {
-          constructor() {
-            this.x = Math.random() * width;
-            this.y = Math.random() * height;
-            // Multiscale: Some are large (continuum/precipitates), some small (atoms)
-            this.type = Math.random() > 0.85 ? 'macro' : 'micro';
-            
-            if (this.type === 'macro') {
-              this.radius = Math.random() * 4 + 3; // 3 to 7
-              this.vx = (Math.random() - 0.5) * 0.2;
-              this.vy = (Math.random() - 0.5) * 0.2;
-              this.color = 'rgba(99, 102, 241, 0.6)'; // Indigo for macro
-              this.connectionDistance = 250;
-            } else {
-              this.radius = Math.random() * 1.5 + 0.5; // 0.5 to 2
-              this.vx = (Math.random() - 0.5) * 0.6;
-              this.vy = (Math.random() - 0.5) * 0.6;
-              this.color = 'rgba(6, 182, 212, 0.4)'; // Cyan for micro
-              this.connectionDistance = 100;
-            }
-          }
-          
-          update() {
-            this.x += this.vx;
-            this.y += this.vy;
-            
-            if (this.x < 0 || this.x > width) this.vx *= -1;
-            if (this.y < 0 || this.y > height) this.vy *= -1;
-          }
-          
-          draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
-            ctx.fill();
-            // Glow for macro
-            if (this.type === 'macro') {
-              ctx.shadowBlur = 10;
-              ctx.shadowColor = 'rgba(99, 102, 241, 0.8)';
-            } else {
-              ctx.shadowBlur = 0;
-            }
-          }
-        }
-        
-        for (let i = 0; i < particleCount; i++) {
-          particles.push(new Particle());
-        }
-        
-        function animate() {
-          ctx.clearRect(0, 0, width, height);
-          
-          // Draw connections
-          for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-              const dx = particles[i].x - particles[j].x;
-              const dy = particles[i].y - particles[j].y;
-              const dist = Math.sqrt(dx * dx + dy * dy);
-              
-              // Use the larger connection distance of the two particles
-              const maxDist = Math.max(particles[i].connectionDistance, particles[j].connectionDistance);
-              
-              if (dist < maxDist) {
-                const alpha = (1 - dist / maxDist) * 0.15;
-                ctx.beginPath();
-                ctx.moveTo(particles[i].x, particles[i].y);
-                ctx.lineTo(particles[j].x, particles[j].y);
-                // Color based on interaction type
-                if (particles[i].type === 'macro' || particles[j].type === 'macro') {
-                   ctx.strokeStyle = `rgba(99, 102, 241, ${alpha})`;
-                } else {
-                   ctx.strokeStyle = `rgba(6, 182, 212, ${alpha})`;
-                }
-                ctx.lineWidth = (particles[i].type === 'macro' || particles[j].type === 'macro') ? 1.5 : 0.5;
-                ctx.stroke();
-              }
-            }
-          }
-          
-          // Update and draw particles
-          particles.forEach(p => {
-            p.update();
-            p.draw();
-          });
-          
-          requestAnimationFrame(animate);
-        }
-        
-        window.addEventListener('resize', () => {
-          width = canvas.width = window.innerWidth;
-          height = canvas.height = window.innerHeight;
-        });
-        
-        animate();
-      })();
-    </script>
-  </body>
+  <footer class="site-footer">
+    <div class="footer-inner"><span>&copy; <span data-year>2026</span> Dr. Divyesh A. Mistry. All rights reserved.</span><a href="#home">Back to top</a></div>
+  </footer>
+  <script src="js/site.js" defer></script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-

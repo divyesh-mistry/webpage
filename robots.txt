@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://divyesh-mistry.github.io/webpage/sitemap.xml
+
