@@ -1,0 +1,162 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=1.45cm,top=1.25cm,bottom=1.3cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\hypersetup{
+  pdftitle={Divyesh A. Mistry - Computational Materials Scientist},
+  pdfauthor={Dr. Divyesh A. Mistry},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={computational materials scientist, molecular dynamics, LAMMPS, discrete dislocation dynamics, multiscale modeling, Python, high-performance computing, fracture mechanics, plasticity, scientific software}
+}
+
+\definecolor{navy}{HTML}{17365D}
+\definecolor{rulegray}{HTML}{A7B0BA}
+\definecolor{textgray}{HTML}{333333}
+\color{textgray}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{leftmargin=1.15em,label=--,itemsep=1.2pt,topsep=2pt,parsep=0pt}
+\titleformat{\section}{\large\bfseries\color{navy}}{}{0pt}{}[\vspace{-2pt}\color{rulegray}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize Divyesh Mistry | Curriculum Vitae | Page \thepage\ of \pageref{LastPage}}
+
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill \textbf{#2}\\[-1pt]
+  \textit{#3} \hfill \textit{#4}\vspace{1pt}
+}
+
+\begin{document}
+
+{\LARGE\bfseries\color{navy} Divyesh A. Mistry, PhD}\hfill
+{\large\bfseries Computational Materials Scientist}\par
+\vspace{3pt}
+Seville, Spain \;|\; +34 694 290 182 \;|\;
+\href{mailto:d.mistryg@gmail.com}{d.mistryg@gmail.com} \;|\;
+\href{https://www.linkedin.com/in/dr-divyesh-mistry-7b40a95b/}{linkedin.com/in/dr-divyesh-mistry} \;|\;
+\href{https://github.com/divyesh-mistry}{github.com/divyesh-mistry} \;|\;
+\href{https://scholar.google.com/citations?user=feQuDO8AAAAJ\&hl=en}{Google Scholar}
+
+\section{Professional Summary}
+Computational materials scientist specializing in molecular dynamics, multiscale mechanics, and high-performance scientific computing. Develops LAMMPS, discrete dislocation dynamics, and Python workflows that connect atomistic mechanisms to measurable deformation, strengthening, adhesion, and fracture response. Experience spans Ni-based superalloys, tungsten and W-Re alloys, polymer adhesives, constitutive modeling, defect characterization, and reproducible analysis on HPC clusters. Published first-author research and open simulation software; available for computational materials, scientific software, and mechanics roles.
+
+\section{Technical Skills}
+\textbf{Simulation \& Modeling:} Molecular dynamics (MD), discrete dislocation dynamics (DDD), finite element analysis (FEA/FEM), multiscale modeling, constitutive modeling, fracture mechanics, plasticity, microstructure evolution.\\[2pt]
+\textbf{Simulation Software:} LAMMPS, OVITO, Atomsk, ABAQUS, ANSYS, COMSOL, NEPER, ParaView, MATLAB.\\[2pt]
+\textbf{Programming \& Scientific Python:} Python (NumPy, Pandas, SciPy, Matplotlib), C++, Fortran, Bash, workflow automation, large-scale data analysis, Git/GitHub, \LaTeX.\\[2pt]
+\textbf{High-Performance Computing (HPC):} Linux/Unix, MPI/OpenMP parallel computing, HPC cluster management, batch scheduling, multi-million-atom simulations.
+
+\section{Professional Experience}
+\role{Postdoctoral Researcher}{Aug 2026--Present}{University of Seville}{Seville, Spain}
+\begin{itemize}
+  \item Develop molecular-dynamics and multiscale workflows for cross-linked epoxy and polymer adhesive systems, linking network chemistry and crosslink density to thermomechanical response, glass-transition temperature, shear strength, and failure.
+  \item Design reproducible LAMMPS protocols for curing, equilibration, cooling, and deformation; evaluate thermostat, strain-rate, and finite-size effects to improve verification and physical interpretation.
+  \item Build Python pipelines for replica-based statistical analysis, stress--strain processing, property extraction, uncertainty assessment, and automated visualization of large simulation campaigns on HPC systems.
+  \item Connect atomistic shear response with cohesive-zone and continuum descriptions of adhesive joints to support strength and life-prediction models across length scales.
+  \item \textbf{Project:} \textit{Multiscale modeling of interfacial delamination of steel/adhesive interfaces by aqueous corrosion}, funded by the U.S. Office of Naval Research.
+  \item \textbf{Advisors:} Prof. Mar\'{i}a del Pilar Ariza Moreno and Prof. Michael Ortiz.
+\end{itemize}
+
+\role{Postdoctoral Fellow / Visiting Researcher}{Apr 2026--Jul 2026}{Merrimack College, Department of Mechanical and Electrical Engineering}{North Andover, MA, USA}
+\begin{itemize}
+  \item Performed large-scale MD simulations of temperature-dependent crack-tip deformation and the ductile-to-brittle transition in tungsten and W--Re alloys.
+  \item Developed automated LAMMPS and Python workflows for stress--strain analysis, fracture-energy calculations, defect characterization, dislocation extraction, and trajectory processing on HPC clusters.
+  \item Integrated atomistic fracture mechanisms with a 3D polycrystalline DDD framework to study Frank--Read source activation, dislocation multiplication, grain-boundary interactions, and plastic shielding.
+  \item Mentored student research and contributed to manuscript development and multiscale simulation planning.
+\end{itemize}
+
+\role{Junior Research Fellow, DRDO-Sponsored Project}{Jan 2025--Dec 2025}{Indian Institute of Technology Bombay}{Mumbai, India \normalfont\textit{(concurrent with final thesis defense)}}
+\begin{itemize}
+  \item Investigated constitutive behavior and high-strain-rate response of shape-memory-alloy composites for aerospace and defense applications.
+  \item Conducted Split Hopkinson Pressure Bar experiments and used experimental data to calibrate and validate numerical constitutive models.
+  \item Supported project execution, data analysis, technical reporting, and mentoring of junior researchers.
+\end{itemize}
+
+\role{PhD Researcher, Aerospace Engineering}{Jan 2019--Jun 2025}{Indian Institute of Technology Bombay}{Mumbai, India}
+\begin{itemize}
+  \item Developed an atomistically informed multiscale framework for dislocation--precipitate--interface interactions in powder-metallurgy Ni-based superalloys.
+  \item Executed multi-million-atom LAMMPS simulations to quantify generalized stacking-fault energies, dislocation mobility, precipitate shearing, critical resolved shear stress, and temperature-dependent mechanisms.
+  \item Established size-dependent power laws for paired edge dislocations interacting with $\gamma'$ precipitates and transferred atomistic drag and obstacle-strength parameters into DDD models.
+  \item Developed polycrystalline DDD/finite-element models of prior particle boundaries, quantifying hardening, pinned dislocation density, geometrically necessary dislocations, and residual-stress retention.
+  \item Created parallel and automated Python/C++/Fortran workflows for simulation setup, defect tracking, post-processing, verification, parameter studies, and publication-quality visualization.
+  \item Published first-author research, presented at international conferences, and collaborated with computational and experimental researchers.
+\end{itemize}
+
+\role{Graduate Teaching Assistant}{Jan 2019--Dec 2023}{Indian Institute of Technology Bombay}{Mumbai, India}
+\begin{itemize}
+  \item Supported Continuum Mechanics, Data Analysis, and Multiscale Modeling courses; developed computational exercises and guided undergraduate and postgraduate students.
+\end{itemize}
+
+\role{Assistant Professor, Mechanical Engineering}{Jun 2016--Dec 2018}{CMR Institute of Technology}{Bengaluru, India}
+\begin{itemize}
+  \item Taught Finite Element Methods, Experimental Stress Analysis, and Solid Mechanics; developed laboratory modules using ANSYS, MATLAB, and Python.
+\end{itemize}
+
+\role{Graduate Teaching Assistant and MTech Researcher}{Jun 2014--Jul 2016}{Indian Institute of Technology Kharagpur}{Kharagpur, India}
+\begin{itemize}
+  \item Developed and validated ABAQUS and ANSYS models for structural mechanics, smart composites, and vibration; supported laboratories in FEM, vibration analysis, and tribology.
+\end{itemize}
+
+\section{Education}
+\textbf{PhD, Aerospace Engineering}, Indian Institute of Technology Bombay \hfill 2019--2025\\
+Thesis: \textit{Multiscale Modeling of Prior Particle Boundaries in Nickel-Based Superalloys}; CGPA: 9.36/10\\
+Advisors: Prof. P. J. Guruprasad and Prof. Amuthan A. Ramabathiran
+
+\vspace{3pt}
+\textbf{MTech, Mechanical Engineering (Mechanical System Design)}, IIT Kharagpur \hfill 2014--2016\\
+Thesis: \textit{A Mesh-Free Model for Static Analysis of Smart Composite Beams}; CGPA: 8.85/10
+
+\vspace{3pt}
+\textbf{BE, Aeronautical Engineering (Aero Mechanical)}, Aeronautical Society of India \hfill 2013
+
+\section{Publications}
+\textbf{\textit{Peer-Reviewed Journal Articles}}
+\begin{enumerate}[leftmargin=1.35em,itemsep=2pt,topsep=1pt]
+  \item \textbf{Mistry, D. A.}, Tak, T. N., Sankarasubramanian, R., and Guruprasad, P. J. ``A Discrete Dislocation Dynamics Study of Prior Particle Boundary Effects in Ni-Based Superalloys.'' \textit{Journal of Engineering Materials and Technology} (2026). \href{https://doi.org/10.1115/1.4072448}{DOI}.
+  \item \textbf{Mistry, D. A.} and Ramabathiran, A. A. ``Size-Dependent Power Laws for Edge Dislocations in Nickel Superalloys: A Molecular Dynamics Study.'' \textit{Computational Materials Science} 259, 114122 (2025). \href{https://doi.org/10.1016/j.commatsci.2025.114122}{DOI}.
+\end{enumerate}
+
+\textbf{\textit{Manuscripts in Preparation}}
+\begin{enumerate}[leftmargin=1.35em,itemsep=2pt,topsep=1pt]
+  \item \textbf{Mistry, D. A.} and Mahata, A. ``Atomistic Indicators of the Ductile-to-Brittle Transition in Polycrystalline Tungsten: Temperature and Rhenium Effects on Crack-Tip Plasticity.'' arXiv preprint arXiv:2608.27589 (2026). \href{https://arxiv.org/abs/2608.27589}{Preprint}.
+  \item \textbf{Mistry, D. A.}, Tak, T. N., and Guruprasad, P. J. ``Polycrystalline Discrete Dislocation Dynamics of Ni-Based Superalloys: Interactions with Prior Particle Boundaries and Second Phases Using Atomistically Informed Inputs.'' Manuscript in preparation.
+\end{enumerate}
+
+\textbf{\textit{Conference Contributions}}
+\begin{enumerate}[leftmargin=1.35em,itemsep=2pt,topsep=1pt]
+  \item EMI 2026, Boulder, USA: \textit{Multiscale Modeling of Dislocation--Precipitate--PPB Interactions in Powder-Metallurgy Nickel Superalloys}.
+  \item IMPLAST 2025, IIT Roorkee, India: \textit{Hierarchical Multiscale Modeling of Plasticity in Ni-Based Superalloys}.
+  \item COMPLAS 2023, Barcelona, Spain: \textit{An Atomistically Informed DDD Study of Prior Particle Boundaries in Ni-Based Superalloys}.
+\end{enumerate}
+
+
+\section{Awards, Grants \& Professional Memberships}
+\begin{itemize}
+  \item \textbf{Institution of Eminence Travel Grant}, IIT Bombay (2025) --- funded attendance at TMS 2025, USA.
+  \item \textbf{IIT Bombay International Travel Grant} (2023) --- funded attendance at COMPLAS 2023, Spain.
+  \item \textbf{GATE All India Rank: 69} (2014) --- Graduate Aptitude Test in Engineering; MHRD fellowships for doctoral and master's study.
+  \item \textbf{Member}, The Minerals, Metals \& Materials Society (TMS); \textbf{Associate Member}, Aeronautical Society of India (AeSI).
+  \item Certifications: Using Python for Research (HarvardX); The Unix Workbench (Johns Hopkins); Material Behavior (Georgia Tech); Engineering Simulations (CornellX).
+\end{itemize}
+
+\section{Additional Information}
+Research interests: computational materials science, multiscale mechanics, atomistic simulation, deformation and fracture, additive-manufacturing materials, polymer adhesives, and data-driven materials modeling. Academic references available upon request.
+
+\end{document}
