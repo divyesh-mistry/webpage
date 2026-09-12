@@ -114,6 +114,12 @@ p { font-size: 16px; line-height: 1.75; }
 .milestone-photo figcaption { padding: 13px 16px; color: var(--muted); font-size: 13px; }
 .compact-list { margin-top: 24px; }
 .education-secondary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; margin-top: 54px; padding-top: 42px; border-top: 1px solid var(--line); }
+.institution-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 38px; padding-top: 30px; border-top: 1px solid var(--line); }
+.institution-card { display: flex; align-items: center; gap: 14px; min-height: 100px; padding: 16px; border: 1px solid var(--line); background: var(--white); }
+.institution-card img { width: 64px; height: 64px; object-fit: contain; flex: 0 0 64px; }
+.institution-card strong, .institution-card span { display: block; }
+.institution-card strong { color: var(--ink); font-size: 15px; }
+.institution-card span { margin-top: 5px; color: var(--muted); font-size: 12px; line-height: 1.45; }
 .conference-gallery { display: grid; grid-template-columns: 1.35fr 1fr .72fr; gap: 20px; align-items: stretch; }
 .conference-gallery figure { min-width: 0; margin: 0; border: 1px solid var(--line-dark); background: var(--panel); }
 .conference-frame { height: 300px; display: grid; place-items: center; overflow: hidden; background: #020507; }
@@ -170,7 +176,7 @@ p { font-size: 16px; line-height: 1.75; }
   .hero .lead, .subpage-hero p { font-size: 17px; }
   .section { padding: 62px 0; }
   h2 { font-size: 30px; }
-  .signals, .expertise-grid, .research-grid, .two-column, .contact-grid, .finding-grid, .pipeline, .evidence-grid, .education-gallery, .education-secondary, .conference-gallery { grid-template-columns: 1fr; }
+  .signals, .expertise-grid, .research-grid, .two-column, .contact-grid, .finding-grid, .pipeline, .evidence-grid, .education-gallery, .education-secondary, .institution-strip, .conference-gallery { grid-template-columns: 1fr; }
   .video-pair { gap: 14px; overflow-x: auto; padding-bottom: 8px; }
   .video-pair figure { flex: 0 0 min(72vw, 320px); }
   .desktop-video { display: none; }
