@@ -24,7 +24,7 @@ Production site: `https://divyesh-mistry.github.io/webpage/`
 - `img/research-banner.jpg` - multiscale banner used behind the homepage name
 - `img/web/` - resized, compressed copies of the original photographs and publication certificate
 - Original photographs are retained in their existing folders.
-- Videos have native controls, do not autoplay, and use `preload="none"`.
+- Muted simulation previews loop automatically when visible and pause off screen or in a hidden tab. Native controls remain available, manual pause is respected, and reduced-motion preferences disable automatic playback. Videos use `preload="none"` before entering view.
 - The pages use system fonts and local CSS/JavaScript without a framework or external icon/font dependencies.
 
 ## Local Preview

@@ -60,6 +60,54 @@ filters.forEach((button) => {
   });
 });
 
+const previewVideos = [...document.querySelectorAll('video[data-autoplay-preview]')];
+
+if (previewVideos.length && 'IntersectionObserver' in window) {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const visibleVideos = new Set();
+  const userPaused = new WeakSet();
+  const automaticPauses = new WeakSet();
+
+  function pausePreview(video) {
+    if (video.paused) return;
+    automaticPauses.add(video);
+    video.pause();
+  }
+
+  function updatePreviews() {
+    previewVideos.forEach((video) => {
+      if (!visibleVideos.has(video) || document.hidden) {
+        pausePreview(video);
+      } else if (!reducedMotion.matches && !userPaused.has(video) && video.paused) {
+        video.play().catch(() => {});
+      }
+    });
+  }
+
+  previewVideos.forEach((video) => {
+    video.addEventListener('pause', () => {
+      if (automaticPauses.has(video)) automaticPauses.delete(video);
+      else userPaused.add(video);
+    });
+    video.addEventListener('play', () => userPaused.delete(video));
+  });
+
+  const previewObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.2) visibleVideos.add(entry.target);
+      else visibleVideos.delete(entry.target);
+    });
+    updatePreviews();
+  }, { threshold: [0, 0.2] });
+
+  previewVideos.forEach((video) => previewObserver.observe(video));
+  document.addEventListener('visibilitychange', updatePreviews);
+  reducedMotion.addEventListener('change', () => {
+    if (reducedMotion.matches) previewVideos.forEach(pausePreview);
+    else updatePreviews();
+  });
+}
+
 document.querySelectorAll('details').forEach((details) => {
   details.addEventListener('toggle', () => {
     if (!details.open) details.querySelectorAll('video').forEach((video) => video.pause());
