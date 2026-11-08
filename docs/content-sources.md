@@ -1,5 +1,11 @@
 # Content provenance - 6 November 2026
 
+## Professional service update — 8 November 2026
+
+The author confirmed active reviewer roles for **ASME** and **SAE International**. The homepage records these ongoing roles under Professional Service. Journal names, review counts, and start dates have not been supplied, so the entry makes no claims about them.
+
+## Portfolio revision — 6 November 2026
+
 This website update uses the CVN generated on 30 October 2026 as source material. The source PDF is not copied into the repository or substituted for the public CV.
 
 | Content | Source and editorial decision |
